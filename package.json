@@ -1,7 +1,7 @@
 {
   "name": "dashblocks-template",
-  "version": "0.1.0",
-  "private": false,
+  "version": "0.5.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/slanatech/dashblocks-template"
@@ -20,7 +20,9 @@
     "demo:build": "vue-cli-service build --dest demo",
     "demo:deploy": "yarn run demo:build && ./scripts/demodeploy.sh",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "release": "release-it",
+    "release-ci": "release-it --ci"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -111,5 +113,17 @@
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "hooks": {
+      "before:init": [
+        "yarn run demo:deploy"
+      ],
+      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+    }
   }
+
 }
