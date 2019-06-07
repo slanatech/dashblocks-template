@@ -1,6 +1,6 @@
 {
   "name": "dashblocks-template",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "repository": {
     "type": "git",
@@ -125,5 +125,4 @@
       "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
     }
   }
-
 }
