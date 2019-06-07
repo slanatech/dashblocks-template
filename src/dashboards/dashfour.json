@@ -1,0 +1,61 @@
+{
+  "layout": {
+    "type": "grid"
+  },
+  "widgets": [
+    {
+      "id": "w0",
+      "type": "DbTrendLine",
+      "cspan": 16
+    },
+    {
+      "id": "w1",
+      "type": "WidgetOne",
+      "cspan": 2,
+      "rspan": 2
+    },
+    {
+      "id": "w2",
+      "type": "WidgetOne",
+      "cspan": 2,
+      "rspan": 1
+    },
+    {
+      "id": "w3",
+      "type": "DbChartjsLine",
+      "cspan": 4,
+      "height": 350
+    },
+    {
+      "id": "w4",
+      "type": "DbChartjsBar",
+      "cspan": 4,
+      "height": 350
+    },
+    {
+      "id": "w5",
+      "type": "DbChartjsBar",
+      "cspan": 4
+    },
+    {
+      "id": "w1",
+      "type": "DbNumber",
+      "cspan": 4,
+      "height": 300
+    },
+    {
+      "id": "w6",
+      "type": "DbEasyPie",
+      "cspan": 4,
+      "properties": {
+        "barColor": "red",
+        "lineWidth": 10
+      }
+    },
+    {
+      "id": "w7",
+      "type": "DbTrendLine",
+      "cspan": 6
+    }
+  ]
+}

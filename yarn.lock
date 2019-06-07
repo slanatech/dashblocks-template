@@ -1710,6 +1710,10 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+brace@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/brace/-/brace-0.11.1.tgz#4896fcc9d544eef45f4bb7660db320d3b379fe58"
+
 braces@^1.8.2:
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/braces/-/braces-1.8.5.tgz#ba77962e12dff969d6b76711e914b737857bf6a7"
@@ -2719,6 +2723,14 @@ cypress@^3.2.0:
     tmp "0.1.0"
     url "0.11.0"
     yauzl "2.10.0"
+
+dashblocks@^0.5.9:
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/dashblocks/-/dashblocks-0.5.9.tgz#b7fc3146979c28090120cc5521831e96a2055469"
+  dependencies:
+    vue "^2.6.10"
+    vue-router "^3.0.6"
+    vuex "^3.1.0"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -8997,7 +9009,7 @@ vue-loader@^15.7.0:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-router@^3.0.3:
+vue-router@^3.0.3, vue-router@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.6.tgz#2e4f0f9cbb0b96d0205ab2690cfe588935136ac3"
 
@@ -9023,7 +9035,11 @@ vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
 
-vuex@^3.0.1:
+vuetify@^1.5.12:
+  version "1.5.14"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.5.14.tgz#ff67d0b8a398be5297da159b6cd1b31f4d2898b8"
+
+vuex@^3.0.1, vuex@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
 

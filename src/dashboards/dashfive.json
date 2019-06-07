@@ -1,0 +1,157 @@
+{
+  "layout": {
+    "type": "grid"
+  },
+  "widgets": [
+    {
+      "id": "wa",
+      "type": "DbDygraphsBar",
+      "cspan": 16,
+      "height": 250,
+      "properties": {
+        "options": {
+          "stackedGraph": true
+        }
+      }
+    },
+    {
+      "id": "w0",
+      "type": "DbTrendLine",
+      "cspan": 4,
+      "properties": {
+        "smooth": false,
+        "strokeWidth": 1
+      }
+    },
+    {
+      "id": "w0",
+      "type": "DbTrendLine",
+      "cspan": 4
+    },
+    {
+      "id": "w1",
+      "type": "DbTrendBar",
+      "cspan": 4
+    },
+    {
+      "id": "w2",
+      "type": "DbTrendBar",
+      "cspan": 4
+    },
+    {
+      "id": "w4",
+      "type": "DbNumber",
+      "cspan": 4,
+      "properties": {
+        "title": "Test OK",
+        "badge": "req/s",
+        "icon" : "fa fa-signal",
+        "ranges": [1000,2000]
+      }
+    },
+    {
+      "id": "w5",
+      "type": "DbNumber",
+      "cspan": 4,
+      "properties": {
+        "title": "Test Warning",
+        "badge": "req/s",
+        "icon" : "fa fa-clock",
+        "ranges": [1000,2000]
+      }
+    },
+    {
+      "id": "w6",
+      "type": "DbNumber",
+      "cspan": 4,
+      "properties": {
+        "title": "Test Alarm",
+        "badge": "req/s",
+        "icon" : "fa fa-chart-bar",
+        "ranges": [1000,2000]
+      }
+    },
+    {
+      "id": "w7",
+      "type": "DbPlotly",
+      "cspan": 16,
+      "rspan": 2,
+      "properties": {
+        "layout": {
+          "paper_bgcolor":"rgba(0,0,0,0)",
+          "plot_bgcolor":"rgba(0,0,0,0)",
+          "modebar": {
+            "bgcolor": "rgba(0,0,0,0)",
+            "color": "rgba(0,0,0,0.5)"
+          },
+          "title": "reactive charts",
+          "xaxis": {
+            "title": "xaxis title"
+          },
+          "yaxis": {
+            "title": "yaxis title"
+          },
+          "margin": {
+            "l": 60,
+            "r": 40,
+            "b": 40,
+            "t": 40,
+            "pad": 5
+          }
+        }
+      }
+    },
+    {
+      "id": "w8",
+      "type": "DbPlotlyLine",
+      "cspan": 10,
+      "height": 300,
+      "properties": {
+        "layout": {
+          "template": "plotly_dark",
+          "paper_bgcolor":"rgba(0,0,0,0)",
+          "plot_bgcolor":"rgba(0,0,0,0)",
+          "modebar": {
+            "bgcolor": "rgba(0,0,0,0)",
+            "color": "rgba(0,0,0,0.5)"
+          },
+          "margin": {
+            "l": 60,
+            "r": 40,
+            "b": 40,
+            "t": 40,
+            "pad": 5
+          }
+        }
+      }
+    },
+    {
+      "id": "w9",
+      "type": "DbPlotlyPie",
+      "cspan": 6,
+      "height": 300,
+      "properties": {
+        "layout": {
+          "legend": {
+            "orientation": "h"
+          },
+          "paper_bgcolor":"rgba(0,0,0,0)",
+          "plot_bgcolor":"rgba(0,0,0,0)",
+          "modebar": {
+            "bgcolor": "rgba(0,0,0,0)",
+            "color": "rgba(0,0,0,0.5)"
+          },
+          "margin": {
+            "l": 60,
+            "r": 40,
+            "b": 40,
+            "t": 40,
+            "pad": 5
+          }
+        }
+      }
+    }
+
+
+  ]
+}

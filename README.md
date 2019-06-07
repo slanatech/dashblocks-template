@@ -1,39 +1,15 @@
-# dashblocks-template
+# dashblocks-template ![](https://img.shields.io/badge/vue-2.x-brightgreen.svg)
 
-## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+### [Dashblocks](https://github.com/slanatech/dashblocks) official template 
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+Enable Analytics in your Vue app using [Dashblocks](https://github.com/slanatech/dashblocks)
 
-### Run your tests
-```
-yarn run test
-```
+## DEMO
 
-### Lints and fixes files
-```
-yarn run lint
-```
+TODO Link
 
-### Run your end-to-end tests
-```
-yarn run test:e2e
-```
-
-### Run your unit tests
-```
-yarn run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## License
+ 
+[MIT](LICENSE)
+   

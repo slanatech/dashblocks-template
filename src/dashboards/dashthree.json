@@ -1,0 +1,12 @@
+{
+  "layout": {
+    "type": "grid"
+  },
+  "widgets": [
+    {
+      "id": "w1",
+      "type": "DbHorizon",
+      "cspan": 16
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "layout": {
+    "type": "grid"
+  },
+  "widgets": [
+    {
+      "id": "w1",
+      "type": "DbDygraphsBar",
+      "cspan": 16,
+      "height": 250,
+      "properties": {
+        "options": {
+          "stackedGraph": true
+        }
+      }
+    },
+    {
+      "id": "w2",
+      "type": "DbDygraphsLine",
+      "cspan": 8,
+      "height": 300,
+      "properties": {
+        "options": {
+          "stackedGraph": false,
+          "title": "Random value Chart",
+          "ylabel": "Probability",
+          "labels" : ["Date","AAA","BBB"],
+          "legend": "always"
+        }
+      }
+    },
+    {
+      "id": "w6",
+      "type": "DbDygraphsLine",
+      "cspan": 8,
+      "height": 300,
+      "properties": {
+        "options": {
+          "showRangeSelector": true,
+          "stackedGraph": false,
+          "title": "Random value Chart",
+          "ylabel": "Probability",
+          "labels" : ["Date","AAA","BBB"],
+          "legend": "always"
+        }
+      }
+    },
+    {
+      "id": "w3",
+      "type": "DbDygraphsSparkLine",
+      "cspan": 4,
+      "properties": {
+        "smoothing": 0.5
+      }
+    },
+    {
+      "id": "w4",
+      "type": "DbDygraphsSparkLine",
+      "cspan": 4,
+      "properties": {
+        "options": {
+          "colors": ["gray"],
+          "strokeWidth": 0,
+          "fillGraph": true,
+          "fillAlpha": 0.2
+        }
+      }
+    },
+    {
+      "id": "w5",
+      "type": "DbDygraphsSparkLine",
+      "cspan": 4,
+      "properties": {
+        "smoothing": 0.5
+      }
+    }
+  ]
+}
