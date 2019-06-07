@@ -7,7 +7,7 @@ import DashblocksShowcase from "./views/DashblocksShowcase";
 Vue.use(Router);
 
 export default new Router({
-  base: "/dashblocks/", //process.env.BASE_URL,
+  base: "/dashblocks-template/",
   routes: [
     {
       path: "/",

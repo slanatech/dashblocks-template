@@ -1,11 +1,24 @@
 {
   "name": "dashblocks-template",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slanatech/dashblocks-template"
+  },
+  "author": "https://github.com/sv2",
+  "homepage": "https://github.com/slanatech/dashblocks-template",
+  "bugs": {
+    "url": "https://github.com/slanatech/dashblocks-template/issues",
+    "email": "sv2@slana.tech"
+  },
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "demo:build": "vue-cli-service build --dest demo",
+    "demo:deploy": "yarn run demo:build && ./scripts/demodeploy.sh",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -34,7 +47,8 @@
     "vue-template-compiler": "^2.6.10",
     "vuetify": "^1.5.12",
     "brace": "^0.11.1",
-    "dashblocks": "^0.5.9"
+    "dashblocks": "^0.5.9",
+    "release-it": "^12.3.0"
   },
   "eslintConfig": {
     "root": true,

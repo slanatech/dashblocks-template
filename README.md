@@ -7,7 +7,10 @@ Enable Analytics in your Vue app using [Dashblocks](https://github.com/slanatech
 
 ## DEMO
 
-TODO Link
+[Dashblocks Template Demo](https://slanatech.github.io/dashblocks-template)
+
+
+![dashboard](screenshots/dashblocks.png?raw=true)
 
 ## License
  
