@@ -1793,10 +1793,6 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-brace@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/brace/-/brace-0.11.1.tgz#4896fcc9d544eef45f4bb7660db320d3b379fe58"
-
 braces@^1.8.2:
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/braces/-/braces-1.8.5.tgz#ba77962e12dff969d6b76711e914b737857bf6a7"
@@ -2875,10 +2871,11 @@ cypress@^3.2.0:
     url "0.11.0"
     yauzl "2.10.0"
 
-dashblocks@^0.5.9:
-  version "0.5.9"
-  resolved "https://registry.yarnpkg.com/dashblocks/-/dashblocks-0.5.9.tgz#b7fc3146979c28090120cc5521831e96a2055469"
+dashblocks@^0.5.10:
+  version "0.5.10"
+  resolved "https://registry.yarnpkg.com/dashblocks/-/dashblocks-0.5.10.tgz#edc8de79deddfed1daf6adb986ae0593dfea832b"
   dependencies:
+    plotly.js-dist "^1.47.3"
     vue "^2.6.10"
     vue-router "^3.0.6"
     vuex "^3.1.0"
@@ -7262,6 +7259,10 @@ please-upgrade-node@^3.0.2:
   resolved "https://registry.yarnpkg.com/please-upgrade-node/-/please-upgrade-node-3.1.1.tgz#ed320051dfcc5024fae696712c8288993595e8ac"
   dependencies:
     semver-compare "^1.0.0"
+
+plotly.js-dist@^1.47.3:
+  version "1.48.1"
+  resolved "https://registry.yarnpkg.com/plotly.js-dist/-/plotly.js-dist-1.48.1.tgz#77809e45b6af54a280740dbd4a0aaa3d38b1d552"
 
 pluralize@^7.0.0:
   version "7.0.0"

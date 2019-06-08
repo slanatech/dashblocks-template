@@ -123,6 +123,36 @@ export default {
             type: "DbChartjsBar",
             cspan: 4,
             height: 250
+          },
+          {
+            id: "w0",
+            type: "DbPlotly",
+            cspan: 16,
+            rspan: 2,
+            properties: {
+              layout: {
+                paper_bgcolor: "rgba(0,0,0,0)",
+                plot_bgcolor: "rgba(0,0,0,0)",
+                modebar: {
+                  bgcolor: "rgba(0,0,0,0)",
+                  color: "rgba(0,0,0,0.5)"
+                },
+                title: "reactive charts",
+                xaxis: {
+                  title: "xaxis title"
+                },
+                yaxis: {
+                  title: "yaxis title"
+                },
+                margin: {
+                  l: 60,
+                  r: 40,
+                  b: 40,
+                  t: 40,
+                  pad: 5
+                }
+              }
+            }
           }
         ]
       },
