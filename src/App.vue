@@ -2,9 +2,7 @@
   <div id="app">
     <v-app id="inspire" :dark="switchDark">
       <v-toolbar dense fixed app clipped-right>
-        <v-toolbar-side-icon
-          @click.stop="drawer = !drawer"
-        ></v-toolbar-side-icon>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>{{ currentRouteName }}</v-toolbar-title>
         <v-spacer></v-spacer>
         <div>
@@ -34,12 +32,7 @@
         </v-toolbar>
 
         <v-list dense two-line subheader>
-          <v-list-tile
-            v-for="item in items"
-            :key="item.title"
-            avatar
-            :to="item.href"
-          >
+          <v-list-tile v-for="item in items" :key="item.title" avatar :to="item.href">
             <v-tooltip bottom>
               <v-list-tile-avatar slot="activator">
                 <v-icon :class="[item.iconClass]">{{ item.icon }}</v-icon>
@@ -75,11 +68,7 @@
               </v-list-tile>
             </template>
 
-            <v-list-tile
-              v-for="subItem in item.items"
-              :key="subItem.title"
-              :to="subItem.href"
-            >
+            <v-list-tile v-for="subItem in item.items" :key="subItem.title" :to="subItem.href">
               <v-list-tile-content>
                 <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
               </v-list-tile-content>
@@ -114,34 +103,41 @@ export default {
       drawerRight: false,
       items2: [
         {
-          icon: "bar_chart",
-          title: "Dygraphs",
+          icon: 'bar_chart',
+          title: 'Dygraphs',
           items: [
             {
-              title: "Dynamic Updates",
-              href: "/dygraphsdynamic"
+              title: 'Dynamic Updates',
+              href: '/dygraphsdynamic'
             },
             {
-              title: "TODO",
-              href: "/dashsix"
+              title: 'TODO',
+              href: '/dashsix'
             }
           ]
         }
       ],
       items: [
         {
-          icon: "bar_chart",
-          iconClass: "teal lighten-2 white--text",
-          title: "Dashblocks",
-          subtitle: "Dashboard Showcase",
-          href: "/"
+          icon: 'bar_chart',
+          iconClass: 'teal lighten-2 white--text',
+          title: 'Dashblocks',
+          subtitle: 'Dashboard Showcase',
+          href: '/'
         },
         {
-          icon: "bubble_chart",
-          iconClass: "teal lighten-2 white--text",
-          title: "Chart.JS",
-          subtitle: "showcase",
-          href: "/chartjs"
+          icon: 'bubble_chart',
+          iconClass: 'teal lighten-2 white--text',
+          title: 'Sample Dashboard',
+          subtitle: 'my first dashboard',
+          href: '/sample'
+        },
+        {
+          icon: 'bubble_chart',
+          iconClass: 'teal lighten-2 white--text',
+          title: 'Chart.JS',
+          subtitle: 'showcase',
+          href: '/chartjs'
         }
       ]
     };
@@ -155,7 +151,7 @@ export default {
         return this.$store.state.switchDark;
       },
       set(value) {
-        this.$store.commit("setSwitchDark", value);
+        this.$store.commit('setSwitchDark', value);
       }
     }
   },
@@ -166,7 +162,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 
 body,
 html {
@@ -174,7 +170,7 @@ html {
   padding: 0;
 }
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 /*
 .theme--dark.v-navigation-drawer {

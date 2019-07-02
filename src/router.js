@@ -1,18 +1,24 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue';
+import Router from 'vue-router';
 //import DygraphsDynamic from "./views/DygraphsDynamic";
 //import ChartJsShowcase from "./views/ChartJsShowcase";
-import DashblocksShowcase from "./views/DashblocksShowcase";
+import DashblocksShowcase from './views/DashblocksShowcase';
+import SampleDashboard from './views/SampleDashboard';
 
 Vue.use(Router);
 
 export default new Router({
-  base: "/dashblocks-template/",
+  base: '/dashblocks-template/',
   routes: [
     {
-      path: "/",
-      name: "Dashblocks Dashboard",
+      path: '/',
+      name: 'Dashblocks Dashboard',
       component: DashblocksShowcase
+    },
+    {
+      path: '/sample',
+      name: 'Sample Dashboard',
+      component: SampleDashboard
     }
     /*
     {
