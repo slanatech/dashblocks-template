@@ -1,16 +1,15 @@
 <template>
   <div>
-    <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="isDark">
-    </db-dashboard>
+    <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="isDark"> </db-dashboard>
   </div>
 </template>
 
 <script>
-import { DbData, DbDashboard } from "dashblocks";
-import { demodashboard } from "../mixins/demodashboard";
+import { DbData, DbDashboard } from 'dashblocks';
+import { demodashboard } from '../mixins/demodashboard';
 
 export default {
-  name: "DashblocksShowcase",
+  name: 'DashblocksShowcase',
   components: {
     DbDashboard
   },
@@ -20,129 +19,129 @@ export default {
       dbdata: new DbData(),
       dbspec: {
         layout: {
-          type: "grid"
+          type: 'grid'
         },
         widgets: [
           {
-            id: "w2",
-            type: "DbDygraphsBar",
+            id: 'w2',
+            type: 'DbDygraphsBar',
             cspan: 16,
             height: 250,
             properties: {
               options: {
                 stackedGraph: true,
-                title: "Traffic over time",
-                ylabel: "Requests, Mil.",
-                labels: ["Date", "Success", "Error"],
-                legend: "always"
+                title: 'Traffic over time',
+                ylabel: 'Requests, Mil.',
+                labels: ['Date', 'Success', 'Error'],
+                legend: 'always'
               }
             }
           },
           {
-            id: "w8",
-            type: "DbEasyPie",
+            id: 'w8',
+            type: 'DbEasyPie',
             cspan: 2,
             height: 120,
-            properties: { barColor: "#2ca02c", lineWidth: 8 }
+            properties: { barColor: '#2ca02c', lineWidth: 8 }
           },
           {
-            id: "w9",
-            type: "DbEasyPie",
+            id: 'w9',
+            type: 'DbEasyPie',
             cspan: 2,
             height: 120,
-            properties: { barColor: "#2ca02c", lineWidth: 8 }
+            properties: { barColor: '#2ca02c', lineWidth: 8 }
           },
           {
-            id: "w10",
-            type: "DbEasyPie",
+            id: 'w10',
+            type: 'DbEasyPie',
             cspan: 2,
             height: 120,
-            properties: { barColor: "#ff7f0e", lineWidth: 8 }
+            properties: { barColor: '#ff7f0e', lineWidth: 8 }
           },
           {
-            id: "w11",
-            type: "DbEasyPie",
+            id: 'w11',
+            type: 'DbEasyPie',
             cspan: 2,
             height: 120,
-            properties: { barColor: "#ff7f0e", lineWidth: 8 }
+            properties: { barColor: '#ff7f0e', lineWidth: 8 }
           },
           {
-            id: "w12",
-            type: "DbEasyPie",
+            id: 'w12',
+            type: 'DbEasyPie',
             cspan: 2,
             height: 120,
-            properties: { barColor: "#2ca02c", lineWidth: 8 }
+            properties: { barColor: '#2ca02c', lineWidth: 8 }
           },
           {
-            id: "w13",
-            type: "DbEasyPie",
+            id: 'w13',
+            type: 'DbEasyPie',
             cspan: 2,
             height: 120,
-            properties: { barColor: "#2ca02c", lineWidth: 8 }
+            properties: { barColor: '#2ca02c', lineWidth: 8 }
           },
           {
-            id: "w14",
-            type: "DbEasyPie",
+            id: 'w14',
+            type: 'DbEasyPie',
             cspan: 2,
             height: 120,
-            properties: { barColor: "#d62728", lineWidth: 8 }
+            properties: { barColor: '#d62728', lineWidth: 8 }
           },
           {
-            id: "w15",
-            type: "DbEasyPie",
+            id: 'w15',
+            type: 'DbEasyPie',
             cspan: 2,
             height: 120,
-            properties: { barColor: "#d62728", lineWidth: 8 }
+            properties: { barColor: '#d62728', lineWidth: 8 }
           },
           {
-            id: "w3",
-            type: "DbChartjsPie",
+            id: 'w3',
+            type: 'DbChartjsPie',
             cspan: 4,
             height: 250
           },
           {
-            id: "w5",
-            type: "DbChartjsBubble",
+            id: 'w5',
+            type: 'DbChartjsBubble',
             cspan: 8,
             rspan: 2
           },
           {
-            id: "w4",
-            type: "DbChartjsPie",
+            id: 'w4',
+            type: 'DbChartjsPie',
             cspan: 4,
             height: 250
           },
           {
-            id: "w6",
-            type: "DbChartjsHorizontalBar",
+            id: 'w6',
+            type: 'DbChartjsHorizontalBar',
             cspan: 4,
             height: 250
           },
           {
-            id: "w7",
-            type: "DbChartjsBar",
+            id: 'w7',
+            type: 'DbChartjsBar',
             cspan: 4,
             height: 250
           },
           {
-            id: "w0",
-            type: "DbPlotly",
+            id: 'w0',
+            type: 'DbPlotly',
             cspan: 16,
             rspan: 2,
             properties: {
               layout: {
-                paper_bgcolor: "rgba(0,0,0,0)",
-                plot_bgcolor: "rgba(0,0,0,0)",
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
                 modebar: {
-                  bgcolor: "rgba(0,0,0,0)",
-                  color: "rgba(0,0,0,0.5)"
+                  bgcolor: 'rgba(0,0,0,0)',
+                  color: 'rgba(0,0,0,0.5)'
                 },
-                title: "reactive charts",
+                title: 'reactive charts',
                 xaxis: {
-                  title: "xaxis title"
+                  title: 'xaxis title'
                 },
                 yaxis: {
-                  title: "yaxis title"
+                  title: 'yaxis title'
                 },
                 margin: {
                   l: 60,
@@ -160,8 +159,8 @@ export default {
     };
   },
   mounted() {
-    this.$store.dispatch("setDashboardSpec", {
-      spec: JSON.stringify(this.dbspec, null, "\t")
+    this.$store.dispatch('setDashboardSpec', {
+      spec: JSON.stringify(this.dbspec, null, '\t')
     });
     // Initialize dashboard data
     this.initialize();
@@ -178,42 +177,42 @@ export default {
         dthData2.push([d, Math.random(), Math.random()]);
       }
 
-      this.dbdata.setWData("w2", {
+      this.dbdata.setWData('w2', {
         data: dthData2
       });
 
       let dataTwoSeries = {
-        labels: ["January", "February", "March", "April"],
+        labels: ['January', 'February', 'March', 'April'],
         datasets: [
           {
-            label: "Data One",
+            label: 'Data One',
             data: [10, 20, 30, 100]
           },
           {
-            label: "Data Two",
+            label: 'Data Two',
             data: [50, 10, 70, 11]
           }
         ]
       };
 
-      this.dbdata.setWData("w3", {
+      this.dbdata.setWData('w3', {
         data: {
-          labels: ["January", "February", "March", "April"],
+          labels: ['January', 'February', 'March', 'April'],
           datasets: [
             {
-              label: "Data One",
+              label: 'Data One',
               data: [10, 20, 30, 100]
             }
           ]
         }
       });
 
-      this.dbdata.setWData("w4", {
+      this.dbdata.setWData('w4', {
         data: {
-          labels: ["January", "February", "March", "April"],
+          labels: ['January', 'February', 'March', 'April'],
           datasets: [
             {
-              label: "Data One",
+              label: 'Data One',
               data: [50, 10, 67, 45]
             }
           ]
@@ -221,14 +220,14 @@ export default {
       });
 
       let bubbleData = {
-        labels: ["January", "February", "March", "April"],
+        labels: ['January', 'February', 'March', 'April'],
         datasets: [
           {
-            label: "Data One",
+            label: 'Data One',
             data: []
           },
           {
-            label: "Data Two",
+            label: 'Data Two',
             data: []
           }
         ]
@@ -247,25 +246,25 @@ export default {
         });
       }
 
-      this.dbdata.setWData("w5", {
+      this.dbdata.setWData('w5', {
         data: bubbleData
       });
 
-      this.dbdata.setWData("w6", {
+      this.dbdata.setWData('w6', {
         data: JSON.parse(JSON.stringify(dataTwoSeries))
       });
-      this.dbdata.setWData("w7", {
+      this.dbdata.setWData('w7', {
         data: JSON.parse(JSON.stringify(dataTwoSeries))
       });
 
-      this.dbdata.setWData("w8", { value: 15 });
-      this.dbdata.setWData("w9", { value: 35 });
-      this.dbdata.setWData("w10", { value: 52 });
-      this.dbdata.setWData("w11", { value: 64 });
-      this.dbdata.setWData("w12", { value: 10 });
-      this.dbdata.setWData("w13", { value: 25 });
-      this.dbdata.setWData("w14", { value: 72 });
-      this.dbdata.setWData("w15", { value: 84 });
+      this.dbdata.setWData('w8', { value: 15 });
+      this.dbdata.setWData('w9', { value: 35 });
+      this.dbdata.setWData('w10', { value: 52 });
+      this.dbdata.setWData('w11', { value: 64 });
+      this.dbdata.setWData('w12', { value: 10 });
+      this.dbdata.setWData('w13', { value: 25 });
+      this.dbdata.setWData('w14', { value: 72 });
+      this.dbdata.setWData('w15', { value: 84 });
     },
     getRand: function(max) {
       return Math.floor(Math.random() * Math.floor(max));

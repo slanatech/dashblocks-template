@@ -1,12 +1,12 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     switchDark: false,
-    dashboardSpec: ""
+    dashboardSpec: ''
   },
   mutations: {
     setSwitchDark(state, value) {
@@ -18,7 +18,7 @@ export default new Vuex.Store({
   },
   actions: {
     setDashboardSpec({ commit }, { spec }) {
-      commit("SET_DB_SPEC", { spec: spec });
+      commit('SET_DB_SPEC', { spec: spec });
     }
   }
 });
