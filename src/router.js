@@ -1,36 +1,29 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-//import DygraphsDynamic from "./views/DygraphsDynamic";
-//import ChartJsShowcase from "./views/ChartJsShowcase";
-import DashblocksShowcase from './views/DashblocksShowcase';
-import SampleDashboard from './views/SampleDashboard';
+import DefaultLayout from './layouts/Default.vue';
+import Home from './views/Home.vue';
+import About from './views/About.vue';
+import DashblocksShowcase from './views/DashblocksShowcase.vue';
 
 Vue.use(Router);
 
 export default new Router({
-  base: '/dashblocks-template/',
   routes: [
     {
       path: '/',
-      name: 'Dashblocks Dashboard',
-      component: DashblocksShowcase
-    },
-    {
-      path: '/sample',
-      name: 'Sample Dashboard',
-      component: SampleDashboard
+      component: DefaultLayout,
+      children: [
+        {
+          path: '',
+          name: 'showcase',
+          component: DashblocksShowcase
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: About
+        }
+      ]
     }
-    /*
-    {
-      path: "/dygraphsdynamic",
-      name: "Dygraphs - Dynamic Updates",
-      component: DygraphsDynamic
-    },
-    {
-      path: "/chartjs",
-      name: "Chart.js Showcase",
-      component: ChartJsShowcase
-    }
-    */
   ]
 });

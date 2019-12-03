@@ -1,7 +1,7 @@
 export const demodashboard = {
   computed: {
     isDark() {
-      return this.$store.state.switchDark;
+      return this.$store.state.dark;
     },
     dbSpecText() {
       return this.$store.state.dashboardSpec;

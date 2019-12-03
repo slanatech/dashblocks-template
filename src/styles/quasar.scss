@@ -1,0 +1,52 @@
+@import './quasar.variables.scss';
+@import '~quasar-styl';
+// @import '~quasar-addon-styl'
+
+body.body--dark {
+  color: $grey-6;
+}
+
+.q-dark {
+  color: $grey-6;
+}
+
+.q-item {
+  color: $blue-grey-8;
+}
+
+.q-item--dark {
+  color: $blue-grey-4;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $primary;
+  text-decoration: underline;
+}
+
+.db-toolbar {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.db-page {
+  @media (max-width: $breakpoint-xs-max) {
+    padding: 4px 8px 8px 8px;
+  }
+  @media (min-width: $breakpoint-sm-min) and (max-width: $breakpoint-md-max) {
+    padding: 4px 16px 16px 16px;
+  }
+  @media (min-width: $breakpoint-lg-min) {
+    padding: 4px 24px 24px 24px;
+  }
+}

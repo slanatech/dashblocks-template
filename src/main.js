@@ -9,6 +9,7 @@ import 'vuetify/dist/vuetify.min.css';
 
 // Dashblocks CSS
 import 'dashblocks/dist/dashblocks.css';
+import './quasar';
 
 Vue.config.productionTip = false;
 

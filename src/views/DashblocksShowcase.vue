@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <q-page class="db-page">
     <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="isDark"> </db-dashboard>
-  </div>
+  </q-page>
 </template>
 
 <script>
@@ -37,6 +37,28 @@ export default {
               }
             }
           },
+
+          { id: 'w51', type: 'DbNumber', cspan: 4, properties: { title: 'Requests', subtitle: 'Total requests received', icon: 'fa fa-signal' } },
+          {
+            id: 'w52',
+            type: 'DbNumber',
+            cspan: 4,
+            properties: {
+              title: 'Apdex Score',
+              subtitle: 'Overall Apdex Score',
+              total: 1,
+              trendMax: 1,
+              format: '%.2f',
+              percentRanges: [
+                { value: 50, color: 'red' },
+                { value: 60, color: 'orange' },
+                { value: 100, color: 'green' }
+              ]
+            }
+          },
+          { id: 'w53', type: 'DbNumber', cspan: 4, properties: { title: 'Current Req Rate', subtitle: 'Requests per second', format: '%.2f', icon: 'fa fa-exchange-alt' } },
+          { id: 'w54', type: 'DbNumber', cspan: 4, properties: { title: 'Current Err Rate', subtitle: 'Errors per second', format: '%.2f', icon: 'fa fa-exclamation' } },
+
           {
             id: 'w8',
             type: 'DbEasyPie',
@@ -122,36 +144,6 @@ export default {
             type: 'DbChartjsBar',
             cspan: 4,
             height: 250
-          },
-          {
-            id: 'w0',
-            type: 'DbPlotly',
-            cspan: 16,
-            rspan: 2,
-            properties: {
-              layout: {
-                paper_bgcolor: 'rgba(0,0,0,0)',
-                plot_bgcolor: 'rgba(0,0,0,0)',
-                modebar: {
-                  bgcolor: 'rgba(0,0,0,0)',
-                  color: 'rgba(0,0,0,0.5)'
-                },
-                title: 'reactive charts',
-                xaxis: {
-                  title: 'xaxis title'
-                },
-                yaxis: {
-                  title: 'yaxis title'
-                },
-                margin: {
-                  l: 60,
-                  r: 40,
-                  b: 40,
-                  t: 40,
-                  pad: 5
-                }
-              }
-            }
           }
         ]
       },
@@ -168,13 +160,22 @@ export default {
   },
   methods: {
     initialize: function() {
+      let totalReq = 0;
+      let trendReq = [];
+      let trendErr = [];
       let dthData2 = [];
       let sTS = Date.now() - 100 * 3600 * 1000;
 
       for (let i = 0; i < 100; i++) {
         let cTs = sTS + i * 3600 * 1000;
         let d = new Date(cTs);
-        dthData2.push([d, Math.random(), Math.random()]);
+        let r = Math.random();
+        let e = Math.random();
+        totalReq += r + e;
+        trendReq.push(r + e);
+        trendErr.push(e);
+
+        dthData2.push([d, r, e]);
       }
 
       this.dbdata.setWData('w2', {
@@ -256,6 +257,11 @@ export default {
       this.dbdata.setWData('w7', {
         data: JSON.parse(JSON.stringify(dataTwoSeries))
       });
+
+      this.dbdata.setWData('w51', { value: totalReq, trend: trendReq });
+      this.dbdata.setWData('w52', { value: 0.8, trend: trendReq });
+      this.dbdata.setWData('w53', { value: 10, trend: trendReq });
+      this.dbdata.setWData('w54', { value: 4, trend: trendErr });
 
       this.dbdata.setWData('w8', { value: 15 });
       this.dbdata.setWData('w9', { value: 35 });
