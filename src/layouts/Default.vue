@@ -66,7 +66,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import { DbColors } from 'dashblocks';
+import { dbColors } from 'dashblocks';
 
 export default {
   name: 'SwsUxLayout',
@@ -160,7 +160,7 @@ export default {
     }
   },
   mounted() {
-    this.testColors = DbColors.getColors(true); // TEMP TODO REMOVE
+    this.testColors = dbColors.getColors(true); // TEMP TODO REMOVE
     this.$q.dark.set(this.dark);
     this.initRefresh();
   },

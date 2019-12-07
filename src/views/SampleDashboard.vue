@@ -3,13 +3,10 @@
 </template>
 
 <script>
-import { DbData, DbDashboard } from 'dashblocks';
+import { DbData } from 'dashblocks';
 
 export default {
   name: 'SampleDashboard',
-  components: {
-    DbDashboard
-  },
   data() {
     return {
       isDark: false,

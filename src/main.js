@@ -3,11 +3,102 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+import {
+  DashBlocks,
+  DbDashboard,
+  DbHorizon,
+  DbSunburst,
+  DbSankey,
+  DbRidgeline,
+  DbChartjsBar,
+  DbChartjsHorizontalBar,
+  DbChartjsDoughnut,
+  DbChartjsLine,
+  DbChartjsPie,
+  DbChartjsPolarArea,
+  DbChartjsRadar,
+  DbChartjsBubble,
+  DbChartjsScatter,
+  DbNumber,
+  DbEasyPie,
+  DbTrendLine,
+  DbTrendBar,
+  DbSparkline,
+  DbDygraphsBar,
+  DbDygraphsLine,
+  DbDygraphsSparkLine,
+  DbDygraphsDateTimeHistogram
+} from 'dashblocks';
+
+Vue.use(DashBlocks, {
+  components: {
+    DbDashboard,
+    DbHorizon,
+    DbSunburst,
+    DbSankey,
+    DbRidgeline,
+    DbChartjsBar,
+    DbChartjsHorizontalBar,
+    DbChartjsDoughnut,
+    DbChartjsLine,
+    DbChartjsPie,
+    DbChartjsPolarArea,
+    DbChartjsRadar,
+    DbChartjsBubble,
+    DbChartjsScatter,
+    DbNumber,
+    DbEasyPie,
+    DbTrendLine,
+    DbTrendBar,
+    DbSparkline,
+    DbDygraphsBar,
+    DbDygraphsLine,
+    DbDygraphsSparkLine,
+    DbDygraphsDateTimeHistogram
+  }
+  //components: dashblocksComponents
+});
+
+// Sample: to import all
+/*
+import { DashBlocks } from 'dashblocks';
+import * as dashblocksComponents from 'dashblocks';
+Vue.use(DashBlocks, {
+  components: dashblocksComponents
+});
+*/
+
+/*
+  DbHorizon,
+  DbSunburst,
+  DbSankey,
+  DbRidgeline,
+  DbChartjsBar,
+  DbChartjsHorizontalBar,
+  DbChartjsDoughnut,
+  DbChartjsLine,
+  DbChartjsPie,
+  DbChartjsPolarArea,
+  DbChartjsRadar,
+  DbChartjsBubble,
+  DbChartjsScatter,
+  DbNumber,
+  DbEasyPie,
+  DbTrendLine,
+  DbTrendBar,
+  DbSparkline,
+  DbDygraphsBar,
+  DbDygraphsLine,
+  DbDygraphsSparkLine,
+  DbDygraphsDateTimeHistogram
+*/
+
 // Dashblocks CSS
 import 'dashblocks/dist/dashblocks.css';
+
 import './quasar';
 
-Vue.config.productionTip = false;
+//Vue.config.productionTip = false;
 
 new Vue({
   router,

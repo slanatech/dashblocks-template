@@ -5,14 +5,16 @@
 </template>
 
 <script>
-import { DbData, DbDashboard } from 'dashblocks';
+import { DbData, DbColors } from 'dashblocks';
 import { demodashboard } from '../mixins/demodashboard';
 
 export default {
   name: 'DashblocksShowcase',
+  /*
   components: {
     DbDashboard
   },
+  */
   mixins: [demodashboard],
   data() {
     return {

@@ -43,7 +43,8 @@
     "release-it": "^12.4.3",
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-quasar": "^2.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack-bundle-analyzer": "^3.6.0"
   },
   "eslintConfig": {
     "root": true,
