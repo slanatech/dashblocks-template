@@ -911,9 +911,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@quasar/extras@^1.0.0":
+"@quasar/extras@^1.3.3":
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/@quasar/extras/-/extras-1.3.3.tgz#4eade1e9ad4087ec05bee676d2e2cfb5c30c1810"
+  integrity sha512-xRXoIl0ZtRjQbTt6iLsvLMMOy8nyroeh2bahDlQmF14dkIU+gKQqKH7pMyn5as9xJq+Vubyw6957rbyasa8WOQ==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -8421,9 +8422,10 @@ qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
-quasar@^1.0.0:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.5.3.tgz#38eabf61218a8796c2a63b20e9d63ccfe630e59a"
+quasar@^1.5.4:
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.5.7.tgz#b21ae7858513a75175435bb889e24c570bf4bf9c"
+  integrity sha512-b/0LDYS5SleQUCb92yxLGrakpv5Bssl61mmxYqABootOU1rSytFjupkC2+hB+KBtWvjgGhjpty+Kir8/0X78zA==
 
 query-string@^4.1.0:
   version "4.3.4"
@@ -10342,10 +10344,6 @@ vue@^2.6.10:
 vuebars@^0.1.3:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/vuebars/-/vuebars-0.1.5.tgz#e954c54dd40bc6a13dddeb47d0e4653422e088e4"
-
-vuetify@^1.5.12:
-  version "1.5.21"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.5.21.tgz#e62b4f3b23fc9db39abf340cc9abea3e3859a051"
 
 vuetrend@^0.3.2:
   version "0.3.4"
