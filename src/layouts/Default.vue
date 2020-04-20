@@ -5,7 +5,7 @@
         <q-btn dense flat round icon="menu" @click="leftShown = !leftShown" />
 
         <q-toolbar-title>
-          dashblocks-template
+          dashblocks
         </q-toolbar-title>
 
         <q-btn dense flat round icon="menu" @click="rightShown = !rightShown" />
