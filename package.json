@@ -9,8 +9,6 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "demo:build": "vue-cli-service build --dest demo",
-    "demo:deploy": "yarn run demo:build && ./scripts/demodeploy.sh",
     "release": "release-it",
     "release-ci": "release-it --ci"
   },
