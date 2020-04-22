@@ -1,0 +1,29 @@
+/** UB Flex Box */
+.ub-box {
+  display: flex;
+  flex-flow: column;
+
+  .ub-row {
+    border: 0px;
+  }
+
+  .ub-row.ub-box-fixed {
+    flex: 0 0 auto;
+    /* The above is shorthand for:
+      flex-grow: 0,
+      flex-shrink: 0,
+      flex-basis: auto
+      */
+    width: 100%;
+  }
+
+  .ub-row.ub-box-expand {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .ub-row.ub-footer {
+    flex: 0 1 24px;
+    width: 100%;
+  }
+}

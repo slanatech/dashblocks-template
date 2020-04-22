@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh LpR fFf">
     <q-header class="text-grey-4 db-toolbar" height-hint="98">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="leftShown = !leftShown" />
@@ -18,6 +18,10 @@
           <q-tooltip anchor="bottom right" self="center middle">Slide show</q-tooltip>
         </q-toggle>
 
+        <q-btn-dropdown unelevated dense v-model="settingsOpen" icon="settings">
+          <settings></settings>
+        </q-btn-dropdown>
+
         <!--
         <q-btn dense flat size="md" round icon="refresh" @click="performRefresh" />
         <q-btn-toggle
@@ -33,24 +37,11 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above :mini="miniState" v-model="leftShown" side="left" bordered @on-layout="handleLeftLayout">
-      <q-list>
-        <q-item clickable v-ripple v-for="item in menuItems" v-bind:key="item.link" :to="item.link" exact>
-          <q-item-section avatar>
-            <q-icon :name="item.icon">
-              <q-tooltip anchor="top right" self="center middle">
-                {{ item.title }}
-              </q-tooltip>
-            </q-icon>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>{{ item.title }}</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-separator></q-separator>
-        <q-btn :ripple="false" class="full-width" flat :icon="miniState ? 'chevron_right' : 'chevron_left'" size="md" @click="toggleMiniState" />
-      </q-list>
-    </q-drawer>
+    <menu-drawer v-model="leftShown" :mini.sync="leftMini" :auto-expand="false">
+      <template v-slot:menu>
+        <menu-list :menu-items="menuItems"></menu-list>
+      </template>
+    </menu-drawer>
 
     <q-drawer v-model="rightShown" side="right" bordered>
       OPA
@@ -67,19 +58,33 @@
 <script>
 import { mapActions, mapState } from 'vuex';
 import { dbColors } from 'dashblocks';
+import MenuDrawer from '../components/menu/menudrawer.vue';
+import MenuList from '../components/menu/menulist.vue';
+import Settings from '../components/settings/settings.vue';
 
 export default {
-  name: 'SwsUxLayout',
-
+  name: 'DashblocksTemplateUxLayout',
+  components: {
+    MenuDrawer,
+    MenuList,
+    Settings
+  },
   data() {
     return {
-      miniState: true,
+      leftMini: true,
       leftShown: true,
       rightShown: false,
+      settingsOpen: false,
       transitionName: '',
       testColors: null,
       menuItems: [
-        { title: 'Showcase', link: '/', icon: 'trending_up' }
+        { id: '1', title: 'Dashboard', link: '/', icon: 'trending_up' },
+        { id: '2', title: 'Typography', link: '/typography', icon: 'mdi-format-text' },
+        { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
+        { id: '4', title: 'Tables', link: '/tables', icon: 'mdi-table' },
+        { id: '5', title: 'Charts', link: '/charts', icon: 'pie_chart' },
+        { id: '6', title: 'Icons', link: '/icons', icon: 'pie_chart' }
+
         /*
         { title: 'Requests', link: '/requests', icon: 'sync_alt' },
         { title: 'Errors', link: '/errors', icon: 'error' },

@@ -8,11 +8,16 @@ import '@quasar/extras/material-icons/material-icons.css';
 //import '@quasar/extras/material-icons-sharp/material-icons-sharp.css';
 //import '@quasar/extras/fontawesome-v5/fontawesome-v5.css';
 //import '@quasar/extras/ionicons-v4/ionicons-v4.css';
+import '@quasar/extras/mdi-v4/mdi-v4.css';
 
 import {
   Quasar,
   Ripple,
+  ClosePopup,
+  TouchPan,
   LoadingBar,
+  Notify,
+  Dialog,
   QLayout,
   QHeader,
   QDrawer,
@@ -22,6 +27,8 @@ import {
   QToolbar,
   QToolbarTitle,
   QBtn,
+  QBtnDropdown,
+  QBtnGroup,
   QIcon,
   QList,
   QItem,
@@ -35,12 +42,35 @@ import {
   QSeparator,
   QTooltip,
   QTable,
+  QTd,
+  QTh,
+  QTr,
   QCard,
   QCardSection,
+  QCardActions,
   QSelect,
   QToggle,
   QBadge,
-  QSpace
+  QSpace,
+  QInput,
+  QTabs,
+  QTab,
+  QTabPanels,
+  QTabPanel,
+  QDate,
+  QTime,
+  QPopupProxy,
+  QBar,
+  QPopupEdit,
+  QRadio,
+  QResizeObserver,
+  QChip,
+  QCheckbox,
+  QPagination,
+  QDialog,
+  QVirtualScroll,
+  QSkeleton,
+  QImg
 } from 'quasar';
 
 Vue.use(Quasar, {
@@ -55,6 +85,8 @@ Vue.use(Quasar, {
     QToolbar,
     QToolbarTitle,
     QBtn,
+    QBtnDropdown,
+    QBtnGroup,
     QIcon,
     QList,
     QItem,
@@ -68,17 +100,44 @@ Vue.use(Quasar, {
     QSeparator,
     QTooltip,
     QTable,
+    QTd,
+    QTh,
+    QTr,
     QCard,
     QCardSection,
+    QCardActions,
     QSelect,
     QToggle,
     QBadge,
-    QSpace
+    QSpace,
+    QInput,
+    QTabs,
+    QTab,
+    QTabPanels,
+    QTabPanel,
+    QDate,
+    QTime,
+    QPopupProxy,
+    QBar,
+    QPopupEdit,
+    QRadio,
+    QResizeObserver,
+    QChip,
+    QCheckbox,
+    QPagination,
+    QDialog,
+    QVirtualScroll,
+    QSkeleton,
+    QImg
   },
   directives: {
-    Ripple
+    Ripple,
+    ClosePopup,
+    TouchPan
   },
   plugins: {
-    LoadingBar
+    LoadingBar,
+    Notify,
+    Dialog
   }
 });
