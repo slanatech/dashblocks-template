@@ -1,16 +1,8 @@
 <template>
   <q-page class="ub-page">
     <div class="row items-center">
-      <div class="col-md-10 offset-md-1 q-ma-lg">
+      <div class="col-md-12 q-ma-lg">
         <div class="text-h3">Material Design Icons</div>
-      </div>
-    </div>
-    <div class="row items-center">
-      <div class="col-md-10 offset-md-1 q-ma-md">
-        <div class="text-subtitle1">
-          MDI icons by <a href="https://materialdesignicons.com/">https://materialdesignicons.com/</a>. See detailed documentation on using icons in Quasar at
-          <a href="https://quasar.dev/style/icon">https://quasar.dev/style/icon</a>
-        </div>
       </div>
     </div>
     <div class="row items-center">
@@ -21,11 +13,22 @@
       </q-input>
     </div>
     <div class="row items-center">
-      <div class="col-md-10 offset-md-1 q-ma-lg ub-icons-set">
+      <div class="col-md-12 q-ma-lg ub-icons-set" v-on:click="onIconClick">
         <!--<q-icon v-for="icon in icons" v-bind:key="icon" :name="`mdi-${icon}`" :title="`mdi-${icon}`" size="xl" class="q-pa-md q-ma-lg"></q-icon>-->
         <i v-for="icon in icons" v-bind:key="icon" :class="`mdi mdi-${icon}`" :title="`mdi-${icon}`"></i>
       </div>
     </div>
+    <q-drawer v-model="showDetails" side="right" bordered class="ub-drawer-transparent">
+      <div style="text-align: center;" class="q-ma-lg">
+        <q-icon v-if="currentIcon" :name="currentIcon" style="font-size: 240px;"></q-icon>
+      </div>
+      <div style="text-align: center;" class="text-subtitle1 q-ma-md">
+        {{ currentIcon }}
+      </div>
+      <div style="text-align: center;" class="q-ma-md">
+        <q-btn dense color="accent" title="Copy" icon="mdi-clipboard-text-multiple-outline" @click="onCopy">Copy</q-btn>
+      </div>
+    </q-drawer>
   </q-page>
 </template>
 
@@ -37,7 +40,9 @@ export default {
   data() {
     return {
       icons: [],
-      searchQuery: ''
+      searchQuery: '',
+      currentIcon: null,
+      showDetails: false
     };
   },
   watch: {
@@ -53,7 +58,23 @@ export default {
   mounted() {
     this.icons = Object.freeze(iconsmdiv5);
   },
-  methods: {}
+  methods: {
+    onIconClick(e) {
+      if (e.target && e.target.title) {
+        this.currentIcon = e.target.title;
+        this.showDetails = true;
+      }
+    },
+    onCopy(index) {
+      let tempInput = document.createElement('textarea');
+      tempInput.style = 'position: absolute; left: -1000px; top: -1000px';
+      tempInput.value = this.currentIcon;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+    }
+  }
 };
 </script>
 <style lang="scss">
@@ -65,10 +86,22 @@ export default {
   i {
     padding: 20px;
     margin: 10px;
+    cursor: pointer;
   }
 }
 
 .body--dark .ub-icons-set {
   color: rgba(144, 164, 174, 0.5);
+}
+
+.ub-drawer-transparent {
+  .q-drawer {
+    background: #fff;
+  }
+}
+.body--dark .ub-drawer-transparent {
+  .q-drawer {
+    background: #121212;
+  }
 }
 </style>
