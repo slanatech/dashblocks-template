@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md" style="max-width: 700px">
     <q-bar class="bg-none">
-      Messages
+      TODO Messages - message component, list
       <q-space />
       <q-btn dense flat round icon="close" @click="onClose" />
     </q-bar>

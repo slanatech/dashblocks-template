@@ -8,6 +8,14 @@
           dashblocks
         </q-toolbar-title>
 
+        <q-space></q-space>
+
+        <q-input dark="true" v-model="searchQuery" debounce="500" dense filled placeholder="Search" clearable class="col-md-3">
+          <template v-slot:prepend>
+            <q-icon name="search" />
+          </template>
+        </q-input>
+
         <q-btn-dropdown dense unelevated v-model="messagesOpen">
           <template v-slot:label>
             <div class="row items-center no-wrap">
@@ -96,6 +104,7 @@ export default {
       settingsOpen: false,
       messagesOpen: false,
       userInfoOpen: false,
+      searchQuery: '',
       transitionName: '',
       testColors: null,
       menuItems: [
