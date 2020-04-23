@@ -1,5 +1,16 @@
 <template>
-  <q-drawer ref="drawer" show-if-above :mini="miniState" v-model="shown" :side="side" bordered @on-layout="handleLayout" :mini-to-overlay="miniToOverlay" @mouseover="handleMouseOver" @mouseout="handleMouseOut">
+  <q-drawer
+    ref="drawer"
+    show-if-above
+    :mini="miniState"
+    v-model="shown"
+    :side="side"
+    bordered
+    @on-layout="handleLayout"
+    :mini-to-overlay="miniToOverlay"
+    @mouseover="handleMouseOver"
+    @mouseout="handleMouseOut"
+  >
     <div class="fit ub-box">
       <q-scroll-area class="ub-row ub-box-expand">
         <slot name="menu"></slot>

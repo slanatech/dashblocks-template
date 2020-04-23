@@ -8,18 +8,33 @@
           dashblocks
         </q-toolbar-title>
 
-        <q-btn dense flat round icon="menu" @click="rightShown = !rightShown" />
+        <q-btn-dropdown dense unelevated v-model="messagesOpen">
+          <template v-slot:label>
+            <div class="row items-center no-wrap">
+              <q-avatar size="sm" icon="mdi-bell">
+                <q-badge color="red" floating>4</q-badge>
+              </q-avatar>
+            </div>
+          </template>
+          <messages @close="messagesOpen = false"></messages>
+        </q-btn-dropdown>
 
-        <q-toggle v-model="dark" icon="brightness_medium">
-          <q-tooltip anchor="bottom right" self="center middle">Dark Mode</q-tooltip>
-        </q-toggle>
+        <q-btn-dropdown unelevated dense v-model="userInfoOpen" no-caps>
+          <template v-slot:label>
+            <div class="row items-center no-wrap">
+              <q-avatar size="sm">
+                <img src="images/avatars/male/1.png" />
+              </q-avatar>
+              <div class="text-center q-pa-sm">
+                John Smith
+              </div>
+            </div>
+          </template>
+          <user-info></user-info>
+        </q-btn-dropdown>
 
-        <q-toggle v-model="rotateEnabled" icon="dynamic_feed">
-          <q-tooltip anchor="bottom right" self="center middle">Slide show</q-tooltip>
-        </q-toggle>
-
-        <q-btn-dropdown unelevated dense v-model="settingsOpen" icon="settings">
-          <settings></settings>
+        <q-btn-dropdown dense unelevated v-model="settingsOpen" dropdown-icon="settings" class="ub-btn-dropdown-bare">
+          <settings @close="settingsOpen = false"></settings>
         </q-btn-dropdown>
 
         <!--
@@ -37,7 +52,7 @@
       </q-toolbar>
     </q-header>
 
-    <menu-drawer v-model="leftShown" :mini.sync="leftMini" :auto-expand="false">
+    <menu-drawer v-model="leftShown" :mini.sync="leftMini" :auto-expand="menuAutoExpand">
       <template v-slot:menu>
         <menu-list :menu-items="menuItems"></menu-list>
       </template>
@@ -61,13 +76,17 @@ import { dbColors } from 'dashblocks';
 import MenuDrawer from '../components/menu/menudrawer.vue';
 import MenuList from '../components/menu/menulist.vue';
 import Settings from '../components/settings/settings.vue';
+import UserInfo from '../components/user/userinfo.vue';
+import Messages from '../components/user/messages.vue';
 
 export default {
   name: 'DashblocksTemplateUxLayout',
   components: {
     MenuDrawer,
     MenuList,
-    Settings
+    Settings,
+    UserInfo,
+    Messages
   },
   data() {
     return {
@@ -75,6 +94,8 @@ export default {
       leftShown: true,
       rightShown: false,
       settingsOpen: false,
+      messagesOpen: false,
+      userInfoOpen: false,
       transitionName: '',
       testColors: null,
       menuItems: [
@@ -112,7 +133,7 @@ export default {
   },
   computed: {
     ...mapState({
-      rotateTrigger: state => state.rotateTrigger
+      menuAutoExpand: state => state.layout.menuAutoExpand
     }),
     refreshTimeout: {
       get() {
@@ -124,7 +145,7 @@ export default {
     },
     dark: {
       get() {
-        return this.$store.state.dark;
+        return this.$store.state.layout.dark;
       },
       set(value) {
         this.setDark({ dark: value });
@@ -167,36 +188,15 @@ export default {
   mounted() {
     this.testColors = dbColors.getColors(true); // TEMP TODO REMOVE
     this.$q.dark.set(this.dark);
-    this.initRefresh();
   },
   methods: {
     ...mapActions({
-      setDark: 'setDark',
-      initRefresh: 'initRefresh',
-      setRefreshTimeout: 'setRefreshTimeout', // map `this.getStats()` to `... dispatch('getStats')`
-      performRefresh: 'performRefresh'
-    }),
-    toggleMiniState() {
-      this.miniState = !this.miniState;
-      // need to wait a bit till it fully expands/collapses
-      this.$nextTick(() => {
-        setTimeout(() => {
-          window.dispatchEvent(new Event('resize'));
-        }, 200);
-      });
-    },
-    handleLeftLayout(state) {
-      console.log(`Left Layout ! ${state}`);
-      this.$nextTick(() => {
-        setTimeout(() => {
-          window.dispatchEvent(new Event('resize'));
-        }, 100);
-      });
-    }
+      setDark: 'layout/setDark'
+    })
   }
 };
 </script>
-<style>
+<style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;

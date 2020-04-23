@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store';
+import store from './store/store';
 
 import {
   DashBlocks,
@@ -66,31 +66,6 @@ import * as dashblocksComponents from 'dashblocks';
 Vue.use(DashBlocks, {
   components: dashblocksComponents
 });
-*/
-
-/*
-  DbHorizon,
-  DbSunburst,
-  DbSankey,
-  DbRidgeline,
-  DbChartjsBar,
-  DbChartjsHorizontalBar,
-  DbChartjsDoughnut,
-  DbChartjsLine,
-  DbChartjsPie,
-  DbChartjsPolarArea,
-  DbChartjsRadar,
-  DbChartjsBubble,
-  DbChartjsScatter,
-  DbNumber,
-  DbEasyPie,
-  DbTrendLine,
-  DbTrendBar,
-  DbSparkline,
-  DbDygraphsBar,
-  DbDygraphsLine,
-  DbDygraphsSparkLine,
-  DbDygraphsDateTimeHistogram
 */
 
 // Dashblocks CSS

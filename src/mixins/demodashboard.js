@@ -1,15 +1,8 @@
 export const demodashboard = {
   computed: {
     isDark() {
-      return this.$store.state.dark;
-    },
-    dbSpecText() {
-      return this.$store.state.dashboardSpec;
+      return this.$store.state.layout.dark;
     }
   },
-  watch: {
-    dbSpecText: function(val) {
-      this.dbspec = JSON.parse(val);
-    }
-  }
+  watch: {}
 };

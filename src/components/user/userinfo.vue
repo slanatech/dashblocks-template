@@ -1,13 +1,30 @@
 <template>
   <div class="q-pa-md" style="max-width: 350px">
-    <q-bar class="bg-none">
-      Settings
-      <q-space />
-      <q-btn dense flat round icon="close" @click="onClose" />
-    </q-bar>
+    <q-list bordered padding>
+      <q-item-label header>User Controls</q-item-label>
 
-    <q-list padding>
-      <!--<q-item tag="label" v-ripple>
+      <q-item clickable v-ripple>
+        <q-item-section>
+          <q-item-label>Content filtering</q-item-label>
+          <q-item-label caption>
+            Set the content filtering level to restrict apps that can be downloaded
+          </q-item-label>
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-item-section>
+          <q-item-label>Password</q-item-label>
+          <q-item-label caption>
+            Require password for purchase or use password to restrict purchase
+          </q-item-label>
+        </q-item-section>
+      </q-item>
+
+      <q-separator spaced />
+      <q-item-label header>General</q-item-label>
+
+      <q-item tag="label" v-ripple>
         <q-item-section side top>
           <q-checkbox v-model="check1" />
         </q-item-section>
@@ -48,32 +65,35 @@
 
       <q-separator spaced />
       <q-item-label header>Notifications</q-item-label>
-      -->
 
       <q-item tag="label" v-ripple>
         <q-item-section>
-          <q-item-label>Dark Mode</q-item-label>
+          <q-item-label>Battery too low</q-item-label>
         </q-item-section>
         <q-item-section side>
-          <q-toggle v-model="dark" icon="brightness_medium" />
+          <q-toggle color="blue" v-model="notif1" val="battery" />
         </q-item-section>
       </q-item>
 
       <q-item tag="label" v-ripple>
         <q-item-section>
-          <q-item-label>Expand Menu</q-item-label>
-          <q-item-label caption>Auto expand menu when hovering</q-item-label>
+          <q-item-label>Friend request</q-item-label>
+          <q-item-label caption>Allow notification</q-item-label>
         </q-item-section>
         <q-item-section side top>
-          <q-toggle v-model="menuAutoExpand" icon="menu" />
+          <q-toggle color="green" v-model="notif2" val="friend" />
         </q-item-section>
       </q-item>
 
-      <q-separator spaced />
-      <q-item-label header>TODO Chart Colors</q-item-label>
-
-      <q-separator spaced />
-      <q-item-label header>TODO Banner Colors, Backgounds</q-item-label>
+      <q-item tag="label" v-ripple>
+        <q-item-section>
+          <q-item-label>Picture uploaded</q-item-label>
+          <q-item-label caption>Allow notification when uploading images</q-item-label>
+        </q-item-section>
+        <q-item-section side top>
+          <q-toggle color="red" v-model="notif3" val="picture" />
+        </q-item-section>
+      </q-item>
 
       <q-separator spaced />
       <q-item-label header>Other settings</q-item-label>
@@ -111,9 +131,8 @@
   </div>
 </template>
 <script>
-import { mapActions, mapState } from 'vuex';
 export default {
-  name: 'Settings',
+  name: 'UserInfo',
   components: {},
   props: {},
   data() {
@@ -131,33 +150,8 @@ export default {
       mic: 8
     };
   },
-  computed: {
-    dark: {
-      get() {
-        return this.$store.state.layout.dark;
-      },
-      set(value) {
-        this.setDark({ dark: value });
-      }
-    },
-    menuAutoExpand: {
-      get() {
-        return this.$store.state.layout.menuAutoExpand;
-      },
-      set(value) {
-        this.setMenuAutoExpand({ menuAutoExpand: value });
-      }
-    }
-  },
+  computed: {},
   watch: {},
-  methods: {
-    ...mapActions({
-      setDark: 'layout/setDark',
-      setMenuAutoExpand: 'layout/setMenuAutoExpand'
-    }),
-    onClose() {
-      this.$emit('close');
-    }
-  }
+  methods: {}
 };
 </script>
