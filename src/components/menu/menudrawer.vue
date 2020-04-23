@@ -67,30 +67,32 @@ export default {
       this.$emit('input', val);
     },
     mini: function(val) {
-      this.miniState = val;
+      this.setMini(val);
     },
     miniState: function(val) {
       this.$emit('update:mini', val);
     }
   },
   methods: {
+    resize(delay) {
+      this.$nextTick(() => {
+        setTimeout(() => {
+          window.dispatchEvent(new Event('resize'));
+        }, delay);
+      });
+    },
     handleLayout(state) {
       console.log(`handleLayout: ${state}`);
       this.drawerBelowBreakpoint = this.$refs.drawer.belowBreakpoint;
-      this.$nextTick(() => {
-        setTimeout(() => {
-          window.dispatchEvent(new Event('resize'));
-        }, 100);
-      });
+      this.resize(100);
     },
     toggleMini() {
       this.miniState = !this.miniState;
-      // need to wait a bit till it fully expands/collapses
-      this.$nextTick(() => {
-        setTimeout(() => {
-          window.dispatchEvent(new Event('resize'));
-        }, 200);
-      });
+      this.resize(200);
+    },
+    setMini(mini) {
+      this.miniState = mini;
+      this.resize(200);
     },
     handleMouseOver() {
       if (this.autoExpand) {

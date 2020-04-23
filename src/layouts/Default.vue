@@ -58,13 +58,9 @@
 
     <menu-drawer v-model="leftShown" :mini.sync="menuMini" :auto-expand="menuAutoExpand">
       <template v-slot:menu>
-        <menu-list :menu-items="menuItems"></menu-list>
+        <menu-list :menu-items="menuItems" v-on:expansionItemClick="menuMini = false"></menu-list>
       </template>
     </menu-drawer>
-
-    <q-drawer v-model="rightShown" side="right" bordered>
-      OPA
-    </q-drawer>
 
     <q-page-container>
       <transition :name="transitionName">

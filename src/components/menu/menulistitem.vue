@@ -7,6 +7,9 @@
     expand-separator
     :class="`menuitem-ei-${item.id} ` + itemClass"
     :active-class="itemActiveClass"
+    @click="onClick"
+    @show="onShow"
+    @hide="onHide"
   >
     <q-tooltip anchor="top right" self="center middle" :target="`.menuitem-ei-${item.id} i`">{{ item.title }}</q-tooltip>
     <menu-list-item v-for="childItem in item.items" v-bind:key="childItem.id" :item="childItem" />
@@ -71,6 +74,16 @@ export default {
     }
   },
   watch: {},
-  methods: {}
+  methods: {
+    onClick(evt) {
+      this.$emit('expansionItemClick', evt);
+    },
+    onShow(evt) {
+      this.$emit('itemExpanded', evt);
+    },
+    onHide(evt) {
+      this.$emit('itemCollapsed', evt);
+    }
+  }
 };
 </script>

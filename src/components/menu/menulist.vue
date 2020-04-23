@@ -1,6 +1,15 @@
 <template>
   <q-list class="db-menu-list">
-    <menu-list-item v-for="item in menuItems" v-bind:key="item.id" :item="item" :collapsed="collapsed" :active-class="activeClass" />
+    <menu-list-item
+      v-for="item in menuItems"
+      v-bind:key="item.id"
+      :item="item"
+      :collapsed="collapsed"
+      :active-class="activeClass"
+      @expansionItemClick="onExpansionItemClick(item)"
+      @itemExpanded="onItemExpanded(item)"
+      @itemCollapsed="onItemCollapsed(item)"
+    />
   </q-list>
 </template>
 <script>
@@ -27,7 +36,17 @@ export default {
   },
   computed: {},
   watch: {},
-  methods: {}
+  methods: {
+    onExpansionItemClick(item) {
+      this.$emit('expansionItemClick', item);
+    },
+    onItemExpanded(item) {
+      this.$emit('itemExpanded', item);
+    },
+    onItemCollapsed(item) {
+      this.$emit('itemCollapsed', item);
+    }
+  }
 };
 </script>
 <style lang="scss">
