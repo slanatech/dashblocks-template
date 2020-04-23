@@ -4,6 +4,7 @@ import DefaultLayout from './layouts/Default.vue';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import DashblocksShowcase from './views/DashblocksShowcase.vue';
+import Typography from './views/typography.vue';
 
 Vue.use(Router);
 
@@ -19,9 +20,9 @@ export default new Router({
           component: DashblocksShowcase
         },
         {
-          path: '/about',
-          name: 'about',
-          component: About
+          path: '/typography',
+          name: 'typography',
+          component: Typography
         }
       ]
     }

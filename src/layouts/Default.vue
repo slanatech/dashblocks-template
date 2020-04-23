@@ -16,15 +16,15 @@
           </template>
         </q-input>
 
-        <q-btn-dropdown dense unelevated v-model="messagesOpen">
-          <template v-slot:label>
-            <div class="row items-center no-wrap">
-              <q-avatar size="sm" icon="mdi-bell">
-                <q-badge color="red" floating>4</q-badge>
-              </q-avatar>
-            </div>
-          </template>
-          <messages @close="messagesOpen = false"></messages>
+        <q-btn dense unelevated icon="mdi-bell" class="q-ma-sm">
+          <q-badge color="red" floating>4</q-badge>
+          <q-menu v-model="messagesOpen">
+            <messages @close="messagesOpen = false"></messages>
+          </q-menu>
+        </q-btn>
+
+        <q-btn-dropdown dense unelevated v-model="settingsOpen" dropdown-icon="settings" class="ub-btn-dropdown-bare q-ma-sm">
+          <settings @close="settingsOpen = false"></settings>
         </q-btn-dropdown>
 
         <q-btn-dropdown unelevated dense v-model="userInfoOpen" no-caps>
@@ -39,10 +39,6 @@
             </div>
           </template>
           <user-info></user-info>
-        </q-btn-dropdown>
-
-        <q-btn-dropdown dense unelevated v-model="settingsOpen" dropdown-icon="settings" class="ub-btn-dropdown-bare">
-          <settings @close="settingsOpen = false"></settings>
         </q-btn-dropdown>
 
         <!--
@@ -60,7 +56,7 @@
       </q-toolbar>
     </q-header>
 
-    <menu-drawer v-model="leftShown" :mini.sync="leftMini" :auto-expand="menuAutoExpand">
+    <menu-drawer v-model="leftShown" :mini.sync="menuMini" :auto-expand="menuAutoExpand">
       <template v-slot:menu>
         <menu-list :menu-items="menuItems"></menu-list>
       </template>
@@ -98,7 +94,6 @@ export default {
   },
   data() {
     return {
-      leftMini: true,
       leftShown: true,
       rightShown: false,
       settingsOpen: false,
@@ -108,7 +103,7 @@ export default {
       transitionName: '',
       testColors: null,
       menuItems: [
-        { id: '1', title: 'Dashboard', link: '/', icon: 'trending_up' },
+        { id: '1', title: 'Dashboard', link: '/', icon: 'dashboard' },
         { id: '2', title: 'Typography', link: '/typography', icon: 'mdi-format-text' },
         { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
         { id: '4', title: 'Tables', link: '/tables', icon: 'mdi-table' },
@@ -126,38 +121,27 @@ export default {
         { title: 'Last Errors', link: '/lasterrors', icon: 'error_outline' },
         { title: 'Longest Requests', link: '/longestrequests', icon: 'hourglass_empty' }
         */
-      ],
-      refreshOptions: [
-        { icon: 'pause', value: 0 },
-        { label: '1s', value: 1000 },
-        { label: '5s', value: 5000 },
-        { label: '15s', value: 15000 },
-        { label: '30s', value: 30000 },
-        { label: '1m', value: 60000 }
-      ],
-      rotateEnabled: false,
-      rotateCurrent: -1,
-      rotateOptions: ['/', '/requests', '/errors', '/api', '/apiresponses', '/rates', '/payload']
+      ]
     };
   },
   computed: {
     ...mapState({
       menuAutoExpand: state => state.layout.menuAutoExpand
     }),
-    refreshTimeout: {
-      get() {
-        return this.$store.state.refreshTimeout;
-      },
-      set(value) {
-        this.setRefreshTimeout({ timeout: value });
-      }
-    },
     dark: {
       get() {
         return this.$store.state.layout.dark;
       },
       set(value) {
         this.setDark({ dark: value });
+      }
+    },
+    menuMini: {
+      get() {
+        return this.$store.state.layout.menuMini;
+      },
+      set(value) {
+        this.setMenuMini({ menuMini: value });
       }
     }
   },
@@ -200,7 +184,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      setDark: 'layout/setDark'
+      setDark: 'layout/setDark',
+      setMenuMini: 'layout/setMenuMini'
     })
   }
 };

@@ -61,8 +61,18 @@
 
       <q-item tag="label" v-ripple>
         <q-item-section>
-          <q-item-label>Expand Menu</q-item-label>
-          <q-item-label caption>Auto expand menu when hovering</q-item-label>
+          <q-item-label>Minimize Menu</q-item-label>
+          <q-item-label caption>Minimize menu sidebar</q-item-label>
+        </q-item-section>
+        <q-item-section side top>
+          <q-toggle v-model="menuMini" icon="menu" />
+        </q-item-section>
+      </q-item>
+
+      <q-item tag="label" v-ripple>
+        <q-item-section>
+          <q-item-label>Auto-Expand Menu</q-item-label>
+          <q-item-label caption>Auto-expand menu when hovering</q-item-label>
         </q-item-section>
         <q-item-section side top>
           <q-toggle v-model="menuAutoExpand" icon="menu" />
@@ -147,13 +157,22 @@ export default {
       set(value) {
         this.setMenuAutoExpand({ menuAutoExpand: value });
       }
+    },
+    menuMini: {
+      get() {
+        return this.$store.state.layout.menuMini;
+      },
+      set(value) {
+        this.setMenuMini({ menuMini: value });
+      }
     }
   },
   watch: {},
   methods: {
     ...mapActions({
       setDark: 'layout/setDark',
-      setMenuAutoExpand: 'layout/setMenuAutoExpand'
+      setMenuAutoExpand: 'layout/setMenuAutoExpand',
+      setMenuMini: 'layout/setMenuMini'
     }),
     onClose() {
       this.$emit('close');

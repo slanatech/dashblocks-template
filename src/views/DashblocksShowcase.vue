@@ -1,5 +1,5 @@
 <template>
-  <q-page class="db-page">
+  <q-page class="ub-page">
     <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="isDark"> </db-dashboard>
   </q-page>
 </template>
@@ -58,8 +58,18 @@ export default {
               ]
             }
           },
-          { id: 'w53', type: 'DbNumber', cspan: 4, properties: { title: 'Current Req Rate', subtitle: 'Requests per second', format: '%.2f', icon: 'fa fa-exchange-alt' } },
-          { id: 'w54', type: 'DbNumber', cspan: 4, properties: { title: 'Current Err Rate', subtitle: 'Errors per second', format: '%.2f', icon: 'fa fa-exclamation' } },
+          {
+            id: 'w53',
+            type: 'DbNumber',
+            cspan: 4,
+            properties: { title: 'Current Req Rate', subtitle: 'Requests per second', format: '%.2f', icon: 'fa fa-exchange-alt' }
+          },
+          {
+            id: 'w54',
+            type: 'DbNumber',
+            cspan: 4,
+            properties: { title: 'Current Err Rate', subtitle: 'Errors per second', format: '%.2f', icon: 'fa fa-exclamation' }
+          },
 
           {
             id: 'w8',

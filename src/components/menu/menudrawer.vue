@@ -66,6 +66,9 @@ export default {
     shown: function(val) {
       this.$emit('input', val);
     },
+    mini: function(val) {
+      this.miniState = val;
+    },
     miniState: function(val) {
       this.$emit('update:mini', val);
     }
