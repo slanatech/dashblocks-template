@@ -10,7 +10,7 @@
 
         <q-space></q-space>
 
-        <q-input dark="true" v-model="searchQuery" debounce="500" dense filled placeholder="Search" clearable class="col-md-3">
+        <q-input :dark="true" v-model="searchQuery" debounce="500" dense filled placeholder="Search" clearable class="col-md-3">
           <template v-slot:prepend>
             <q-icon name="search" />
           </template>
@@ -104,11 +104,28 @@ export default {
       testColors: null,
       menuItems: [
         { id: '1', title: 'Dashboard', link: '/', icon: 'dashboard' },
-        { id: '2', title: 'Typography', link: '/typography', icon: 'mdi-format-text' },
         { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
         { id: '4', title: 'Tables', link: '/tables', icon: 'mdi-table' },
         { id: '5', title: 'Charts', link: '/charts', icon: 'pie_chart' },
-        { id: '6', title: 'Icons', link: '/icons', icon: 'pie_chart' }
+        {
+          id: '6',
+          title: 'Style',
+          icon: 'mdi-draw',
+          items: [
+            { id: '7', title: 'Typography', link: '/typography', icon: 'mdi-format-text' },
+            { id: '8', title: 'Icons', link: '/icons', icon: 'pie_chart' },
+            {
+              id: '9',
+              title: 'MDI Icons',
+              caption: 'Material Design Icons',
+              link: '/mdi',
+              icon: 'pie_chart',
+              badge: '5045',
+              badgeColor: 'accent',
+              sideCaption: 'icons'
+            }
+          ]
+        }
 
         /*
         { title: 'Requests', link: '/requests', icon: 'sync_alt' },

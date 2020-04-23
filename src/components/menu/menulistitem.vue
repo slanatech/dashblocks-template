@@ -1,5 +1,13 @@
 <template>
-  <q-expansion-item v-if="item.items" :icon="item.icon" :label="item.title" :caption="item.caption" expand-separator :class="`menuitem-ei-${item.id} ` + itemClass" :active-class="itemActiveClass">
+  <q-expansion-item
+    v-if="item.items"
+    :icon="item.icon"
+    :label="item.title"
+    :caption="item.caption"
+    expand-separator
+    :class="`menuitem-ei-${item.id} ` + itemClass"
+    :active-class="itemActiveClass"
+  >
     <q-tooltip anchor="top right" self="center middle" :target="`.menuitem-ei-${item.id} i`">{{ item.title }}</q-tooltip>
     <menu-list-item v-for="childItem in item.items" v-bind:key="childItem.id" :item="childItem" />
   </q-expansion-item>
