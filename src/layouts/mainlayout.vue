@@ -4,7 +4,9 @@
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="leftShown = !leftShown" />
 
-        <q-toolbar-title>
+        <q-btn dense flat icon="img:dblogo.png" type="a" href="https://dashblocks.io" target="_blank" />
+
+        <q-toolbar-title style="padding-left: 4px;">
           dashblocks.io
         </q-toolbar-title>
 

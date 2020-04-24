@@ -3,27 +3,28 @@
     <q-page-container>
       <q-page class="flex flex-center">
         <q-card class="ub-login-card">
-          <q-card-section class="ub-login-hdr text-white">
-            <q-btn round color="secondary" icon="mdi-google" class="absolute" style="z-index:10; top: 40px; right: 12px; transform: translateY(-50%);">
+          <q-card-section class="ub-login-hdr text-white text-center">
+            <q-btn round color="deep-purple-7" icon="mdi-google" class="absolute" style="z-index:10; top: 40px; right: 12px; transform: translateY(-50%);">
               <q-tooltip>Login With Google</q-tooltip>
             </q-btn>
-            <q-btn round color="secondary" icon="mdi-facebook" class="absolute" style="z-index:10; top: 100px; right: 12px; transform: translateY(-50%);">
+            <q-btn round color="deep-purple-7" icon="mdi-facebook" class="absolute" style="z-index:10; top: 100px; right: 12px; transform: translateY(-50%);">
               <q-tooltip>Login With Facebook</q-tooltip>
             </q-btn>
-            <q-btn round color="secondary" icon="mdi-github" class="absolute" style="z-index:10; top: 160px; right: 12px; transform: translateY(-50%);">
+            <q-btn round color="deep-purple-7" icon="mdi-github" class="absolute" style="z-index:10; top: 160px; right: 12px; transform: translateY(-50%);">
               <q-tooltip>Login With GitHub</q-tooltip>
             </q-btn>
-            <div class="text-h5 absolute-bottom text-center" style="margin-bottom: 24px;">dashblocks.io</div>
+            <q-img src="dblogo.png" style="height: 128px; width: 128px;"></q-img>
+            <div class="text-h5 absolute-bottom" style="margin-bottom: 20px;">dashblocks.io</div>
           </q-card-section>
 
           <q-card-section>
             <q-card-section>
-              <q-input v-model="username" debounce="400" clearable label="Username or Email">
+              <q-input v-model="username" clearable label="Username or Email">
                 <template v-slot:prepend>
                   <q-icon name="mdi-account" />
                 </template>
               </q-input>
-              <q-input v-model="password" debounce="400" clearable label="password">
+              <q-input v-model="password" type="password" clearable label="password">
                 <template v-slot:prepend>
                   <q-icon name="mdi-lock" />
                 </template>
