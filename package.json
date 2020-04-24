@@ -117,9 +117,6 @@
       "release": true
     },
     "hooks": {
-      "before:init": [
-        "yarn run demo:deploy"
-      ],
       "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
     }
   },
