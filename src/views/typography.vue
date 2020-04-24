@@ -1,12 +1,12 @@
 <template>
   <q-page class="ub-page">
     <div class="row items-center">
-      <div class="col-md-8 offset-md-2 q-ma-lg">
+      <div class="col-md-10 offset-md-1 q-ma-lg">
         <div class="text-h3">Typography</div>
       </div>
     </div>
     <div class="row items-center">
-      <div class="col-md-8 offset-md-2 q-ma-md">
+      <div class="col-md-10 offset-md-1 q-ma-md">
         <div class="text-body1">
           Typography by <a href="https://quasar.dev/">Quasar</a>. See detailed documentation at
           <a href="https://quasar.dev/style/typography">https://quasar.dev/style/typography</a>
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="row items-center">
-      <div class="col-md-8 offset-md-2 q-ma-md">
+      <div class="col-md-10 offset-md-1 q-ma-md">
         <div class="row items-center q-mb-lg">
           <div class="col-sm-3 col-12">
             <div role="alert" class="q-badge flex inline items-center no-wrap q-badge--single-line bg-primary">text-h1</div>

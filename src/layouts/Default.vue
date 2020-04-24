@@ -17,7 +17,7 @@
         </q-input>
 
         <q-btn dense unelevated icon="mdi-bell" class="q-ma-sm">
-          <q-badge color="red" floating>4</q-badge>
+          <q-badge color="red" floating>5</q-badge>
           <q-menu v-model="messagesOpen">
             <messages @close="messagesOpen = false"></messages>
           </q-menu>
@@ -27,7 +27,7 @@
           <settings @close="settingsOpen = false"></settings>
         </q-btn-dropdown>
 
-        <q-btn-dropdown unelevated dense v-model="userInfoOpen" no-caps>
+        <q-btn-dropdown unelevated v-model="userInfoOpen" no-caps>
           <template v-slot:label>
             <div class="row items-center no-wrap">
               <q-avatar size="sm">
@@ -40,19 +40,6 @@
           </template>
           <user-info></user-info>
         </q-btn-dropdown>
-
-        <!--
-        <q-btn dense flat size="md" round icon="refresh" @click="performRefresh" />
-        <q-btn-toggle
-          v-model="refreshTimeout"
-          text-color="blue-grey-8"
-          toggle-text-color="grey-4"
-          size="md"
-          dense
-          flat
-          :options="refreshOptions"
-        />
-        -->
       </q-toolbar>
     </q-header>
 
@@ -100,9 +87,18 @@ export default {
       testColors: null,
       menuItems: [
         { id: '1', title: 'Dashboard', link: '/', icon: 'dashboard' },
+        { id: 'observability', title: 'Observability Dashboards', icon: 'mdi-eye-check', caption: 'Monitor your Microservices' },
         { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
         { id: '4', title: 'Tables', link: '/tables', icon: 'mdi-table' },
-        { id: '5', title: 'Charts', icon: 'pie_chart', items: [{ id: 'chartjs', title: 'Chart.js', link: '/chartjs', icon: 'mdi-chart-bar' }] },
+        {
+          id: '5',
+          title: 'Charts',
+          icon: 'pie_chart',
+          items: [
+            { id: 'chartjs', title: 'Chart.js', link: '/chartjs', icon: 'mdi-chart-bar' },
+            { id: 'dygraphs', title: 'Dygraphs', link: '/dygraphs', icon: 'mdi-chart-line' }
+          ]
+        },
         {
           id: '6',
           title: 'Style',
@@ -162,32 +158,6 @@ export default {
     dark: {
       handler: function(val) {
         this.$q.dark.set(val);
-      }
-    },
-    rotateEnabled: {
-      handler: function(val) {
-        if (val) {
-          this.rotateCurrent = -1;
-        }
-      }
-    },
-    rotateTrigger: {
-      handler: function() {
-        if (!this.rotateEnabled) {
-          return;
-        }
-        console.log(`Rotating screen: ${Date.now()}`);
-        this.rotateCurrent++;
-        if (this.rotateCurrent >= this.rotateOptions.length) {
-          this.rotateCurrent = 0;
-        }
-        this.transitionName = 'fade';
-        this.$router.push(this.rotateOptions[this.rotateCurrent]);
-        this.$nextTick(() => {
-          setTimeout(() => {
-            this.transitionName = '';
-          }, 550);
-        });
       }
     }
   },

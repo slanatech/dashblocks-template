@@ -249,7 +249,6 @@ export default {
 
       this.dbdata.setWData('wTrend', { data: dataTrend });
 
-      //let bw = 1;
       // Dynamic updates
       this.refreshIntervalId = setInterval(() => {
         this.performRefresh();

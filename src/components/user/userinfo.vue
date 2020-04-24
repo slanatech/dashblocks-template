@@ -1,6 +1,75 @@
 <template>
-  <div class="q-pa-md" style="max-width: 350px">
-    <q-list bordered padding>
+  <div class="q-pa-md" style="max-width: 280px">
+    <q-list style="width: 260px">
+      <q-item>
+        <q-item-section avatar>
+          <q-avatar>
+            <img src="images/avatars/male/1.png" />
+          </q-avatar>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label lines="1">
+            <div class="text-h5">John Smith</div>
+          </q-item-label>
+        </q-item-section>
+      </q-item>
+
+      <q-separator spaced />
+
+      <q-item clickable v-ripple v-close-popup>
+        <q-item-section avatar>
+          <q-icon name="mdi-account"></q-icon>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label lines="1">
+            My Account
+          </q-item-label>
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple v-close-popup>
+        <q-item-section avatar>
+          <q-icon name="mdi-bell"></q-icon>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label lines="1">
+            Notifications
+          </q-item-label>
+        </q-item-section>
+        <q-item-section side>
+          <q-badge color="red" label="5" />
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple v-close-popup>
+        <q-item-section avatar>
+          <q-icon name="mdi-calendar"></q-icon>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label lines="1">
+            Calendar
+          </q-item-label>
+        </q-item-section>
+        <q-item-section side>
+          <q-badge color="red" label="1" />
+        </q-item-section>
+      </q-item>
+
+      <q-separator spaced />
+
+      <q-item clickable v-ripple v-close-popup>
+        <q-item-section avatar>
+          <q-icon name="mdi-logout"></q-icon>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label lines="1">
+            Log Out
+          </q-item-label>
+        </q-item-section>
+      </q-item>
+    </q-list>
+
+    <!--<q-list bordered padding>
       <q-item-label header>User Controls</q-item-label>
 
       <q-item clickable v-ripple>
@@ -127,7 +196,7 @@
           <q-slider v-model="mic" :min="0" :max="50" label />
         </q-item-section>
       </q-item>
-    </q-list>
+    </q-list>-->
   </div>
 </template>
 <script>
@@ -136,19 +205,7 @@ export default {
   components: {},
   props: {},
   data() {
-    return {
-      check1: true,
-      check2: false,
-      check3: false,
-
-      notif1: true,
-      notif2: true,
-      notif3: false,
-
-      volume: 6,
-      brightness: 3,
-      mic: 8
-    };
+    return {};
   },
   computed: {},
   watch: {},

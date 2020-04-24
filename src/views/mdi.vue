@@ -1,7 +1,7 @@
 <template>
   <q-page class="ub-page">
     <div class="row items-center">
-      <div class="col-md-12 q-ma-lg">
+      <div class="col-md-10 offset-md-1 q-ma-lg">
         <div class="text-h3">Material Design Icons</div>
       </div>
     </div>
@@ -13,7 +13,7 @@
       </q-input>
     </div>
     <div class="row items-center">
-      <div class="col-md-12 q-ma-lg ub-icons-set" v-on:click="onIconClick">
+      <div class="col-md-10 offset-md-1 ub-icons-set" v-on:click="onIconClick">
         <!--<q-icon v-for="icon in icons" v-bind:key="icon" :name="`mdi-${icon}`" :title="`mdi-${icon}`" size="xl" class="q-pa-md q-ma-lg"></q-icon>-->
         <i v-for="icon in icons" v-bind:key="icon" :class="`mdi mdi-${icon}`" :title="`mdi-${icon}`"></i>
       </div>
