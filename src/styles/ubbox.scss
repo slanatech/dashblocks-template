@@ -9,11 +9,6 @@
 
   .ub-row.ub-box-fixed {
     flex: 0 0 auto;
-    /* The above is shorthand for:
-      flex-grow: 0,
-      flex-shrink: 0,
-      flex-basis: auto
-      */
     width: 100%;
   }
 

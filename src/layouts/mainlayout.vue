@@ -67,7 +67,7 @@ import UserInfo from '../components/user/userinfo.vue';
 import Messages from '../components/user/messages.vue';
 
 export default {
-  name: 'DashblocksTemplateUxLayout',
+  name: 'MainLayout',
   components: {
     MenuDrawer,
     MenuList,
@@ -117,6 +117,12 @@ export default {
               sideCaption: 'icons'
             }
           ]
+        },
+        {
+          id: 'pages',
+          title: 'Pages',
+          icon: 'mdi-link-box-outline',
+          items: [{ id: '7', title: 'Login', link: '/login', icon: 'mdi-login' }]
         }
 
         /*

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import DefaultLayout from './layouts/Default.vue';
+import MainLayout from './layouts/mainlayout.vue';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import DashblocksShowcase from './views/DashblocksShowcase.vue';
@@ -10,13 +10,15 @@ import ChartJsShowcase from './views/ChartJsShowcase.vue';
 import Dygraphs from './views/Dygraphs.vue';
 import Mdi from './views/mdi.vue';
 
+import Login from './pages/login.vue';
+
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      component: DefaultLayout,
+      component: MainLayout,
       children: [
         {
           path: '',
@@ -49,6 +51,10 @@ export default new Router({
           component: MaterialIcons
         }
       ]
+    },
+    {
+      path: '/login',
+      component: Login
     }
   ]
 });
