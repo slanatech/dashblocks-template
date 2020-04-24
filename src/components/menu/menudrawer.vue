@@ -67,7 +67,9 @@ export default {
       this.$emit('input', val);
     },
     mini: function(val) {
-      this.setMini(val);
+      if (!this.autoExpand) {
+        this.setMini(val);
+      }
     },
     miniState: function(val) {
       this.$emit('update:mini', val);

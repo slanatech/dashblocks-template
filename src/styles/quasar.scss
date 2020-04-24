@@ -60,15 +60,16 @@ a:hover {
   background: linear-gradient(to right, #2c5364, #203a43, #0f2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+
 .ub-page {
   @media (max-width: $breakpoint-xs-max) {
     padding: 4px 8px 8px 8px;
   }
   @media (min-width: $breakpoint-sm-min) and (max-width: $breakpoint-md-max) {
-    padding: 4px 16px 16px 16px;
+    padding: 4px 12px 16px 12px;
   }
   @media (min-width: $breakpoint-lg-min) {
-    padding: 4px 24px 24px 24px;
+    padding: 4px 12px 24px 12px;
   }
 }
 

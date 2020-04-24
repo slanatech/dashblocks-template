@@ -5,7 +5,7 @@
         <q-btn dense flat round icon="menu" @click="leftShown = !leftShown" />
 
         <q-toolbar-title>
-          dashblocks
+          dashblocks.io
         </q-toolbar-title>
 
         <q-space></q-space>
@@ -102,7 +102,7 @@ export default {
         { id: '1', title: 'Dashboard', link: '/', icon: 'dashboard' },
         { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
         { id: '4', title: 'Tables', link: '/tables', icon: 'mdi-table' },
-        { id: '5', title: 'Charts', link: '/charts', icon: 'pie_chart' },
+        { id: '5', title: 'Charts', icon: 'pie_chart', items: [{ id: 'chartjs', title: 'Chart.js', link: '/chartjs', icon: 'mdi-chart-bar' }] },
         {
           id: '6',
           title: 'Style',
