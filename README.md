@@ -9,7 +9,7 @@
 <img src="https://img.shields.io/npm/v/dashblocks.svg?label=dashblocks"> 
 ![CI](https://github.com/slanatech/dashblocks-template/workflows/CI/badge.svg)
 
-#### Enable Analytics in your Vue App with [Dashblocks](https://github.com/slanatech/dashblocks)
+### Enable Analytics in your Vue App with [Dashblocks](https://github.com/slanatech/dashblocks)
 
 [Live Demo](https://slanatech.github.io/dashblocks-template)
 
