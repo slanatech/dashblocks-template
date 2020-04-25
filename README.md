@@ -20,6 +20,20 @@
 ![dashboard](screenshots/dashblocks.png?raw=true)
 
 
+Dashblocks Vue Material Admin Template is build based on [Quasar Framework](https://quasar.dev/), [Vuex](https://vuex.vuejs.org/installation.html),  [Vuejs](https://vuejs.org/) and [Dashblocks](https://github.com/slanatech/dashblocks).
+
+We focus on providing beautiful interactive Dashboards out of the box, and helping to enable In-App Analytics in your Apps.  
+
+[Dashblocks](https://github.com/slanatech/dashblocks) enables simple and streamlined way to quickly add awesome Dashboards in your app: 
+ 
+* Use declarative approach to define a dashboard. The whole dashboard is just one JS object (or JSON) 
+* Provide reasonable out of the box defaults for all chart types, such as colors
+* Support dark / light modes out of the box    
+* Enable interactivity by providing event handling on dashboard level
+* Streamline dynamic updates of dashboard data, for example based on user interaction with dashboard
+* Even dynamically generate Dashboard itself based on the data - thanks to declarative approach   
+  
+
 ## Quick start
 
 Clone `dashblocks-template` repo: 
@@ -41,7 +55,9 @@ Run `serve`:
 $ yarn run serve
 ```
 
-And start developing !
+`dashblocks-template` is set up using [vue-cli](https://github.com/vuejs/vue-cli), you will see standard `vue-cli` scripts in `package.json`: `serve`, `build` ...
+[Quasar Framework](https://quasar.dev/) is configured using Vue CLI Quasar Plugin. 
+
 
 ## Enhancements and Bug Reports
 
