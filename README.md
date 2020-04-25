@@ -22,6 +22,26 @@
 
 ## Quick start
 
+Clone `dashblocks-template` repo: 
+
+```bash
+$ git clone https://github.com/slanatech/dashblocks-template.git
+```
+
+Install dependencies:
+
+```bash
+$ cd dashblocks-template
+$ yarn install
+```
+
+Run `serve`:
+
+```bash
+$ yarn run serve
+```
+
+And start developing !
 
 ## Enhancements and Bug Reports
 
