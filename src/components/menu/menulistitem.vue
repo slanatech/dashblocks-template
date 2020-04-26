@@ -67,10 +67,10 @@ export default {
       return this.item.activeClass ? this.item.activeClass : this.activeClass;
     },
     hasSide: function() {
-      return this.item.badge || this.item.sideCaption;
+      return 'badge' in this.item || 'sideCaption' in this.item;
     },
     isSideTop: function() {
-      return this.item.caption || this.item.sideCaption;
+      return 'caption' in this.item || 'sideCaption' in this.item;
     }
   },
   watch: {},

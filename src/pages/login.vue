@@ -49,6 +49,16 @@ export default {
       username: '',
       password: ''
     };
+  },
+  computed: {
+    dark: {
+      get() {
+        return this.$store.state.layout.dark;
+      }
+    }
+  },
+  mounted() {
+    this.$q.dark.set(this.dark);
   }
 };
 </script>

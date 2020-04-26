@@ -89,7 +89,7 @@ export default {
       testColors: null,
       menuItems: [
         { id: '1', title: 'Dashboard', link: '/', icon: 'dashboard' },
-        { id: 'observability', title: 'Observability Dashboards', icon: 'mdi-eye-check', caption: 'Monitor your Microservices' },
+        { id: 'observability', title: 'Observability Dashboards', link: '/observability', icon: 'mdi-eye-check', caption: 'Monitor your Microservices' },
         { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
         { id: '4', title: 'Tables', link: '/tables', icon: 'mdi-table' },
         {

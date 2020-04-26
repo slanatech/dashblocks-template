@@ -72,7 +72,8 @@ import {
   QVirtualScroll,
   QSkeleton,
   QImg,
-  QMenu
+  QMenu,
+  QBanner
 } from 'quasar';
 
 Vue.use(Quasar, {
@@ -131,7 +132,8 @@ Vue.use(Quasar, {
     QVirtualScroll,
     QSkeleton,
     QImg,
-    QMenu
+    QMenu,
+    QBanner
   },
   directives: {
     Ripple,

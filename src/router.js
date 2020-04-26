@@ -9,6 +9,9 @@ import MaterialIcons from './views/materialicons.vue';
 import ChartJsShowcase from './views/ChartJsShowcase.vue';
 import Dygraphs from './views/Dygraphs.vue';
 import Mdi from './views/mdi.vue';
+import Tables from './views/tables.vue';
+import Forms from './views/forms.vue';
+import Observability from './views/observability.vue';
 
 import Login from './pages/login.vue';
 
@@ -49,6 +52,21 @@ export default new Router({
           path: '/icons',
           name: 'icons',
           component: MaterialIcons
+        },
+        {
+          path: '/tables',
+          name: 'tables',
+          component: Tables
+        },
+        {
+          path: '/forms',
+          name: 'forms',
+          component: Forms
+        },
+        {
+          path: '/observability',
+          name: 'observability',
+          component: Observability
         }
       ]
     },
