@@ -6,26 +6,36 @@
 
         <q-btn dense flat icon="img:dblogo.png" type="a" href="https://dashblocks.io" target="_blank" />
 
-        <q-toolbar-title style="padding-left: 4px;">
+        <q-toolbar-title v-if="!smallScreen" style="padding-left: 4px;">
           dashblocks.io
         </q-toolbar-title>
 
         <q-space></q-space>
 
-        <q-input :dark="true" v-model="searchQuery" debounce="500" dense filled placeholder="Search" clearable class="col-md-3">
+        <q-btn
+          v-if="smallScreen"
+          :text-color="showSearchToolbar ? 'primary' : ''"
+          dense
+          unelevated
+          icon="search"
+          class="q-ma-xs"
+          @click="showSearchToolbar = !showSearchToolbar"
+        ></q-btn>
+
+        <q-input v-if="!smallScreen" :dark="true" v-model="searchQuery" debounce="500" dense filled placeholder="Search" clearable class="col-md-3">
           <template v-slot:prepend>
             <q-icon name="search" />
           </template>
         </q-input>
 
-        <q-btn dense unelevated icon="mdi-bell" class="q-ma-sm">
+        <q-btn dense unelevated icon="mdi-bell" class="q-ma-xs">
           <q-badge color="red" floating>5</q-badge>
           <q-menu v-model="messagesOpen">
             <messages @close="messagesOpen = false"></messages>
           </q-menu>
         </q-btn>
 
-        <q-btn-dropdown dense unelevated v-model="settingsOpen" dropdown-icon="settings" class="ub-btn-dropdown-bare q-ma-sm">
+        <q-btn-dropdown dense unelevated v-model="settingsOpen" dropdown-icon="settings" class="ub-btn-dropdown-bare q-ma-xs">
           <settings @close="settingsOpen = false"></settings>
         </q-btn-dropdown>
 
@@ -42,6 +52,13 @@
           </template>
           <user-info></user-info>
         </q-btn-dropdown>
+      </q-toolbar>
+      <q-toolbar v-if="smallScreen && showSearchToolbar">
+        <q-input :dark="true" v-model="searchQuery" debounce="500" dense filled placeholder="Search" clearable class="full-width">
+          <template v-slot:prepend>
+            <q-icon name="search" />
+          </template>
+        </q-input>
       </q-toolbar>
     </q-header>
 
@@ -84,6 +101,7 @@ export default {
       settingsOpen: false,
       messagesOpen: false,
       userInfoOpen: false,
+      showSearchToolbar: false,
       searchQuery: '',
       transitionName: '',
       testColors: null,
@@ -107,13 +125,13 @@ export default {
           icon: 'mdi-draw',
           items: [
             { id: '7', title: 'Typography', link: '/typography', icon: 'mdi-format-text' },
-            { id: '8', title: 'Icons', link: '/icons', icon: 'pie_chart' },
+            { id: '8', title: 'Icons', link: '/icons', icon: 'mdi-dots-horizontal-circle-outline' },
             {
               id: '9',
               title: 'MDI Icons',
               caption: 'Material Design Icons',
               link: '/mdi',
-              icon: 'pie_chart',
+              icon: 'mdi-dots-horizontal-circle-outline',
               badge: '5045',
               badgeColor: 'accent',
               sideCaption: 'icons'
@@ -160,6 +178,9 @@ export default {
       set(value) {
         this.setMenuMini({ menuMini: value });
       }
+    },
+    smallScreen() {
+      return ['xs', 'sm'].includes(this.$q.screen.name);
     }
   },
   watch: {
