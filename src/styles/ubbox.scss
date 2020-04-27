@@ -2,6 +2,7 @@
 .ub-box {
   display: flex;
   flex-flow: column;
+  flex-shrink: 0;
 
   .ub-row {
     border: 0px;

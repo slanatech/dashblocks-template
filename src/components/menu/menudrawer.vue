@@ -12,7 +12,8 @@
     @mouseout="handleMouseOut"
   >
     <div class="fit ub-box">
-      <q-scroll-area class="ub-row ub-box-expand">
+      <!-- "height: 100px;" seem to address issue with flex: 1 1 auto scroll area on safari -->
+      <q-scroll-area class="ub-row ub-box-expand" style="height: 100px;">
         <slot name="menu"></slot>
       </q-scroll-area>
       <!-- Mini toggle is not needed if below breakpoint -->
@@ -109,3 +110,20 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+/*
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
+ */
+</style>
