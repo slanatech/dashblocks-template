@@ -12,6 +12,7 @@ import Mdi from './views/mdi.vue';
 import Tables from './views/tables.vue';
 import Forms from './views/forms.vue';
 import Observability from './views/observability.vue';
+import Summary from './views/summary.vue';
 
 import Login from './pages/login.vue';
 
@@ -67,6 +68,11 @@ export default new Router({
           path: '/observability',
           name: 'observability',
           component: Observability
+        },
+        {
+          path: '/summary',
+          name: 'summary',
+          component: Summary
         }
       ]
     },
