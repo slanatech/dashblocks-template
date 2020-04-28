@@ -2,7 +2,7 @@
   <q-page class="ub-page">
     <div class="row items-center" style="margin-bottom: 10px;">
       <div class="col-md-12 q-ma-sm">
-        <div class="text-h3">Traffic Summary</div>
+        <div class="text-h3">Status Summary</div>
         <div class="text-subtitle1">
           Check out <a href="https://github.com/slanatech/swagger-stats" target="_blank">swagger-stats</a> project to see this dashboard in action
         </div>

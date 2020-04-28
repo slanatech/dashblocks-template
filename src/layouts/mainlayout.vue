@@ -113,9 +113,10 @@ export default {
           icon: 'mdi-eye-check',
           caption: 'Monitor your Microservices',
           items: [
-            { id: 'summary', title: 'Traffic Summary', link: '/summary', icon: 'mdi-chart-line-variant' },
-            { id: 'requests', title: 'Requests', link: '/requests', icon: 'sync_alt' },
-            { id: 'apiop', title: 'API Operation', link: '/apiop', icon: 'sync_alt', caption: 'API Operation Scorecard' }
+            { id: 'summary', title: 'Summary', link: '/summary', caption: 'Microservice Status', icon: 'mdi-chart-line-variant' },
+            { id: 'requests', title: 'Requests', link: '/requests', icon: 'sync_alt', badge: '2070', badgeColor: 'accent' },
+            { id: 'errors', title: 'Errors', link: '/errors', icon: 'error', caption: 'Errors Trend', badge: '10.62%', badgeColor: 'negative' },
+            { id: 'apiop', title: 'API Operation', link: '/apiop', icon: 'settings_ethernet', caption: 'API Operation Scorecard' }
           ]
         },
         { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },

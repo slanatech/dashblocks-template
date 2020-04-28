@@ -16,6 +16,7 @@ import Summary from './views/summary.vue';
 import Requests from './views/requests.vue';
 import VGT from './views/vuegoodtable.vue';
 import APIOp from './views/apiop.vue';
+import Errors from './views/errors.vue';
 
 import Login from './pages/login.vue';
 
@@ -91,6 +92,11 @@ export default new Router({
           path: '/apiop',
           name: 'apiop',
           component: APIOp
+        },
+        {
+          path: '/errors',
+          name: 'errors',
+          component: Errors
         }
       ]
     },
