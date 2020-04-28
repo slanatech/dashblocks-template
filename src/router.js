@@ -13,6 +13,9 @@ import Tables from './views/tables.vue';
 import Forms from './views/forms.vue';
 import Observability from './views/observability.vue';
 import Summary from './views/summary.vue';
+import Requests from './views/requests.vue';
+import VGT from './views/vuegoodtable.vue';
+import APIOp from './views/apiop.vue';
 
 import Login from './pages/login.vue';
 
@@ -73,6 +76,21 @@ export default new Router({
           path: '/summary',
           name: 'summary',
           component: Summary
+        },
+        {
+          path: '/requests',
+          name: 'requests',
+          component: Requests
+        },
+        {
+          path: '/vgt',
+          name: 'vgt',
+          component: VGT
+        },
+        {
+          path: '/apiop',
+          name: 'apiop',
+          component: APIOp
         }
       ]
     },

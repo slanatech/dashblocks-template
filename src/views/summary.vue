@@ -1,6 +1,6 @@
 <template>
   <q-page class="ub-page">
-    <div class="row items-center">
+    <div class="row items-center" style="margin-bottom: 10px;">
       <div class="col-md-12 q-ma-sm">
         <div class="text-h3">Traffic Summary</div>
         <div class="text-subtitle1">
@@ -15,7 +15,7 @@
 <script>
 import { DbData } from 'dashblocks';
 import pathOr from 'ramda/src/pathOr';
-import { mapState, mapActions } from 'vuex';
+import { mapState } from 'vuex';
 import utils from '../utils.js';
 
 // File '../data/summary.json' contains example dashboard data

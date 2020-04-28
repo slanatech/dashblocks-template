@@ -1,0 +1,33 @@
+/* vue-good-table styles */
+
+table.vgt-table.sws-table {
+  font-size: 14px;
+}
+
+table.vgt-table.sws-table.nocturnal {
+  background-color: $grey-10;
+}
+
+table.vgt-table.sws-table.nocturnal td {
+  color: $grey-5;
+}
+
+table.vgt-table.sws-table.nocturnal th {
+  color: $grey-4;
+}
+
+.sws-td-badge span {
+  border-radius: 8px;
+  padding: 2px 6px;
+  color: white;
+}
+.sws-td-badge-neg span {
+  background-color: $negative;
+  opacity: 0.6;
+}
+
+.sws-td-badge-warn span {
+  background-color: $warning;
+  opacity: 0.7;
+  color: black;
+}

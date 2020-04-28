@@ -1,0 +1,211 @@
+{
+  "startts": 1588045302159,
+  "all": {
+    "requests": 55827,
+    "responses": 55827,
+    "errors": 5998,
+    "info": 0,
+    "success": 49829,
+    "redirect": 0,
+    "client_error": 3994,
+    "server_error": 2004,
+    "total_time": 2844745,
+    "max_time": 211,
+    "avg_time": 50.956436849553086,
+    "total_req_clength": 2760192,
+    "max_req_clength": 210,
+    "avg_req_clength": 49,
+    "total_res_clength": 5786238,
+    "max_res_clength": 203,
+    "avg_res_clength": 103,
+    "req_rate": 23.541789660116386,
+    "err_rate": 2.5293075820190603,
+    "apdex_threshold": 25,
+    "apdex_satisfied": 12278,
+    "apdex_tolerated": 37332,
+    "apdex_score": 0.5542837695022121
+  },
+  "egress": {
+    "requests": 0,
+    "responses": 0,
+    "errors": 0,
+    "info": 0,
+    "success": 0,
+    "redirect": 0,
+    "client_error": 0,
+    "server_error": 0,
+    "total_time": 0,
+    "max_time": 0,
+    "avg_time": 0,
+    "total_req_clength": 0,
+    "max_req_clength": 0,
+    "avg_req_clength": 0,
+    "total_res_clength": 0,
+    "max_res_clength": 0,
+    "avg_res_clength": 0,
+    "req_rate": 0,
+    "err_rate": 0,
+    "apdex_threshold": 25,
+    "apdex_satisfied": 0,
+    "apdex_tolerated": 0,
+    "apdex_score": 0
+  },
+  "sys": {
+    "rss": 49631232,
+    "heapTotal": 26808320,
+    "heapUsed": 19504832,
+    "external": 1397813,
+    "cpu": 4.595193432265044,
+    "lag": 0.092901,
+    "maxlag": 4.560799
+  },
+  "name": "swagger-stats-spectest",
+  "version": "0.95.16",
+  "hostname": "hostname",
+  "ip": "127.0.0.1",
+  "apdexThreshold": 25,
+  "apiop": {
+    "/v2/pet/{petId}/uploadImage": {
+      "POST": {
+        "defs": {
+          "swagger": true,
+          "deprecated": false,
+          "description": "",
+          "operationId": "uploadFile",
+          "summary": "uploads an image",
+          "tags": [
+            "pet"
+          ]
+        },
+        "stats": {
+          "requests": 2694,
+          "responses": 2694,
+          "errors": 283,
+          "info": 0,
+          "success": 2411,
+          "redirect": 0,
+          "client_error": 186,
+          "server_error": 97,
+          "total_time": 137397,
+          "max_time": 126,
+          "avg_time": 51.001113585746104,
+          "total_req_clength": 294790,
+          "max_req_clength": 210,
+          "avg_req_clength": 109,
+          "total_res_clength": 275845,
+          "max_res_clength": 203,
+          "avg_res_clength": 102,
+          "req_rate": 1.136037783587754,
+          "err_rate": 0.11933878721430378,
+          "apdex_threshold": 25,
+          "apdex_satisfied": 589,
+          "apdex_tolerated": 1808,
+          "apdex_score": 0.5541945063103192
+        },
+        "details": {
+          "duration": {
+            "count": 2694,
+            "buckets": [
+              10,
+              25,
+              50,
+              100,
+              200
+            ],
+            "values": [
+              275,
+              377,
+              679,
+              1349,
+              14,
+              0
+            ]
+          },
+          "req_size": {
+            "count": 2694,
+            "buckets": [
+              10,
+              25,
+              50,
+              100,
+              200
+            ],
+            "values": [
+              0,
+              218,
+              336,
+              648,
+              1388,
+              104
+            ]
+          },
+          "res_size": {
+            "count": 2694,
+            "buckets": [
+              10,
+              25,
+              50,
+              100,
+              200
+            ],
+            "values": [
+              97,
+              204,
+              352,
+              684,
+              1318,
+              39
+            ]
+          },
+          "code": {
+            "200": {
+              "count": 2411
+            },
+            "401": {
+              "count": 44
+            },
+            "404": {
+              "count": 142
+            },
+            "500": {
+              "count": 55
+            },
+            "501": {
+              "count": 42
+            }
+          },
+          "parameters": {
+            "petId": {
+              "name": "petId",
+              "in": "path",
+              "description": "ID of pet to update",
+              "required": true,
+              "type": "integer",
+              "format": "int64",
+              "hits": 2694,
+              "misses": 0
+            },
+            "additionalMetadata": {
+              "name": "additionalMetadata",
+              "in": "formData",
+              "description": "Additional data to pass to server",
+              "required": false,
+              "type": "string",
+              "hits": 0,
+              "misses": 0
+            },
+            "file": {
+              "name": "file",
+              "in": "formData",
+              "description": "file to upload",
+              "required": false,
+              "type": "file",
+              "hits": 0,
+              "misses": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

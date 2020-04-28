@@ -112,10 +112,14 @@ export default {
           title: 'Observability Dashboards',
           icon: 'mdi-eye-check',
           caption: 'Monitor your Microservices',
-          items: [{ id: 'summary', title: 'Traffic Summary', link: '/summary', icon: 'mdi-chart-line-variant' }]
+          items: [
+            { id: 'summary', title: 'Traffic Summary', link: '/summary', icon: 'mdi-chart-line-variant' },
+            { id: 'requests', title: 'Requests', link: '/requests', icon: 'sync_alt' },
+            { id: 'apiop', title: 'API Operation', link: '/apiop', icon: 'sync_alt', caption: 'API Operation Scorecard' }
+          ]
         },
         { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
-        { id: '4', title: 'Tables', link: '/tables', icon: 'mdi-table' },
+        { id: '4', title: 'Tables', icon: 'mdi-table', items: [{ id: 'vgt', title: 'Vue-Good-Table', link: '/vgt', icon: 'sync_alt' }] },
         {
           id: '5',
           title: 'Charts',

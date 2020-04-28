@@ -37,6 +37,52 @@ class Utils {
     return data;
   }
 
+  getApiStatsArray(statsData) {
+    let res = [];
+    let apiStats = pathOr(null, ['apistats'], statsData);
+    let apiDefs = pathOr(null, ['apidefs'], statsData);
+    if (!apiStats) {
+      return res;
+    }
+    for (let apiPath of Object.keys(apiStats)) {
+      let apiMethods = apiStats[apiPath];
+      for (let apiMethod of Object.keys(apiMethods)) {
+        res.push(
+          Object.assign(
+            {
+              path: apiPath,
+              method: apiMethod
+            },
+            apiMethods[apiMethod],
+            {
+              tags: pathOr([], [apiPath, apiMethod, 'tags'], apiDefs).join(',')
+            }
+          )
+        );
+      }
+    }
+    return res;
+  }
+
+  getMethodStatsArray(statsData) {
+    let res = [];
+    let allMethodStats = pathOr(null, ['method'], statsData);
+    if (!allMethodStats) {
+      return res;
+    }
+    for (let methodName of Object.keys(allMethodStats)) {
+      res.push(
+        Object.assign(
+          {
+            method: methodName
+          },
+          allMethodStats[methodName]
+        )
+      );
+    }
+    return res;
+  }
+
   getCurrentTimelineBucket(statsData) {
     let timelineSettings = pathOr(null, ['timeline', 'settings'], statsData);
     let timelineData = pathOr(null, ['timeline', 'data'], statsData);

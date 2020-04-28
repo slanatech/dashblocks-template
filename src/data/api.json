@@ -1,0 +1,931 @@
+{
+  "startts": 1588045302159,
+  "all": {
+    "requests": 2465,
+    "responses": 2465,
+    "errors": 286,
+    "info": 0,
+    "success": 2179,
+    "redirect": 0,
+    "client_error": 210,
+    "server_error": 76,
+    "total_time": 125717,
+    "max_time": 111,
+    "avg_time": 51.00081135902637,
+    "total_req_clength": 119548,
+    "max_req_clength": 210,
+    "avg_req_clength": 48,
+    "total_res_clength": 261003,
+    "max_res_clength": 203,
+    "avg_res_clength": 105,
+    "req_rate": 12.00325280846899,
+    "err_rate": 1.3829305466958186,
+    "apdex_threshold": 25,
+    "apdex_satisfied": 523,
+    "apdex_tolerated": 1649,
+    "apdex_score": 0.5466531440162272
+  },
+  "egress": {
+    "requests": 0,
+    "responses": 0,
+    "errors": 0,
+    "info": 0,
+    "success": 0,
+    "redirect": 0,
+    "client_error": 0,
+    "server_error": 0,
+    "total_time": 0,
+    "max_time": 0,
+    "avg_time": 0,
+    "total_req_clength": 0,
+    "max_req_clength": 0,
+    "avg_req_clength": 0,
+    "total_res_clength": 0,
+    "max_res_clength": 0,
+    "avg_res_clength": 0,
+    "req_rate": 0,
+    "err_rate": 0,
+    "apdex_threshold": 25,
+    "apdex_satisfied": 0,
+    "apdex_tolerated": 0,
+    "apdex_score": 0
+  },
+  "sys": {
+    "rss": 49680384,
+    "heapTotal": 34906112,
+    "heapUsed": 17352432,
+    "external": 1405319,
+    "cpu": 6.0893728265431175,
+    "lag": 0.123,
+    "maxlag": 4.560799
+  },
+  "name": "swagger-stats-spectest",
+  "version": "0.95.16",
+  "hostname": "hostname",
+  "ip": "127.0.0.1",
+  "apdexThreshold": 25,
+  "apidefs": {
+    "/v2/pet": {
+      "PUT": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "updatePet",
+        "summary": "Update an existing pet",
+        "tags": [
+          "pet"
+        ]
+      },
+      "POST": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "addPet",
+        "summary": "Add a new pet to the store",
+        "tags": [
+          "pet"
+        ]
+      }
+    },
+    "/v2/pet/findByStatus": {
+      "GET": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "Multiple status values can be provided with comma separated strings",
+        "operationId": "findPetsByStatus",
+        "summary": "Finds Pets by status",
+        "tags": [
+          "pet"
+        ]
+      }
+    },
+    "/v2/pet/findByTags": {
+      "GET": {
+        "swagger": true,
+        "deprecated": true,
+        "description": "Muliple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+        "operationId": "findPetsByTags",
+        "summary": "Finds Pets by tags",
+        "tags": [
+          "pet"
+        ]
+      }
+    },
+    "/v2/pet/{petId}": {
+      "GET": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "Returns a single pet",
+        "operationId": "getPetById",
+        "summary": "Find pet by ID",
+        "tags": [
+          "pet"
+        ]
+      },
+      "POST": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "updatePetWithForm",
+        "summary": "Updates a pet in the store with form data",
+        "tags": [
+          "pet"
+        ]
+      },
+      "DELETE": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "deletePet",
+        "summary": "Deletes a pet",
+        "tags": [
+          "pet"
+        ]
+      }
+    },
+    "/v2/pet/{petId}/uploadImage": {
+      "POST": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "uploadFile",
+        "summary": "uploads an image",
+        "tags": [
+          "pet"
+        ]
+      }
+    },
+    "/v2/store/inventory": {
+      "GET": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "Returns a map of status codes to quantities",
+        "operationId": "getInventory",
+        "summary": "Returns pet inventories by status",
+        "tags": [
+          "store"
+        ]
+      }
+    },
+    "/v2/store/order": {
+      "POST": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "placeOrder",
+        "summary": "Place an order for a pet",
+        "tags": [
+          "store"
+        ]
+      }
+    },
+    "/v2/store/order/{orderId}": {
+      "GET": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+        "operationId": "getOrderById",
+        "summary": "Find purchase order by ID",
+        "tags": [
+          "store"
+        ]
+      },
+      "DELETE": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors",
+        "operationId": "deleteOrder",
+        "summary": "Delete purchase order by ID",
+        "tags": [
+          "store"
+        ]
+      }
+    },
+    "/v2/user": {
+      "POST": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "This can only be done by the logged in user.",
+        "operationId": "createUser",
+        "summary": "Create user",
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/v2/user/createWithArray": {
+      "POST": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "createUsersWithArrayInput",
+        "summary": "Creates list of users with given input array",
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/v2/user/createWithList": {
+      "POST": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "createUsersWithListInput",
+        "summary": "Creates list of users with given input array",
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/v2/user/login": {
+      "GET": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "loginUser",
+        "summary": "Logs user into the system",
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/v2/user/logout": {
+      "GET": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "logoutUser",
+        "summary": "Logs out current logged in user session",
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/v2/user/{username}": {
+      "GET": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "",
+        "operationId": "getUserByName",
+        "summary": "Get user by user name",
+        "tags": [
+          "user"
+        ]
+      },
+      "PUT": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "This can only be done by the logged in user.",
+        "operationId": "updateUser",
+        "summary": "Updated user",
+        "tags": [
+          "user"
+        ]
+      },
+      "DELETE": {
+        "swagger": true,
+        "deprecated": false,
+        "description": "This can only be done by the logged in user.",
+        "operationId": "deleteUser",
+        "summary": "Delete user",
+        "tags": [
+          "user"
+        ]
+      }
+    }
+  },
+  "apistats": {
+    "/v2/pet": {
+      "PUT": {
+        "requests": 115,
+        "responses": 115,
+        "errors": 16,
+        "info": 0,
+        "success": 99,
+        "redirect": 0,
+        "client_error": 11,
+        "server_error": 5,
+        "total_time": 5807,
+        "max_time": 98,
+        "avg_time": 50.495652173913044,
+        "total_req_clength": 13050,
+        "max_req_clength": 210,
+        "avg_req_clength": 113,
+        "total_res_clength": 12180,
+        "max_res_clength": 202,
+        "avg_res_clength": 105,
+        "req_rate": 0.5599894819366872,
+        "err_rate": 0.07791158009553908,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 24,
+        "apdex_tolerated": 75,
+        "apdex_score": 0.5347826086956522
+      },
+      "POST": {
+        "requests": 116,
+        "responses": 116,
+        "errors": 13,
+        "info": 0,
+        "success": 103,
+        "redirect": 0,
+        "client_error": 11,
+        "server_error": 2,
+        "total_time": 6038,
+        "max_time": 101,
+        "avg_time": 52.05172413793103,
+        "total_req_clength": 12510,
+        "max_req_clength": 209,
+        "avg_req_clength": 107,
+        "total_res_clength": 11777,
+        "max_res_clength": 203,
+        "avg_res_clength": 101,
+        "req_rate": 0.5648589556926583,
+        "err_rate": 0.05843368507165431,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 32,
+        "apdex_tolerated": 71,
+        "apdex_score": 0.5818965517241379
+      }
+    },
+    "/v2/pet/findByStatus": {
+      "GET": {
+        "requests": 119,
+        "responses": 119,
+        "errors": 15,
+        "info": 0,
+        "success": 104,
+        "redirect": 0,
+        "client_error": 12,
+        "server_error": 3,
+        "total_time": 6716,
+        "max_time": 100,
+        "avg_time": 56.436974789915965,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 11860,
+        "max_res_clength": 203,
+        "avg_res_clength": 99,
+        "req_rate": 0.5794673769605719,
+        "err_rate": 0.07304210633956788,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 18,
+        "apdex_tolerated": 86,
+        "apdex_score": 0.5126050420168067
+      }
+    },
+    "/v2/pet/findByTags": {
+      "GET": {
+        "requests": 116,
+        "responses": 116,
+        "errors": 12,
+        "info": 0,
+        "success": 104,
+        "redirect": 0,
+        "client_error": 10,
+        "server_error": 2,
+        "total_time": 6412,
+        "max_time": 101,
+        "avg_time": 55.275862068965516,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 12530,
+        "max_res_clength": 201,
+        "avg_res_clength": 108,
+        "req_rate": 0.5648589556926583,
+        "err_rate": 0.05843368507165431,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 20,
+        "apdex_tolerated": 83,
+        "apdex_score": 0.5301724137931034
+      }
+    },
+    "/v2/pet/{petId}": {
+      "GET": {
+        "requests": 114,
+        "responses": 114,
+        "errors": 16,
+        "info": 0,
+        "success": 98,
+        "redirect": 0,
+        "client_error": 9,
+        "server_error": 7,
+        "total_time": 5997,
+        "max_time": 101,
+        "avg_time": 52.60526315789474,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 12009,
+        "max_res_clength": 202,
+        "avg_res_clength": 105,
+        "req_rate": 0.5551200081807159,
+        "err_rate": 0.07791158009553908,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 26,
+        "apdex_tolerated": 71,
+        "apdex_score": 0.5394736842105263
+      },
+      "POST": {
+        "requests": 113,
+        "responses": 113,
+        "errors": 11,
+        "info": 0,
+        "success": 102,
+        "redirect": 0,
+        "client_error": 6,
+        "server_error": 5,
+        "total_time": 5768,
+        "max_time": 100,
+        "avg_time": 51.04424778761062,
+        "total_req_clength": 12302,
+        "max_req_clength": 210,
+        "avg_req_clength": 108,
+        "total_res_clength": 12516,
+        "max_res_clength": 203,
+        "avg_res_clength": 110,
+        "req_rate": 0.5502505344247447,
+        "err_rate": 0.05356421131568312,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 21,
+        "apdex_tolerated": 81,
+        "apdex_score": 0.5442477876106194
+      },
+      "DELETE": {
+        "requests": 111,
+        "responses": 111,
+        "errors": 16,
+        "info": 0,
+        "success": 95,
+        "redirect": 0,
+        "client_error": 14,
+        "server_error": 2,
+        "total_time": 5477,
+        "max_time": 101,
+        "avg_time": 49.34234234234234,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 10790,
+        "max_res_clength": 201,
+        "avg_res_clength": 97,
+        "req_rate": 0.5405115869128023,
+        "err_rate": 0.07791158009553908,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 21,
+        "apdex_tolerated": 73,
+        "apdex_score": 0.5180180180180181
+      }
+    },
+    "/v2/pet/{petId}/uploadImage": {
+      "POST": {
+        "requests": 122,
+        "responses": 122,
+        "errors": 12,
+        "info": 0,
+        "success": 110,
+        "redirect": 0,
+        "client_error": 10,
+        "server_error": 2,
+        "total_time": 5714,
+        "max_time": 99,
+        "avg_time": 46.83606557377049,
+        "total_req_clength": 14007,
+        "max_req_clength": 210,
+        "avg_req_clength": 114,
+        "total_res_clength": 12753,
+        "max_res_clength": 201,
+        "avg_res_clength": 104,
+        "req_rate": 0.5940757982284854,
+        "err_rate": 0.05843368507165431,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 31,
+        "apdex_tolerated": 79,
+        "apdex_score": 0.5778688524590164
+      }
+    },
+    "/v2/store/inventory": {
+      "GET": {
+        "requests": 100,
+        "responses": 100,
+        "errors": 16,
+        "info": 0,
+        "success": 84,
+        "redirect": 0,
+        "client_error": 11,
+        "server_error": 5,
+        "total_time": 5166,
+        "max_time": 100,
+        "avg_time": 51.66,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 9600,
+        "max_res_clength": 202,
+        "avg_res_clength": 96,
+        "req_rate": 0.48694737559711926,
+        "err_rate": 0.07791158009553908,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 23,
+        "apdex_tolerated": 61,
+        "apdex_score": 0.535
+      }
+    },
+    "/v2/store/order": {
+      "POST": {
+        "requests": 107,
+        "responses": 107,
+        "errors": 15,
+        "info": 0,
+        "success": 92,
+        "redirect": 0,
+        "client_error": 7,
+        "server_error": 8,
+        "total_time": 5302,
+        "max_time": 98,
+        "avg_time": 49.55140186915888,
+        "total_req_clength": 12968,
+        "max_req_clength": 208,
+        "avg_req_clength": 121,
+        "total_res_clength": 10589,
+        "max_res_clength": 201,
+        "avg_res_clength": 98,
+        "req_rate": 0.5210336918889176,
+        "err_rate": 0.07304210633956788,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 24,
+        "apdex_tolerated": 68,
+        "apdex_score": 0.5420560747663551
+      }
+    },
+    "/v2/store/order/{orderId}": {
+      "GET": {
+        "requests": 110,
+        "responses": 110,
+        "errors": 9,
+        "info": 0,
+        "success": 101,
+        "redirect": 0,
+        "client_error": 8,
+        "server_error": 1,
+        "total_time": 5054,
+        "max_time": 101,
+        "avg_time": 45.945454545454545,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 11548,
+        "max_res_clength": 203,
+        "avg_res_clength": 104,
+        "req_rate": 0.5356421131568312,
+        "err_rate": 0.04382526380374073,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 26,
+        "apdex_tolerated": 74,
+        "apdex_score": 0.5727272727272728
+      },
+      "DELETE": {
+        "requests": 119,
+        "responses": 119,
+        "errors": 14,
+        "info": 0,
+        "success": 105,
+        "redirect": 0,
+        "client_error": 10,
+        "server_error": 4,
+        "total_time": 5792,
+        "max_time": 99,
+        "avg_time": 48.67226890756302,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 13335,
+        "max_res_clength": 203,
+        "avg_res_clength": 112,
+        "req_rate": 0.5794673769605719,
+        "err_rate": 0.0681726325835967,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 30,
+        "apdex_tolerated": 75,
+        "apdex_score": 0.5672268907563025
+      }
+    },
+    "/v2/user": {
+      "POST": {
+        "requests": 120,
+        "responses": 120,
+        "errors": 15,
+        "info": 0,
+        "success": 105,
+        "redirect": 0,
+        "client_error": 13,
+        "server_error": 2,
+        "total_time": 5876,
+        "max_time": 101,
+        "avg_time": 48.96666666666667,
+        "total_req_clength": 13878,
+        "max_req_clength": 210,
+        "avg_req_clength": 115,
+        "total_res_clength": 13716,
+        "max_res_clength": 203,
+        "avg_res_clength": 114,
+        "req_rate": 0.5843368507165431,
+        "err_rate": 0.07304210633956788,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 24,
+        "apdex_tolerated": 80,
+        "apdex_score": 0.5333333333333333
+      }
+    },
+    "/v2/user/createWithArray": {
+      "POST": {
+        "requests": 104,
+        "responses": 104,
+        "errors": 11,
+        "info": 0,
+        "success": 93,
+        "redirect": 0,
+        "client_error": 8,
+        "server_error": 3,
+        "total_time": 5149,
+        "max_time": 100,
+        "avg_time": 49.50961538461539,
+        "total_req_clength": 11446,
+        "max_req_clength": 208,
+        "avg_req_clength": 110,
+        "total_res_clength": 11957,
+        "max_res_clength": 203,
+        "avg_res_clength": 114,
+        "req_rate": 0.5064252706210041,
+        "err_rate": 0.05356421131568312,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 29,
+        "apdex_tolerated": 64,
+        "apdex_score": 0.5865384615384616
+      }
+    },
+    "/v2/user/createWithList": {
+      "POST": {
+        "requests": 114,
+        "responses": 114,
+        "errors": 14,
+        "info": 0,
+        "success": 100,
+        "redirect": 0,
+        "client_error": 11,
+        "server_error": 3,
+        "total_time": 5949,
+        "max_time": 97,
+        "avg_time": 52.18421052631579,
+        "total_req_clength": 12257,
+        "max_req_clength": 210,
+        "avg_req_clength": 107,
+        "total_res_clength": 12477,
+        "max_res_clength": 202,
+        "avg_res_clength": 109,
+        "req_rate": 0.5551200081807159,
+        "err_rate": 0.0681726325835967,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 22,
+        "apdex_tolerated": 78,
+        "apdex_score": 0.5350877192982456
+      }
+    },
+    "/v2/user/login": {
+      "GET": {
+        "requests": 111,
+        "responses": 111,
+        "errors": 12,
+        "info": 0,
+        "success": 99,
+        "redirect": 0,
+        "client_error": 8,
+        "server_error": 4,
+        "total_time": 5295,
+        "max_time": 100,
+        "avg_time": 47.7027027027027,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 12515,
+        "max_res_clength": 203,
+        "avg_res_clength": 112,
+        "req_rate": 0.5405115869128023,
+        "err_rate": 0.05843368507165431,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 26,
+        "apdex_tolerated": 73,
+        "apdex_score": 0.5630630630630631
+      }
+    },
+    "/v2/user/logout": {
+      "GET": {
+        "requests": 113,
+        "responses": 113,
+        "errors": 7,
+        "info": 0,
+        "success": 106,
+        "redirect": 0,
+        "client_error": 5,
+        "server_error": 2,
+        "total_time": 5795,
+        "max_time": 102,
+        "avg_time": 51.283185840707965,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 13021,
+        "max_res_clength": 203,
+        "avg_res_clength": 115,
+        "req_rate": 0.5502505344247447,
+        "err_rate": 0.03408631629179835,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 23,
+        "apdex_tolerated": 83,
+        "apdex_score": 0.5707964601769911
+      }
+    },
+    "/v2/user/{username}": {
+      "GET": {
+        "requests": 112,
+        "responses": 112,
+        "errors": 16,
+        "info": 0,
+        "success": 96,
+        "redirect": 0,
+        "client_error": 10,
+        "server_error": 6,
+        "total_time": 5814,
+        "max_time": 99,
+        "avg_time": 51.910714285714285,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 10691,
+        "max_res_clength": 201,
+        "avg_res_clength": 95,
+        "req_rate": 0.5453810606687736,
+        "err_rate": 0.07304210633956788,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 20,
+        "apdex_tolerated": 76,
+        "apdex_score": 0.5178571428571429
+      },
+      "PUT": {
+        "requests": 108,
+        "responses": 108,
+        "errors": 10,
+        "info": 0,
+        "success": 98,
+        "redirect": 0,
+        "client_error": 9,
+        "server_error": 1,
+        "total_time": 5792,
+        "max_time": 99,
+        "avg_time": 53.629629629629626,
+        "total_req_clength": 11986,
+        "max_req_clength": 207,
+        "avg_req_clength": 110,
+        "total_res_clength": 11715,
+        "max_res_clength": 202,
+        "avg_res_clength": 108,
+        "req_rate": 0.5259031656448888,
+        "err_rate": 0.048694737559711924,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 21,
+        "apdex_tolerated": 77,
+        "apdex_score": 0.5509259259259259
+      },
+      "DELETE": {
+        "requests": 114,
+        "responses": 114,
+        "errors": 13,
+        "info": 0,
+        "success": 101,
+        "redirect": 0,
+        "client_error": 8,
+        "server_error": 5,
+        "total_time": 6311,
+        "max_time": 100,
+        "avg_time": 55.35964912280702,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 12074,
+        "max_res_clength": 202,
+        "avg_res_clength": 105,
+        "req_rate": 0.5551200081807159,
+        "err_rate": 0.06330315882762551,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 18,
+        "apdex_tolerated": 83,
+        "apdex_score": 0.5219298245614035
+      }
+    },
+    "/pets": {
+      "GET": {
+        "requests": 49,
+        "responses": 49,
+        "errors": 6,
+        "info": 0,
+        "success": 43,
+        "redirect": 0,
+        "client_error": 5,
+        "server_error": 1,
+        "total_time": 2277,
+        "max_time": 111,
+        "avg_time": 46.46938775510204,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 4831,
+        "max_res_clength": 195,
+        "avg_res_clength": 98,
+        "req_rate": 0.23860421404258844,
+        "err_rate": 0.029216842535827153,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 14,
+        "apdex_tolerated": 28,
+        "apdex_score": 0.5714285714285714
+      },
+      "POST": {
+        "requests": 48,
+        "responses": 48,
+        "errors": 5,
+        "info": 0,
+        "success": 43,
+        "redirect": 0,
+        "client_error": 4,
+        "server_error": 1,
+        "total_time": 2424,
+        "max_time": 99,
+        "avg_time": 50.5,
+        "total_req_clength": 5144,
+        "max_req_clength": 204,
+        "avg_req_clength": 107,
+        "total_res_clength": 5319,
+        "max_res_clength": 202,
+        "avg_res_clength": 110,
+        "req_rate": 0.23373474028661723,
+        "err_rate": 0.024347368779855962,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 8,
+        "apdex_tolerated": 35,
+        "apdex_score": 0.53125
+      }
+    },
+    "/pets/abcde": {
+      "DELETE": {
+        "requests": 60,
+        "responses": 60,
+        "errors": 10,
+        "info": 0,
+        "success": 50,
+        "redirect": 0,
+        "client_error": 8,
+        "server_error": 2,
+        "total_time": 3100,
+        "max_time": 101,
+        "avg_time": 51.666666666666664,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 6082,
+        "max_res_clength": 186,
+        "avg_res_clength": 101,
+        "req_rate": 0.29216842535827153,
+        "err_rate": 0.048694737559711924,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 11,
+        "apdex_tolerated": 38,
+        "apdex_score": 0.5
+      },
+      "GET": {
+        "requests": 50,
+        "responses": 50,
+        "errors": 2,
+        "info": 0,
+        "success": 48,
+        "redirect": 0,
+        "client_error": 2,
+        "server_error": 0,
+        "total_time": 2692,
+        "max_time": 99,
+        "avg_time": 53.84,
+        "total_req_clength": 0,
+        "max_req_clength": 0,
+        "avg_req_clength": 0,
+        "total_res_clength": 5118,
+        "max_res_clength": 203,
+        "avg_res_clength": 102,
+        "req_rate": 0.24347368779855963,
+        "err_rate": 0.009738947511942386,
+        "apdex_threshold": 25,
+        "apdex_satisfied": 11,
+        "apdex_tolerated": 37,
+        "apdex_score": 0.59
+      }
+    }
+  }
+}
