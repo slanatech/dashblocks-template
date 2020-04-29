@@ -80,8 +80,12 @@
       </q-item>
 
       <q-separator spaced />
-      <q-select v-model="dashboardColorScheme" :options="colorSchemaOptions" label="Color Schema" />
-      <q-item-label header>TODO Chart Colors</q-item-label>
+
+      <q-item tag="label">
+        <q-item-section>
+          <q-select v-model="dashboardColorScheme" :options="colorSchemaOptions" label="Color Schema" />
+        </q-item-section>
+      </q-item>
 
       <q-separator spaced />
       <q-item-label header>TODO Banner Colors, Backgounds</q-item-label>

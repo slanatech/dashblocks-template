@@ -5,7 +5,7 @@
         <div class="text-h3">Chart.js Showcase</div>
       </div>
     </div>
-    <db-dashboard :dbspec="dbspec" :dbdata="dbdata" :dark="dark"> </db-dashboard>
+    <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="dark"> </db-dashboard>
     <div class="row items-center">
       <div class="col-md-12 q-ma-sm"></div>
     </div>
@@ -22,6 +22,7 @@ export default {
   mixins: [demodashboard],
   data() {
     return {
+      ready: false,
       refreshIntervalId: null,
       dbdata: new DbData(),
       dbspec: {
@@ -126,8 +127,9 @@ export default {
       }
     };
   },
-  created() {
+  mounted() {
     this.initialize();
+    this.ready = true;
   },
   beforeDestroy: function() {
     if (this.refreshIntervalId) {

@@ -15,16 +15,16 @@
 <script>
 import { DbData } from 'dashblocks';
 import pathOr from 'ramda/src/pathOr';
-import { vgtMethods } from '../mixins/vgtmethods';
 import { mapState } from 'vuex';
 import utils from '../utils.js';
 
 // File '../data/errors.json' contains example dashboard data
 import dashboardData from '../data/errors.json';
+import { demodashboard } from '../mixins/demodashboard';
 
 export default {
   name: 'Errors',
-  components: {},
+  mixins: [demodashboard],
   data() {
     return {
       timer: null,
@@ -37,6 +37,7 @@ export default {
           type: 'grid',
           size: 12
         },
+        colorScheme: 'default',
         // prettier-ignore
         widgets: [
           {
@@ -147,6 +148,9 @@ export default {
   },
   methods: {
     initialize: function() {
+      // Init dashboard color scheme from state
+      this.dbspec.colorScheme = this.dashboardColorScheme;
+
       this.dbdata.setWData('w1', { data: [] });
 
       this.dbdata.setWData('wR', { value: 0, trend: [] });

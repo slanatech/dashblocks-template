@@ -24,11 +24,12 @@ import utils from '../utils.js';
 
 // File '../data/requests.json' contains example dashboard data
 import dashboardData from '../data/requests.json';
+import { demodashboard } from '../mixins/demodashboard';
 
 export default {
   name: 'ApiView',
   components: {},
-  mixins: [vgtMethods],
+  mixins: [vgtMethods, demodashboard],
   data() {
     return {
       timer: null,
@@ -56,6 +57,7 @@ export default {
           type: 'grid',
           size: 12
         },
+        colorScheme: 'default',
         // prettier-ignore
         widgets: [
           { id: 'w1', type: 'DbNumber', cspan: 3, properties: { title: 'GET', subtitle: 'GET Requests' } },
@@ -142,9 +144,6 @@ export default {
     };
   },
   computed: {
-    ...mapState({
-      dark: state => state.layout.dark
-    }),
     vgtTheme: function() {
       return this.dark ? 'nocturnal' : 'default';
     }
@@ -156,6 +155,9 @@ export default {
   },
   methods: {
     initialize: function() {
+      // Init dashboard color scheme from state
+      this.dbspec.colorScheme = this.dashboardColorScheme;
+
       // Init dashboard data
       this.dbdata.setWData('w1', { value: 0, total: 0 });
       this.dbdata.setWData('w2', { value: 0, total: 0 });

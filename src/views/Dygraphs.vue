@@ -5,7 +5,7 @@
         <div class="text-h3">Dygraphs Showcase</div>
       </div>
     </div>
-    <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="isDark"> </db-dashboard>
+    <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="dark"> </db-dashboard>
     <div class="row items-center">
       <div class="col-md-12 q-ma-sm"></div>
     </div>
@@ -18,7 +18,6 @@ import { demodashboard } from '../mixins/demodashboard';
 
 export default {
   name: 'Dygraphs',
-  components: {},
   mixins: [demodashboard],
   data() {
     return {
@@ -30,6 +29,7 @@ export default {
         layout: {
           type: 'grid'
         },
+        colorScheme: 'default',
         widgets: [
           {
             id: 'w1',
@@ -89,6 +89,9 @@ export default {
   },
   methods: {
     initialize: function() {
+      // Init dashboard color scheme from state
+      this.dbspec.colorScheme = this.dashboardColorScheme;
+
       let dthData = [];
       let dthData2 = [];
       let dthData3 = [];

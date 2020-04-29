@@ -39,6 +39,7 @@ export default {
           type: 'grid',
           size: 12
         },
+        colorScheme: 'default',
         // prettier-ignore
         widgets: [
           { id: 'w1', height: 120, type: 'DbNumber', cspan: 2, properties: { title: 'Requests', subtitle: 'Total requests received', icon: 'fa fa-signal' } },
@@ -151,12 +152,6 @@ export default {
       ready: false
     };
   },
-  computed: {
-    ...mapState({
-      dark: state => state.layout.dark
-    })
-  },
-  watch: {},
   mounted() {
     this.apiOpMethod = 'POST';
     this.apiOpPath = '/v2/pet/{petId}/uploadImage';

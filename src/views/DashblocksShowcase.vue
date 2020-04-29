@@ -166,6 +166,9 @@ export default {
   },
   methods: {
     initialize: function() {
+      // Init dashboard color scheme from state
+      this.dbspec.colorScheme = this.dashboardColorScheme;
+
       let totalReq = 0;
       let trendReq = [];
       let trendErr = [];
