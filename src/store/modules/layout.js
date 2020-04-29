@@ -2,10 +2,13 @@
  * Layout state Vuex Module
  */
 
+//import { dbColors } from 'dashblocks';
+
 const state = {
   dark: (localStorage['ub-dark-mode'] || 'false') === 'true',
   menuAutoExpand: (localStorage['ub-menu-auto-expand'] || 'false') === 'true',
-  menuMini: (localStorage['ub-menu-mini'] || 'false') === 'true'
+  menuMini: (localStorage['ub-menu-mini'] || 'false') === 'true',
+  dashboardColorScheme: localStorage['ub-dashboard-color-scheme'] || 'Standard'
 };
 
 const getters = {};
@@ -22,6 +25,10 @@ const mutations = {
   SET_MENU_MINI(state, { menuMini }) {
     localStorage['ub-menu-mini'] = menuMini;
     state.menuMini = menuMini;
+  },
+  SET_DASHBOARD_COLOR_SCHEME(state, { dashboardColorScheme }) {
+    localStorage['ub-dashboard-color-scheme'] = dashboardColorScheme;
+    state.dashboardColorScheme = dashboardColorScheme;
   }
 };
 
@@ -34,6 +41,9 @@ const actions = {
   },
   setMenuMini({ commit }, { menuMini }) {
     commit('SET_MENU_MINI', { menuMini: menuMini });
+  },
+  setDashboardColorScheme({ commit }, { dashboardColorScheme }) {
+    commit('SET_DASHBOARD_COLOR_SCHEME', { dashboardColorScheme: dashboardColorScheme });
   }
 };
 

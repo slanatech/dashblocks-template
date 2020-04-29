@@ -1,8 +1,16 @@
+import { mapState } from 'vuex';
+
 export const demodashboard = {
   computed: {
-    isDark() {
-      return this.$store.state.layout.dark;
-    }
+    ...mapState({
+      dark: state => state.layout.dark,
+      dashboardColorScheme: state => state.layout.dashboardColorScheme
+    })
   },
-  watch: {}
+  watch: {
+    dashboardColorScheme(val) {
+      console.log(`dashboardColorScheme changed to ${val}`);
+      this.$set(this.dbspec, 'colorScheme', val);
+    }
+  }
 };

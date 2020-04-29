@@ -5,7 +5,7 @@
         <div class="text-h3">Chart.js Showcase</div>
       </div>
     </div>
-    <db-dashboard :dbspec="dbspec" :dbdata="dbdata" :dark="isDark"> </db-dashboard>
+    <db-dashboard :dbspec="dbspec" :dbdata="dbdata" :dark="dark"> </db-dashboard>
     <div class="row items-center">
       <div class="col-md-12 q-ma-sm"></div>
     </div>
@@ -28,6 +28,7 @@ export default {
         layout: {
           type: 'grid'
         },
+        colorScheme: 'default',
         widgets: [
           {
             id: 'wTrend',
@@ -135,6 +136,9 @@ export default {
   },
   methods: {
     initialize: function() {
+      // Init dashboard color scheme from state
+      this.dbspec.colorScheme = this.dashboardColorScheme;
+
       let dataTrend = {
         datasets: [
           {

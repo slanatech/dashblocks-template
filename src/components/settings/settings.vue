@@ -80,6 +80,7 @@
       </q-item>
 
       <q-separator spaced />
+      <q-select v-model="dashboardColorScheme" :options="colorSchemaOptions" label="Color Schema" />
       <q-item-label header>TODO Chart Colors</q-item-label>
 
       <q-separator spaced />
@@ -121,13 +122,15 @@
   </div>
 </template>
 <script>
-import { mapActions, mapState } from 'vuex';
+import { mapActions } from 'vuex';
 export default {
   name: 'Settings',
   components: {},
   props: {},
   data() {
     return {
+      colorSchemaOptions: ['Standard', 'Grafana', 'Diverging1'],
+
       check1: true,
       check2: false,
       check3: false,
@@ -165,6 +168,14 @@ export default {
       set(value) {
         this.setMenuMini({ menuMini: value });
       }
+    },
+    dashboardColorScheme: {
+      get() {
+        return this.$store.state.layout.dashboardColorScheme;
+      },
+      set(value) {
+        this.setDashboardColorScheme({ dashboardColorScheme: value });
+      }
     }
   },
   watch: {},
@@ -172,7 +183,8 @@ export default {
     ...mapActions({
       setDark: 'layout/setDark',
       setMenuAutoExpand: 'layout/setMenuAutoExpand',
-      setMenuMini: 'layout/setMenuMini'
+      setMenuMini: 'layout/setMenuMini',
+      setDashboardColorScheme: 'layout/setDashboardColorScheme'
     }),
     onClose() {
       this.$emit('close');

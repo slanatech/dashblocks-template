@@ -14,6 +14,7 @@
 
 <script>
 import { DbData } from 'dashblocks';
+import { demodashboard } from '../mixins/demodashboard';
 import pathOr from 'ramda/src/pathOr';
 import { mapState } from 'vuex';
 import utils from '../utils.js';
@@ -23,6 +24,7 @@ import dashboardData from '../data/apioperation.json';
 
 export default {
   name: 'ApiOperation',
+  mixins: [demodashboard],
   data() {
     return {
       timer: null,
@@ -163,6 +165,9 @@ export default {
   },
   methods: {
     initialize: function() {
+      // Init dashboard color scheme from state
+      this.dbspec.colorScheme = this.dashboardColorScheme;
+
       // Init dashboard data
       this.dbdata.setWData('w1', { value: 0 });
       this.dbdata.setWData('w2', { value: 0 });

@@ -20,10 +20,11 @@ import utils from '../utils.js';
 
 // File '../data/summary.json' contains example dashboard data
 import dashboardData from '../data/summary.json';
+import { demodashboard } from '../mixins/demodashboard';
 
 export default {
   name: 'SummaryView',
-  components: {},
+  mixins: [demodashboard],
   data() {
     return {
       timer: null,
@@ -33,6 +34,7 @@ export default {
           type: 'grid',
           size: 12
         },
+        colorScheme: 'default',
         // prettier-ignore
         widgets: [
           {
@@ -138,18 +140,14 @@ export default {
       ready: false
     };
   },
-  computed: {
-    ...mapState({
-      dark: state => state.layout.dark
-    })
-  },
-  watch: {},
   mounted() {
     this.initialize();
     this.ready = true;
   },
+
   methods: {
     initialize: function() {
+      this.dbspec.colorScheme = this.dashboardColorScheme;
       this.updateStats();
     },
 

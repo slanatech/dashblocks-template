@@ -1,20 +1,16 @@
 <template>
   <q-page class="ub-page">
-    <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="isDark"> </db-dashboard>
+    <db-dashboard v-if="ready" :dbspec="dbspec" :dbdata="dbdata" :dark="dark"> </db-dashboard>
   </q-page>
 </template>
 
 <script>
 import { DbData, DbColors } from 'dashblocks';
 import { demodashboard } from '../mixins/demodashboard';
+import { mapState } from 'vuex';
 
 export default {
   name: 'DashblocksShowcase',
-  /*
-  components: {
-    DbDashboard
-  },
-  */
   mixins: [demodashboard],
   data() {
     return {
@@ -23,6 +19,7 @@ export default {
         layout: {
           type: 'grid'
         },
+        colorScheme: 'default',
         widgets: [
           {
             id: 'w2',

@@ -202,14 +202,35 @@ export default {
     }
   },
   mounted() {
-    this.testColors = dbColors.getColors(true); // TEMP TODO REMOVE
+    this.initialize();
     this.$q.dark.set(this.dark);
   },
   methods: {
     ...mapActions({
       setDark: 'layout/setDark',
       setMenuMini: 'layout/setMenuMini'
-    })
+    }),
+    initialize() {
+      let dbc = dbColors;
+
+      //this.testColors = dbColors.getColors(true); // TEMP TODO REMOVE
+
+      dbColors.setColorScheme('Standard', {
+        light: dbColors.d3ScaleChromatic.schemeTableau10,
+        dark: dbColors.grafanaColors
+      });
+
+      // Setup different color schemes for charts
+      dbColors.setColorScheme('Grafana', {
+        light: dbColors.grafanaColors,
+        dark: dbColors.grafanaColors
+      });
+
+      dbColors.setColorScheme('Diverging1', {
+        light: ['#a50026', '#d73027', '#f46d43', '#fdae61', '#fee090', '#ffffbf', '#e0f3f8', '#abd9e9', '#74add1', '#4575b4', '#313695'],
+        dark: ['#8e0152', '#c51b7d', '#de77ae', '#f1b6da', '#fde0ef', '#f7f7f7', '#e6f5d0', '#b8e186', '#7fbc41', '#4d9221', '#276419']
+      });
+    }
   }
 };
 </script>
