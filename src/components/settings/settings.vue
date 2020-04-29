@@ -81,16 +81,54 @@
 
       <q-separator spaced />
 
-      <q-item tag="label">
+      <!--<q-item tag="label">
         <q-item-section>
           <q-select v-model="dashboardColorScheme" :options="colorSchemaOptions" label="Dashboard Color Schema" />
+        </q-item-section>
+      </q-item>-->
+
+      <q-item-label header style="padding-bottom: 0px;">Dashboard Color Scheme</q-item-label>
+
+      <q-item>
+        <q-item-section> </q-item-section>
+        <q-item-section side top>
+          <q-btn-dropdown
+            size="md"
+            align="right"
+            v-model="schemeSelectorShown"
+            outlined
+            flat
+            :label="dashboardColorScheme"
+            icon="mdi-invert-colors"
+            menu-self="center left"
+          >
+            <div style="width: 400px;">
+              <color-scheme-selector v-model="dashboardColorScheme"></color-scheme-selector>
+            </div>
+          </q-btn-dropdown>
+          <div>
+            <q-chip square size="sm">Light:</q-chip>
+            <q-chip square size="xs" :style="`background-color: ${lightColors[0]}`"></q-chip>
+            <q-chip square size="xs" :style="`background-color: ${lightColors[1]}`"></q-chip>
+            <q-chip square size="xs" :style="`background-color: ${lightColors[2]}`"></q-chip>
+            <q-chip square size="xs" :style="`background-color: ${lightColors[3]}`"></q-chip>
+            <q-chip square size="xs" :style="`background-color: ${lightColors[4]}`"></q-chip>
+          </div>
+          <div>
+            <q-chip square size="sm">Dark:</q-chip>
+            <q-chip square size="xs" :style="`background-color: ${darkColors[0]}`"></q-chip>
+            <q-chip square size="xs" :style="`background-color: ${darkColors[1]}`"></q-chip>
+            <q-chip square size="xs" :style="`background-color: ${darkColors[2]}`"></q-chip>
+            <q-chip square size="xs" :style="`background-color: ${darkColors[3]}`"></q-chip>
+            <q-chip square size="xs" :style="`background-color: ${darkColors[4]}`"></q-chip>
+          </div>
         </q-item-section>
       </q-item>
 
       <q-separator spaced />
       <q-item-label header>TODO Banner Colors, Backgounds</q-item-label>
 
-      <q-separator spaced />
+      <!--<q-separator spaced />
       <q-item-label header>Other settings</q-item-label>
 
       <q-item>
@@ -121,19 +159,27 @@
         <q-item-section>
           <q-slider v-model="mic" :min="0" :max="50" label />
         </q-item-section>
-      </q-item>
+      </q-item>-->
     </q-list>
   </div>
 </template>
 <script>
 import { mapActions } from 'vuex';
+import ColorSchemeSelector from './colorschemeselector.vue';
+import { dbColors } from 'dashblocks';
 export default {
   name: 'Settings',
-  components: {},
+  components: {
+    ColorSchemeSelector
+  },
   props: {},
   data() {
     return {
-      colorSchemaOptions: ['default', 'Grafana', 'Tableau', 'Diverging', 'Categorical', 'Warm', 'Cool'],
+      schemeSelectorShown: false,
+      colorSchemaOptions: ['default', 'Grafana', 'Tableau', 'Diverging', 'Categorical', 'Warm', 'Cool', 'Calm', 'Fancy', 'Colorblind Friendly'],
+
+      lightColors: [],
+      darkColors: [],
 
       check1: true,
       check2: false,
@@ -182,7 +228,14 @@ export default {
       }
     }
   },
-  watch: {},
+  watch: {
+    dashboardColorScheme: function(val) {
+      this.initColors();
+    }
+  },
+  mounted() {
+    this.initColors();
+  },
   methods: {
     ...mapActions({
       setDark: 'layout/setDark',
@@ -190,6 +243,11 @@ export default {
       setMenuMini: 'layout/setMenuMini',
       setDashboardColorScheme: 'layout/setDashboardColorScheme'
     }),
+    initColors() {
+      let colorScheme = dbColors.getColorScheme(this.dashboardColorScheme);
+      this.lightColors = colorScheme.light.slice(0, 5);
+      this.darkColors = colorScheme.dark.slice(0, 5);
+    },
     onClose() {
       this.$emit('close');
     }
