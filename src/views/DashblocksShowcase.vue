@@ -180,11 +180,21 @@ export default {
         let d = new Date(cTs);
         let r = Math.random();
         let e = Math.random();
-        totalReq += r + e;
+        totalReq += Math.random() * 1000;
         trendReq.push(r + e);
         trendErr.push(e);
 
-        dthData2.push([d, r, e]);
+        // Make sure we can see all colors in 10-color palette
+        /*
+        let cStep = Math.floor(i/10);
+        let dthEntry = [d,null,null,null,null,null,null,null,null,null,null];
+        dthEntry[cStep+1] = r;
+        dthEntry[cStep+2] = e;
+        */
+        let ss = (Math.sin(i / 3) + 3) * 8 - Math.random() * 3;
+        let se = (Math.sin(i / 3) + 2) * 4 - Math.random() * 2;
+
+        dthData2.push([d, ss, se]);
       }
 
       this.dbdata.setWData('w2', {
@@ -231,29 +241,24 @@ export default {
 
       let bubbleData = {
         labels: ['January', 'February', 'March', 'April'],
-        datasets: [
-          {
-            label: 'Data One',
-            data: []
-          },
-          {
-            label: 'Data Two',
-            data: []
-          }
-        ]
+        datasets: []
       };
 
-      for (let i = 0; i < 40; i++) {
-        bubbleData.datasets[0].data.push({
-          x: this.getRand(200),
-          y: this.getRand(50),
-          r: this.getRand(30)
+      for (let j = 0; j < 10; j++) {
+        bubbleData.datasets.push({
+          label: `${j}`,
+          data: []
         });
-        bubbleData.datasets[1].data.push({
-          x: this.getRand(200),
-          y: this.getRand(100),
-          r: this.getRand(50)
-        });
+      }
+
+      for (let i = 0; i < 10; i++) {
+        for (let k = 0; k < 10; k++) {
+          bubbleData.datasets[k].data.push({
+            x: this.getRand(200),
+            y: this.getRand(50),
+            r: this.getRand(20)
+          });
+        }
       }
 
       this.dbdata.setWData('w5', {

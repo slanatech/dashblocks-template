@@ -214,21 +214,41 @@ export default {
       let dbc = dbColors;
 
       //this.testColors = dbColors.getColors(true); // TEMP TODO REMOVE
+      let cSteps = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
 
-      dbColors.setColorScheme('Standard', {
+      dbColors.setColorScheme('default', {
         light: dbColors.d3ScaleChromatic.schemeTableau10,
         dark: dbColors.grafanaColors
       });
 
-      // Setup different color schemes for charts
       dbColors.setColorScheme('Grafana', {
         light: dbColors.grafanaColors,
         dark: dbColors.grafanaColors
       });
 
-      dbColors.setColorScheme('Diverging1', {
-        light: ['#a50026', '#d73027', '#f46d43', '#fdae61', '#fee090', '#ffffbf', '#e0f3f8', '#abd9e9', '#74add1', '#4575b4', '#313695'],
-        dark: ['#8e0152', '#c51b7d', '#de77ae', '#f1b6da', '#fde0ef', '#f7f7f7', '#e6f5d0', '#b8e186', '#7fbc41', '#4d9221', '#276419']
+      dbColors.setColorScheme('Tableau', {
+        light: dbColors.d3ScaleChromatic.schemeTableau10,
+        dark: dbColors.d3ScaleChromatic.schemeTableau10
+      });
+
+      dbColors.setColorScheme('Diverging', {
+        light: dbColors.d3ScaleChromatic.schemeRdYlBu[10],
+        dark: dbColors.d3ScaleChromatic.schemeRdYlBu[10]
+      });
+
+      dbColors.setColorScheme('Categorical', {
+        light: dbColors.d3ScaleChromatic.schemeDark2,
+        dark: dbColors.d3ScaleChromatic.schemeSet3 // schemeBuGn[9],
+      });
+
+      dbColors.setColorScheme('Warm', {
+        light: cSteps.map(x => dbColors.d3ScaleChromatic.interpolateWarm(x)),
+        dark: cSteps.map(x => dbColors.d3ScaleChromatic.interpolateWarm(x))
+      });
+
+      dbColors.setColorScheme('Cool', {
+        light: cSteps.map(x => dbColors.d3ScaleChromatic.interpolateCool(x)),
+        dark: cSteps.map(x => dbColors.d3ScaleChromatic.interpolateCool(x))
       });
     }
   }

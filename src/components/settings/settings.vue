@@ -83,7 +83,7 @@
 
       <q-item tag="label">
         <q-item-section>
-          <q-select v-model="dashboardColorScheme" :options="colorSchemaOptions" label="Color Schema" />
+          <q-select v-model="dashboardColorScheme" :options="colorSchemaOptions" label="Dashboard Color Schema" />
         </q-item-section>
       </q-item>
 
@@ -133,7 +133,7 @@ export default {
   props: {},
   data() {
     return {
-      colorSchemaOptions: ['Standard', 'Grafana', 'Diverging1'],
+      colorSchemaOptions: ['default', 'Grafana', 'Tableau', 'Diverging', 'Categorical', 'Warm', 'Cool'],
 
       check1: true,
       check2: false,
