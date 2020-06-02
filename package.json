@@ -13,12 +13,12 @@
     "release-ci": "release-it --ci"
   },
   "dependencies": {
-    "@quasar/extras": "^1.6.4",
+    "@quasar/extras": "^1.8.1",
     "core-js": "^3.6.5",
-    "quasar": "^1.9.15",
+    "quasar": "^1.12.2",
     "vue": "^2.6.11",
-    "vue-router": "^3.1.6",
-    "vuex": "^3.2.0"
+    "vue-router": "^3.3.2",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.1",

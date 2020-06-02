@@ -1022,9 +1022,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@quasar/extras@^1.6.4":
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/@quasar/extras/-/extras-1.6.4.tgz#eb97a5f543e17db38a12fe6e9fd5285ff28fffb8"
+"@quasar/extras@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@quasar/extras/-/extras-1.8.1.tgz#cb032409c4ad746945d3e52571b93667f0f1a2f8"
+  integrity sha512-/97QHzCrOjye/5OifzD+bTfzzT8FxGlzNvCDYauzobzcV/W0HGeSag2FYNlnA+7Ok6zXWJyk3houhb5NckIOGw==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -8755,9 +8756,10 @@ qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
-quasar@^1.9.15:
-  version "1.9.15"
-  resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.9.15.tgz#a8ba1f78b943402fc60e08a1600e263b28636138"
+quasar@^1.12.2:
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.12.2.tgz#6d272d10c0fb8fecf38adf49f06fb0680546be4d"
+  integrity sha512-Jl6tdGsrMNvRN3vf1XhXH1GzA8Xe87bknBQ5R0OXZAiqqJyfUEflTeKn+fhF7h4GvQO+0ntmOmLjKfBylXvVQg==
 
 query-string@^4.1.0:
   version "4.3.4"
@@ -10729,9 +10731,14 @@ vue-loader@^15.9.1:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-router@^3.1.3, vue-router@^3.1.6:
+vue-router@^3.1.3:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
+
+vue-router@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.3.2.tgz#0099de402edb2fe92f9711053ab5a2156f239cad"
+  integrity sha512-5sEbcfb7MW8mY8lbUVbF4kgcipGXsagkM/X+pb6n0MhjP+RorWIUTPAPSqgPaiPOxVCXgAItBl8Vwz8vq78faA==
 
 vue-select@^3.1.0:
   version "3.10.2"
@@ -10774,9 +10781,10 @@ vuex@^3.1.2:
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.3.0.tgz#665b4630ea1347317139fcc5cb495aab3ec5e513"
   integrity sha512-1MfcBt+YFd20DPwKe0ThhYm1UEXZya4gVKUvCy7AtS11YAOUR+9a6u4fsv1Rr6ePZCDNxW/M1zuIaswp6nNv8Q==
 
-vuex@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.2.0.tgz#86da7f26c3e131ff374870580109145a640ee5a8"
+vuex@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.4.0.tgz#20cc086062d750769fce1febb34e7fceeaebde45"
+  integrity sha512-ajtqwEW/QhnrBZQsZxCLHThZZaa+Db45c92Asf46ZDXu6uHXgbfVuBaJ4gzD2r4UX0oMJHstFwd2r2HM4l8umg==
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"

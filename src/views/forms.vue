@@ -15,6 +15,70 @@
         </q-banner>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-6">
+        <q-list padding>
+          <q-item tag="label" v-ripple>
+            <q-item-section>
+              <q-item-label>Dark Mode</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-toggle v-model="dark" icon="brightness_medium" />
+            </q-item-section>
+          </q-item>
+
+          <q-item tag="label" v-ripple>
+            <q-item-section>
+              <q-item-label>Minimize Menu</q-item-label>
+              <q-item-label caption>Minimize menu sidebar</q-item-label>
+            </q-item-section>
+            <q-item-section side top>
+              <q-toggle v-model="menuMini" icon="menu" />
+            </q-item-section>
+          </q-item>
+
+          <q-item tag="label" v-ripple>
+            <q-item-section>
+              <q-item-label>Auto-Expand Menu</q-item-label>
+              <q-item-label caption>Auto-expand menu when hovering</q-item-label>
+            </q-item-section>
+            <q-item-section side top>
+              <q-toggle v-model="menuAutoExpand" icon="menu" />
+            </q-item-section>
+          </q-item>
+
+          <q-separator spaced />
+        </q-list>
+      </div>
+      <div class="col-md-6">
+        <q-form class="q-gutter-md">
+          <q-input
+            filled
+            v-model="name"
+            label="Your name *"
+            hint="Name and surname"
+            lazy-rules
+            :rules="[val => (val && val.length > 0) || 'Please type something']"
+          />
+
+          <q-input
+            filled
+            type="number"
+            v-model="age"
+            label="Your age *"
+            lazy-rules
+            :rules="[val => (val !== null && val !== '') || 'Please type your age', val => (val > 0 && val < 100) || 'Please type a real age']"
+          />
+
+          <q-toggle v-model="accept" label="I accept the license and terms" />
+
+          <div>
+            <q-btn label="Submit" type="submit" color="primary" />
+            <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
+          </div>
+        </q-form>
+      </div>
+    </div>
   </q-page>
 </template>
 
