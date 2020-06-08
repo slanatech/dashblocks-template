@@ -15,6 +15,7 @@ import Observability from './views/observability.vue';
 import Summary from './views/summary.vue';
 import Requests from './views/requests.vue';
 import VGT from './views/vuegoodtable.vue';
+import QuasarTable from './views/quasartable.vue';
 import APIOp from './views/apiop.vue';
 import Errors from './views/errors.vue';
 
@@ -97,6 +98,11 @@ export default new Router({
           path: '/errors',
           name: 'errors',
           component: Errors
+        },
+        {
+          path: '/quasartable',
+          name: 'quasartable',
+          component: QuasarTable
         }
       ]
     },

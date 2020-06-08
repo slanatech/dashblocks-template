@@ -1,0 +1,37 @@
+[
+  {
+    "name": "api_all_client_error_total",
+    "color": "#4e79a7",
+    "data": 10
+  },
+  {
+    "name": "api_all_errors_total",
+    "color": "#f28e2c",
+    "data": 47
+  },
+  {
+    "name": "api_all_request_in_processing_total",
+    "color": "#e15759",
+    "data": 19
+  },
+  {
+    "name": "api_all_request_total",
+    "color": "#76b7b2",
+    "data": 79
+  },
+  {
+    "name": "api_all_server_error_total",
+    "color": "#59a14f",
+    "data": 34
+  },
+  {
+    "name": "api_all_success_total",
+    "color": "#edc949",
+    "data": 44
+  },
+  {
+    "name": "api_request_duration_milliseconds_bucket",
+    "color": "#af7aa1",
+    "data": 81
+  }
+]

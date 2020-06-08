@@ -1,0 +1,24 @@
+{
+  "layout": {
+    "type": "grid"
+  },
+  "widgets": [
+    {
+      "id": "w1",
+      "type": "DbChartjsLine",
+      "cspan": 4,
+      "height": 250,
+      "properties": {
+        "options": {
+          "test": "value"
+        }
+      }
+    },
+    {
+      "id": "w2",
+      "type": "DbChartjsBar",
+      "cspan": 4,
+      "height": 250
+    }
+  ]
+}
