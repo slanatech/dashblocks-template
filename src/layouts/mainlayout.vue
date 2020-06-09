@@ -119,14 +119,14 @@ export default {
             { id: 'apiop', title: 'API Operation', link: '/apiop', icon: 'settings_ethernet', caption: 'API Operation Scorecard' }
           ]
         },
-        { id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
+        //{ id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
         {
           id: '4',
           title: 'Tables',
           icon: 'mdi-table',
           items: [
-            { id: 'vgt', title: 'Vue-Good-Table', link: '/vgt', icon: 'sync_alt' },
-            { id: 'quasartable', title: 'Quasar Tables', link: '/quasartable', icon: 'sync_alt' }
+            { id: 'quasartable', title: 'Quasar Tables', link: '/quasartable', icon: 'sync_alt' },
+            { id: 'vgt', title: 'Vue-Good-Table', link: '/vgt', icon: 'sync_alt' }
           ]
         },
         {

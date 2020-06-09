@@ -6,14 +6,13 @@
     :data="hits"
     :columns="columnsList"
     :pagination.sync="pagination"
-    :rows-per-page-options="[10, 20, 50, 100, 200]"
+    :rows-per-page-options="[5, 10, 25, 50, 100]"
     row-key="name"
     separator="cell"
     class="ub-hits-table"
-    @request="onRequest"
   >
     <template v-slot:top-right="props">
-      <q-btn flat round dense icon="archive" size="md" />
+      <q-toggle v-model="showPreview">Show Preview</q-toggle>
       <q-btn flat round dense :icon="props.inFullscreen ? 'fullscreen_exit' : 'fullscreen'" @click="props.toggleFullscreen" class="q-ml-md" size="md" />
     </template>
 
@@ -55,7 +54,7 @@ export default {
     },
     tsPath: {
       type: Array,
-      default: () => ['_source', '@timestamp']
+      default: () => ['@timestamp']
     },
     tsLabel: {
       type: String,
@@ -77,10 +76,6 @@ export default {
       type: Number,
       default: 10
     },
-    totalHits: {
-      type: Number,
-      default: 0
-    },
     sortBy: {
       type: String,
       default: ''
@@ -93,17 +88,17 @@ export default {
   data: function() {
     return {
       pagination: {
-        page: this.page,
+        page: 1,
         rowsPerPage: this.rowsPerPage,
-        rowsNumber: this.totalHits,
-        sortBy: this.sortBy,
-        descending: this.descending
+        sortBy: this.tsLabel,
+        descending: true
       },
       tsColumn: {
         name: this.tsLabel,
         required: true,
         label: this.tsLabel,
         align: 'left',
+        field: this.tsLabel,
         format: this.formatTsColumn,
         sortable: true,
         style: 'vertical-align: top;'
@@ -119,12 +114,13 @@ export default {
       items: [],
       allColumnsList: [],
       thStops: [25, 50, 100],
-      thStopsWidth: [100, 140, 160]
+      thStopsWidth: [100, 140, 160],
+      showPreview: false
     };
   },
   computed: {
     hasHitColumn: function() {
-      return Object.keys(this.displayFields).length <= 0;
+      return this.showPreview; //return Object.keys(this.displayFields).length <= 0;
     },
     columnsList: function() {
       let allColumnsList = [this.tsColumn];
@@ -151,9 +147,6 @@ export default {
   },
   mounted: function() {},
   watch: {
-    totalHits: function(val) {
-      this.pagination.rowsNumber = val;
-    },
     page: function(val) {
       this.pagination.page = val;
     },
@@ -207,11 +200,6 @@ export default {
 
     onRowDblClick(row) {
       this.$emit('rowDblClick', row);
-    },
-
-    onRequest(props) {
-      console.log(`Got onRequest: ${JSON.stringify(props)}`);
-      this.$emit('tableRequest', props);
     }
   }
 };

@@ -31,12 +31,10 @@
         />
       </div>
     </div>
-    <div class="row items-center">
+    <div class="row items-center" style="margin-top: 20px;">
       <div class="col-md-12 q-ma-sm">
-        <div class="text-h5">Advanced table</div>
-        <div class="text-subtitle1">
-          Search, pagination
-        </div>
+        <div class="text-h5">Advanced Table: Pagination, Sorting, Preview, Full Screen</div>
+        <hits-table :hits="hitsTableData" :display-fields="hitsDisplayFields" v-on:rowClick="onRowClick" />
       </div>
     </div>
   </q-page>
@@ -49,16 +47,18 @@ import { mapState } from 'vuex';
 import utils from '../utils.js';
 import PTable from '../components/tables/ptable.vue';
 import ITable from '../components/tables/itable.vue';
+import HitsTable from '../components/tables/hitstable.vue';
 
 // File '../data/api.json' contains example data for the table
 import dashboardData from '../data/api.json';
 import requestsData from '../data/requests.json';
 import PTableData from '../data/ptabledata.json';
 import ItemsTableData from '../data/itemstabledata.json';
+import HitsData from '../data/hitsdata.json';
 
 export default {
   name: 'QuasarTable',
-  components: { PTable, ITable },
+  components: { PTable, ITable, HitsTable },
   mixins: [vgtMethods],
   data() {
     return {
@@ -66,6 +66,7 @@ export default {
       isDark: false,
       selectedItems: [],
       highlightedItems: null,
+      pTableData: HitsData[0],
       columnsRequests: [
         { label: 'Method', field: 'method', tdClass: 'text-weight-bold' },
         { label: 'Requests', field: 'requests', type: 'number', tdClass: 'text-weight-bold' },
@@ -104,6 +105,13 @@ export default {
         { label: 'Avg Res Size', field: 'avg_res_clength', type: 'number', formatFn: this.formatToFixed0 },
         { label: 'Tags', field: 'tags', type: 'string' }
       ],
+      hitsDisplayFields: {
+        'api.query': ['api', 'query'],
+        'http.response.code': ['http', 'response', 'code'],
+        'http.response.phrase': ['http', 'response', 'phrase'],
+        responsetime: ['responsetime'],
+        'api.operationId': ['api', 'operationId']
+      },
       rows: []
     };
   },
@@ -114,11 +122,11 @@ export default {
     vgtTheme: function() {
       return this.dark ? 'nocturnal' : 'default';
     },
-    pTableData: function() {
-      return PTableData;
-    },
     iTableItems: function() {
       return ItemsTableData;
+    },
+    hitsTableData: function() {
+      return HitsData;
     }
   },
   watch: {},
@@ -134,6 +142,9 @@ export default {
       // Update tables
       this.rowsRequests = utils.getMethodStatsArray(requestsData);
       this.rows = utils.getApiStatsArray(dashboardData);
+    },
+    onRowClick: function(row) {
+      this.pTableData = row;
     }
   }
 };

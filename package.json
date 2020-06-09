@@ -13,9 +13,9 @@
     "release-ci": "release-it --ci"
   },
   "dependencies": {
-    "@quasar/extras": "^1.8.1",
+    "@quasar/extras": "^1.8.2",
     "core-js": "^3.6.5",
-    "quasar": "^1.12.2",
+    "quasar": "^1.12.3",
     "vue": "^2.6.11",
     "vue-router": "^3.3.2",
     "vuex": "^3.4.0"

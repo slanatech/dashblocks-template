@@ -1,0 +1,36 @@
+/* UBook - code highlighting styles */
+
+.ub-code {
+  font: 14px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  color: #757575;
+
+  .ub-v-s {
+    padding: 2px;
+    margin: 1px;
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    color: #1a1aa6;
+  }
+
+  .ub-v-n {
+    padding: 2px;
+    margin: 1px;
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    color: #9a050f;
+  }
+}
+
+.q-dark .ub-code {
+  color: #757575;
+
+  .ub-v-s {
+    background-color: inherit;
+    color: #7986CB;
+  }
+
+  .ub-v-n {
+    background-color: inherit;
+    color: #AD1457;
+  }
+}

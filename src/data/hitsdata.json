@@ -1,0 +1,4728 @@
+[
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661376075,
+    "endts": 1591661376117,
+    "responsetime": 42,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":40,\"payloadsize\":110}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 110
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:36.075Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661375503,
+    "endts": 1591661375578,
+    "responsetime": 75,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":74,\"payloadsize\":53}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 53
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:35.503Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661375502,
+    "endts": 1591661375542,
+    "responsetime": 40,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":39,\"payloadsize\":109}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 109
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:35.502Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661375502,
+    "endts": 1591661375551,
+    "responsetime": 49,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":48,\"payloadsize\":77}",
+          "content-type": "application/json",
+          "content-length": "184",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 184,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 77
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:35.502Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661375059,
+    "endts": 1591661375070,
+    "responsetime": 11,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":10,\"payloadsize\":76}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 76
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:35.059Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661375058,
+    "endts": 1591661375125,
+    "responsetime": 67,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":66,\"payloadsize\":72}",
+          "content-type": "application/json",
+          "content-length": "82",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 82,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 72
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:35.058Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661375057,
+    "endts": 1591661375083,
+    "responsetime": 26,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":26,\"payloadsize\":158}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 158
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:35.057Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661374819,
+    "endts": 1591661374867,
+    "responsetime": 48,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":47,\"payloadsize\":81}",
+          "content-type": "application/json",
+          "content-length": "37",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 37,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 81
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:34.819Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661374819,
+    "endts": 1591661374895,
+    "responsetime": 76,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":76,\"payloadsize\":126}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 126
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:34.819Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661374818,
+    "endts": 1591661374894,
+    "responsetime": 76,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":76,\"payloadsize\":5}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 5
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:34.818Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661374337,
+    "endts": 1591661374343,
+    "responsetime": 6,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":5,\"payloadsize\":66}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 66
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:34.337Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661374337,
+    "endts": 1591661374432,
+    "responsetime": 95,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":95,\"payloadsize\":154}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 154
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:34.337Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661374336,
+    "endts": 1591661374434,
+    "responsetime": 98,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":97,\"payloadsize\":54}",
+          "content-type": "application/json",
+          "content-length": "24",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 24,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 54
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:34.336Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661373862,
+    "endts": 1591661373892,
+    "responsetime": 30,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":30,\"payloadsize\":175}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 175
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.862Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661373861,
+    "endts": 1591661373905,
+    "responsetime": 44,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":404,\"message\":\"Not Found\",\"delay\":43,\"payloadsize\":40}",
+          "content-type": "application/json",
+          "content-length": "93",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 93,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 404,
+        "class": "client_error",
+        "phrase": "Not Found",
+        "headers": {},
+        "clength": 40
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.861Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661373860,
+    "endts": 1591661373898,
+    "responsetime": 38,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":36,\"payloadsize\":161}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 161
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.860Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661373713,
+    "endts": 1591661373723,
+    "responsetime": 10,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":404,\"message\":\"Not Found\",\"delay\":9,\"payloadsize\":107}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 404,
+        "class": "client_error",
+        "phrase": "Not Found",
+        "headers": {},
+        "clength": 107
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.713Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661373712,
+    "endts": 1591661373718,
+    "responsetime": 6,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":4,\"payloadsize\":104}",
+          "content-type": "application/json",
+          "content-length": "87",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 87,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 104
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.712Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661373712,
+    "endts": 1591661373722,
+    "responsetime": 10,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":9,\"payloadsize\":120}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 120
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.712Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661373264,
+    "endts": 1591661373268,
+    "responsetime": 4,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":3,\"payloadsize\":137}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 137
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.264Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661373263,
+    "endts": 1591661373264,
+    "responsetime": 1,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":500,\"message\":\"Internal Server Error\",\"delay\":1,\"payloadsize\":56}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 500,
+        "class": "server_error",
+        "phrase": "Internal Server Error",
+        "headers": {},
+        "clength": 56
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.263Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661373263,
+    "endts": 1591661373328,
+    "responsetime": 65,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":63,\"payloadsize\":173}",
+          "content-type": "application/json",
+          "content-length": "206",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 206,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 173
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:33.263Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661372772,
+    "endts": 1591661372847,
+    "responsetime": 75,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":501,\"message\":\"Not Implemented\",\"delay\":75,\"payloadsize\":79}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 501,
+        "class": "server_error",
+        "phrase": "Not Implemented",
+        "headers": {},
+        "clength": 79
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:32.772Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661372771,
+    "endts": 1591661372817,
+    "responsetime": 46,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":45,\"payloadsize\":176}",
+          "content-type": "application/json",
+          "content-length": "138",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 138,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 176
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:32.771Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661372771,
+    "endts": 1591661372832,
+    "responsetime": 61,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":61,\"payloadsize\":141}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 141
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:32.771Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661372177,
+    "endts": 1591661372240,
+    "responsetime": 63,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":62,\"payloadsize\":81}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 81
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:32.177Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661372176,
+    "endts": 1591661372251,
+    "responsetime": 75,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":73,\"payloadsize\":30}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 30
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:32.176Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661371771,
+    "endts": 1591661371773,
+    "responsetime": 2,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":2,\"payloadsize\":113}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 113
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:31.771Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661371771,
+    "endts": 1591661371809,
+    "responsetime": 38,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":404,\"message\":\"Not Found\",\"delay\":38,\"payloadsize\":66}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 404,
+        "class": "client_error",
+        "phrase": "Not Found",
+        "headers": {},
+        "clength": 66
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:31.771Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661371770,
+    "endts": 1591661371816,
+    "responsetime": 46,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":501,\"message\":\"Not Implemented\",\"delay\":46,\"payloadsize\":162}",
+          "content-type": "application/json",
+          "content-length": "41",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 41,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 501,
+        "class": "server_error",
+        "phrase": "Not Implemented",
+        "headers": {},
+        "clength": 162
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:31.770Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661371312,
+    "endts": 1591661371337,
+    "responsetime": 25,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":401,\"message\":\"Unauthorized\",\"delay\":24,\"payloadsize\":67}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 401,
+        "class": "client_error",
+        "phrase": "Unauthorized",
+        "headers": {},
+        "clength": 67
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:31.312Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661370927,
+    "endts": 1591661370952,
+    "responsetime": 25,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":25,\"payloadsize\":195}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 195
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:30.927Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661370926,
+    "endts": 1591661370936,
+    "responsetime": 10,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":10,\"payloadsize\":42}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 42
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:30.926Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661370926,
+    "endts": 1591661371024,
+    "responsetime": 98,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":501,\"message\":\"Not Implemented\",\"delay\":97,\"payloadsize\":167}",
+          "content-type": "application/json",
+          "content-length": "55",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 55,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 501,
+        "class": "server_error",
+        "phrase": "Not Implemented",
+        "headers": {},
+        "clength": 167
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:30.926Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661370925,
+    "endts": 1591661370954,
+    "responsetime": 29,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":401,\"message\":\"Unauthorized\",\"delay\":29,\"payloadsize\":198}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 401,
+        "class": "client_error",
+        "phrase": "Unauthorized",
+        "headers": {},
+        "clength": 198
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:30.925Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661370607,
+    "endts": 1591661370700,
+    "responsetime": 93,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":92,\"payloadsize\":28}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 28
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:30.607Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661370606,
+    "endts": 1591661370640,
+    "responsetime": 34,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":34,\"payloadsize\":145}",
+          "content-type": "application/json",
+          "content-length": "15",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 15,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 145
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:30.606Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661370606,
+    "endts": 1591661370675,
+    "responsetime": 69,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":68,\"payloadsize\":96}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 96
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:30.606Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661370238,
+    "endts": 1591661370296,
+    "responsetime": 58,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":57,\"payloadsize\":198}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 198
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:30.238Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661369939,
+    "endts": 1591661369961,
+    "responsetime": 22,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":21,\"payloadsize\":21}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 21
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:29.939Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661369939,
+    "endts": 1591661370021,
+    "responsetime": 82,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":82,\"payloadsize\":17}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 17
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:29.939Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661369508,
+    "endts": 1591661369602,
+    "responsetime": 94,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":94,\"payloadsize\":153}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 153
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:29.508Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661369507,
+    "endts": 1591661369517,
+    "responsetime": 10,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":8,\"payloadsize\":148}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 148
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:29.507Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661369507,
+    "endts": 1591661369596,
+    "responsetime": 89,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":89,\"payloadsize\":175}",
+          "content-type": "application/json",
+          "content-length": "192",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 192,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 175
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:29.507Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661368985,
+    "endts": 1591661368993,
+    "responsetime": 8,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":7,\"payloadsize\":116}",
+          "content-type": "application/json",
+          "content-length": "60",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 60,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 116
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.985Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661368985,
+    "endts": 1591661369033,
+    "responsetime": 48,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":47,\"payloadsize\":134}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 134
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.985Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661368671,
+    "endts": 1591661368682,
+    "responsetime": 11,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":11,\"payloadsize\":69}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 69
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.671Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661368671,
+    "endts": 1591661368693,
+    "responsetime": 22,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":404,\"message\":\"Not Found\",\"delay\":21,\"payloadsize\":39}",
+          "content-type": "application/json",
+          "content-length": "25",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 25,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 404,
+        "class": "client_error",
+        "phrase": "Not Found",
+        "headers": {},
+        "clength": 39
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.671Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661368324,
+    "endts": 1591661368376,
+    "responsetime": 52,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":52,\"payloadsize\":2}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 5
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.324Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661368323,
+    "endts": 1591661368367,
+    "responsetime": 44,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":42,\"payloadsize\":25}",
+          "content-type": "application/json",
+          "content-length": "139",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 139,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 25
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.323Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661368323,
+    "endts": 1591661368379,
+    "responsetime": 56,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":54,\"payloadsize\":126}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 126
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.323Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661368174,
+    "endts": 1591661368182,
+    "responsetime": 8,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":8,\"payloadsize\":82}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 82
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.174Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661368174,
+    "endts": 1591661368218,
+    "responsetime": 44,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":43,\"payloadsize\":157}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 157
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.174Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661368173,
+    "endts": 1591661368210,
+    "responsetime": 37,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":35,\"payloadsize\":198}",
+          "content-type": "application/json",
+          "content-length": "139",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 139,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 198
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:28.173Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661367707,
+    "endts": 1591661367792,
+    "responsetime": 85,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":85,\"payloadsize\":129}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 129
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:27.707Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661367706,
+    "endts": 1591661367722,
+    "responsetime": 16,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":500,\"message\":\"Internal Server Error\",\"delay\":16,\"payloadsize\":138}",
+          "content-type": "application/json",
+          "content-length": "156",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 156,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 500,
+        "class": "server_error",
+        "phrase": "Internal Server Error",
+        "headers": {},
+        "clength": 138
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:27.706Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661367365,
+    "endts": 1591661367396,
+    "responsetime": 31,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":30,\"payloadsize\":146}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 146
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:27.365Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661367066,
+    "endts": 1591661367082,
+    "responsetime": 16,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":15,\"payloadsize\":145}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 145
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:27.066Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661367064,
+    "endts": 1591661367099,
+    "responsetime": 35,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":33,\"payloadsize\":79}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 79
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:27.064Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661366483,
+    "endts": 1591661366499,
+    "responsetime": 16,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":16,\"payloadsize\":36}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 36
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:26.483Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661366483,
+    "endts": 1591661366540,
+    "responsetime": 57,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":56,\"payloadsize\":199}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 199
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:26.483Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661366482,
+    "endts": 1591661366497,
+    "responsetime": 15,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":15,\"payloadsize\":136}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 136
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:26.482Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661366482,
+    "endts": 1591661366569,
+    "responsetime": 87,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":85,\"payloadsize\":74}",
+          "content-type": "application/json",
+          "content-length": "128",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 128,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 74
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:26.482Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661366031,
+    "endts": 1591661366070,
+    "responsetime": 39,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":38,\"payloadsize\":41}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 41
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:26.031Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661366030,
+    "endts": 1591661366042,
+    "responsetime": 12,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":11,\"payloadsize\":138}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 138
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:26.030Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661365646,
+    "endts": 1591661365716,
+    "responsetime": 70,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":69,\"payloadsize\":187}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 187
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:25.646Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661365099,
+    "endts": 1591661365198,
+    "responsetime": 99,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":98,\"payloadsize\":186}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 186
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:25.099Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661364685,
+    "endts": 1591661364737,
+    "responsetime": 52,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":51,\"payloadsize\":161}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 161
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:24.685Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661364224,
+    "endts": 1591661364301,
+    "responsetime": 77,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":77,\"payloadsize\":105}",
+          "content-type": "application/json",
+          "content-length": "188",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 188,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 105
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:24.224Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661364224,
+    "endts": 1591661364317,
+    "responsetime": 93,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":92,\"payloadsize\":75}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 75
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:24.224Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661363985,
+    "endts": 1591661363997,
+    "responsetime": 12,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":9,\"payloadsize\":136}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 136
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:23.985Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661363984,
+    "endts": 1591661363996,
+    "responsetime": 12,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":10,\"payloadsize\":63}",
+          "content-type": "application/json",
+          "content-length": "91",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 91,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 63
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:23.984Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661363984,
+    "endts": 1591661364015,
+    "responsetime": 31,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":31,\"payloadsize\":138}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 138
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:23.984Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661363983,
+    "endts": 1591661364083,
+    "responsetime": 100,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":99,\"payloadsize\":40}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 40
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:23.983Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661363782,
+    "endts": 1591661363871,
+    "responsetime": 89,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":88,\"payloadsize\":193}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 193
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:23.782Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661363241,
+    "endts": 1591661363254,
+    "responsetime": 13,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":13,\"payloadsize\":127}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 127
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:23.241Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661363241,
+    "endts": 1591661363324,
+    "responsetime": 83,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":404,\"message\":\"Not Found\",\"delay\":82,\"payloadsize\":147}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 404,
+        "class": "client_error",
+        "phrase": "Not Found",
+        "headers": {},
+        "clength": 147
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:23.241Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661363240,
+    "endts": 1591661363309,
+    "responsetime": 69,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":68,\"payloadsize\":39}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 39
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:23.240Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661362943,
+    "endts": 1591661363019,
+    "responsetime": 76,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":75,\"payloadsize\":158}",
+          "content-type": "application/json",
+          "content-length": "63",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 63,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 158
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:22.943Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661362942,
+    "endts": 1591661362967,
+    "responsetime": 25,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":25,\"payloadsize\":164}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 164
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:22.942Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661362600,
+    "endts": 1591661362605,
+    "responsetime": 5,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":401,\"message\":\"Unauthorized\",\"delay\":5,\"payloadsize\":166}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 401,
+        "class": "client_error",
+        "phrase": "Unauthorized",
+        "headers": {},
+        "clength": 166
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:22.600Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661362273,
+    "endts": 1591661362353,
+    "responsetime": 80,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":79,\"payloadsize\":151}",
+          "content-type": "application/json",
+          "content-length": "158",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 158,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 151
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:22.273Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661361720,
+    "endts": 1591661361742,
+    "responsetime": 22,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":21,\"payloadsize\":161}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 161
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:21.720Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661361720,
+    "endts": 1591661361783,
+    "responsetime": 63,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":401,\"message\":\"Unauthorized\",\"delay\":63,\"payloadsize\":121}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 401,
+        "class": "client_error",
+        "phrase": "Unauthorized",
+        "headers": {},
+        "clength": 121
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:21.720Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661361720,
+    "endts": 1591661361784,
+    "responsetime": 64,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":64,\"payloadsize\":173}",
+          "content-type": "application/json",
+          "content-length": "105",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 105,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 173
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:21.720Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661361719,
+    "endts": 1591661361818,
+    "responsetime": 99,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":97,\"payloadsize\":80}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 80
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:21.719Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661361120,
+    "endts": 1591661361199,
+    "responsetime": 79,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":78,\"payloadsize\":44}",
+          "content-type": "application/json",
+          "content-length": "54",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 54,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 44
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:21.120Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661361120,
+    "endts": 1591661361220,
+    "responsetime": 100,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":98,\"payloadsize\":116}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 116
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:21.120Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661361119,
+    "endts": 1591661361213,
+    "responsetime": 94,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":93,\"payloadsize\":151}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 151
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:21.119Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661360540,
+    "endts": 1591661360632,
+    "responsetime": 92,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":92,\"payloadsize\":126}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 126
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:20.540Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661360539,
+    "endts": 1591661360618,
+    "responsetime": 79,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":78,\"payloadsize\":76}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 76
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:20.539Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661360539,
+    "endts": 1591661360621,
+    "responsetime": 82,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":81,\"payloadsize\":86}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 86
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:20.539Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661360049,
+    "endts": 1591661360117,
+    "responsetime": 68,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":67,\"payloadsize\":166}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 166
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:20.049Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661360048,
+    "endts": 1591661360138,
+    "responsetime": 90,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":89,\"payloadsize\":199}",
+          "content-type": "application/json",
+          "content-length": "72",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 72,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 199
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:20.048Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661359853,
+    "endts": 1591661359856,
+    "responsetime": 3,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":2,\"payloadsize\":148}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 148
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:19.853Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661359853,
+    "endts": 1591661359878,
+    "responsetime": 25,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":24,\"payloadsize\":51}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 51
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:19.853Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "POST",
+    "query": "POST /pets",
+    "startts": 1591661359852,
+    "endts": 1591661359924,
+    "responsetime": 72,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":71,\"payloadsize\":50}",
+          "content-type": "application/json",
+          "content-length": "116",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 116,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 50
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:19.852Z",
+    "api": {
+      "path": "/pets",
+      "query": "POST /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "addPet"
+    }
+  },
+  {
+    "path": "/pets",
+    "method": "GET",
+    "query": "GET /pets",
+    "startts": 1591661359851,
+    "endts": 1591661359940,
+    "responsetime": 89,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":88,\"payloadsize\":119}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 119
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:19.851Z",
+    "api": {
+      "path": "/pets",
+      "query": "GET /pets",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "findPets",
+      "params": {}
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "DELETE",
+    "query": "DELETE /pets/abcde",
+    "startts": 1591661359338,
+    "endts": 1591661359373,
+    "responsetime": 35,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":\"200\",\"message\":\"OK\",\"delay\":34,\"payloadsize\":161}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 200,
+        "class": "success",
+        "phrase": "OK",
+        "headers": {},
+        "clength": 161
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:19.338Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "DELETE /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "deletePet",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  },
+  {
+    "path": "/pets/abcde",
+    "method": "GET",
+    "query": "GET /pets/abcde",
+    "startts": 1591661359338,
+    "endts": 1591661359382,
+    "responsetime": 44,
+    "node": {
+      "name": "swagger-stats-fastify",
+      "version": "0.95.17",
+      "hostname": "sv5",
+      "ip": "192.168.1.71"
+    },
+    "http": {
+      "request": {
+        "url": "/pets/abcde",
+        "headers": {
+          "x-sws-res": "{\"code\":500,\"message\":\"Internal Server Error\",\"delay\":43,\"payloadsize\":8}",
+          "host": "localhost:3040",
+          "connection": "close"
+        },
+        "clength": 0,
+        "route_path": "/pet*",
+        "query": {}
+      },
+      "response": {
+        "code": 500,
+        "class": "server_error",
+        "phrase": "Internal Server Error",
+        "headers": {},
+        "clength": 8
+      }
+    },
+    "ip": "127.0.0.1",
+    "real_ip": "127.0.0.1",
+    "port": 3040,
+    "@timestamp": "2020-06-09T00:09:19.338Z",
+    "api": {
+      "path": "/pets/{id}",
+      "query": "GET /pets/{id}",
+      "swagger": true,
+      "deprecated": false,
+      "operationId": "find pet by id",
+      "params": {
+        "id": "abcde"
+      }
+    }
+  }
+]
