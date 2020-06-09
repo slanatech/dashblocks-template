@@ -10,7 +10,9 @@
       "height": 250,
       "properties": {
         "options": {
-          "test": "value"
+          "test": "true",
+          "key": "value",
+          "display": "dense"
         }
       }
     },
