@@ -33,10 +33,29 @@
     </div>
     <div class="row items-center" style="margin-top: 20px;">
       <div class="col-md-12 q-ma-sm">
-        <div class="text-h5">Advanced Table: Pagination, Sorting, Preview, Full Screen</div>
-        <hits-table :hits="hitsTableData" :display-fields="hitsDisplayFields" v-on:rowClick="onRowClick" />
+        <div class="text-h5">Advanced Table: Filtering, Pagination, Sorting, Preview, Full Screen, Click on Row</div>
+        <h-table :hits="hitsTableData" :display-fields="hitsDisplayFields" v-on:rowClick="onRowClick" />
       </div>
     </div>
+    <q-dialog v-model="hitDetails">
+      <q-card>
+        <q-card-section>
+          <div class="text-h6">Properties</div>
+        </q-card-section>
+
+        <q-separator />
+
+        <q-card-section style="max-height: 50vh" class="scroll">
+          <p-table :obj="selectedHit"></p-table>
+        </q-card-section>
+
+        <q-separator />
+
+        <q-card-actions align="right">
+          <q-btn flat label="Close" color="primary" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -47,7 +66,7 @@ import { mapState } from 'vuex';
 import utils from '../utils.js';
 import PTable from '../components/tables/ptable.vue';
 import ITable from '../components/tables/itable.vue';
-import HitsTable from '../components/tables/hitstable.vue';
+import HTable from '../components/tables/htable.vue';
 
 // File '../data/api.json' contains example data for the table
 import dashboardData from '../data/api.json';
@@ -58,7 +77,7 @@ import HitsData from '../data/hitsdata.json';
 
 export default {
   name: 'QuasarTable',
-  components: { PTable, ITable, HitsTable },
+  components: { PTable, ITable, HTable },
   mixins: [vgtMethods],
   data() {
     return {
@@ -66,7 +85,9 @@ export default {
       isDark: false,
       selectedItems: [],
       highlightedItems: null,
-      pTableData: HitsData[0],
+      pTableData: PTableData,
+      selectedHit: null,
+      hitDetails: false,
       columnsRequests: [
         { label: 'Method', field: 'method', tdClass: 'text-weight-bold' },
         { label: 'Requests', field: 'requests', type: 'number', tdClass: 'text-weight-bold' },
@@ -144,7 +165,8 @@ export default {
       this.rows = utils.getApiStatsArray(dashboardData);
     },
     onRowClick: function(row) {
-      this.pTableData = row;
+      this.selectedHit = row;
+      this.hitDetails = true;
     }
   }
 };

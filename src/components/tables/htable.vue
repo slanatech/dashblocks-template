@@ -1,17 +1,24 @@
 <template>
   <q-table
-    title="Hits"
     dense
     flat
     :data="hits"
     :columns="columnsList"
     :pagination.sync="pagination"
     :rows-per-page-options="[5, 10, 25, 50, 100]"
+    :filter="filter"
+    :filter-method="compositeFilterFn"
     row-key="name"
     separator="cell"
     class="ub-hits-table"
   >
-    <template v-slot:top-right="props">
+    <template v-slot:top="props">
+      <q-input v-model="filter" debounce="500" filled dense placeholder="Search" clearable class="col-md-4">
+        <template v-slot:prepend>
+          <q-icon name="search" />
+        </template>
+      </q-input>
+      <q-space></q-space>
       <q-toggle v-model="showPreview">Show Preview</q-toggle>
       <q-btn flat round dense :icon="props.inFullscreen ? 'fullscreen_exit' : 'fullscreen'" @click="props.toggleFullscreen" class="q-ml-md" size="md" />
     </template>
@@ -46,7 +53,7 @@ import pathOr from 'ramda/src/pathOr';
 
 // Specialized table to show collection of JSON documents
 export default {
-  name: 'HitsTable',
+  name: 'HTable',
   props: {
     hits: {
       type: Array,
@@ -115,7 +122,8 @@ export default {
       allColumnsList: [],
       thStops: [25, 50, 100],
       thStopsWidth: [100, 140, 160],
-      showPreview: false
+      showPreview: false,
+      filter: ''
     };
   },
   computed: {
@@ -198,6 +206,21 @@ export default {
       this.$emit('rowClick', row);
     },
 
+    compositeFilterFn(rows, terms, cols, cellValue) {
+      console.log(`compositeFilterFn: terms = ${JSON.stringify(terms)}`);
+      let filteredRows = rows;
+      if (terms && terms !== '') {
+        const lowerTerms = terms.toLowerCase();
+        filteredRows = rows.filter(
+          row =>
+            JSON.stringify(row)
+              .toLowerCase()
+              .indexOf(lowerTerms) !== -1
+        );
+      }
+      return filteredRows;
+    },
+
     onRowDblClick(row) {
       this.$emit('rowDblClick', row);
     }
@@ -210,6 +233,7 @@ export default {
 
   .ub-hits-tr {
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    cursor: pointer;
   }
 
   .ub-hits-td-time {

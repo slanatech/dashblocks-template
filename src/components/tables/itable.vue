@@ -216,7 +216,6 @@ export default {
 
   .ub-items-data {
     font-weight: 500;
-    font-size: 16px;
   }
 
   .ub-items-row:hover > .ub-items-row-ctrl > .ub-items-ctrls {
