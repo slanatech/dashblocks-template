@@ -82,50 +82,11 @@ export default {
   data() {
     return {
       timer: null,
-      isDark: false,
       selectedItems: [],
       highlightedItems: null,
       pTableData: PTableData,
       selectedHit: null,
       hitDetails: false,
-      columnsRequests: [
-        { label: 'Method', field: 'method', tdClass: 'text-weight-bold' },
-        { label: 'Requests', field: 'requests', type: 'number', tdClass: 'text-weight-bold' },
-        { label: 'Responses', field: 'responses', type: 'number' },
-        { label: 'Apdex Score', field: 'apdex_score', type: 'number', formatFn: this.formatToFixed2, tdClass: this.tdClassApdex },
-        { label: 'Errors', field: 'errors', type: 'number', tdClass: this.tdClassErrors },
-        { label: 'Req rate', field: 'req_rate', type: 'number', formatFn: this.formatToFixed2 },
-        { label: 'Err rate', field: 'err_rate', type: 'number', formatFn: this.formatToFixed2, tdClass: this.tdClassErrRate },
-        { label: 'Success', field: 'success', type: 'number' },
-        { label: 'Redirect', field: 'redirect', type: 'number' },
-        { label: 'Client Error', field: 'client_error', type: 'number', tdClass: this.tdClassCErr },
-        { label: 'Server Error', field: 'server_error', type: 'number', tdClass: this.tdClassSErr },
-        { label: 'Max Time (ms)', field: 'max_time', type: 'number' },
-        { label: 'Avg Time (ms)', field: 'avg_time', type: 'number', formatFn: this.formatToFixed2 },
-        { label: 'Avg Req Size', field: 'avg_req_clength', type: 'number', formatFn: this.formatToFixed0 },
-        { label: 'Avg Res Size', field: 'avg_res_clength', type: 'number', formatFn: this.formatToFixed0 }
-      ],
-      rowsRequests: [],
-      columns: [
-        //{ label: '', field: 'expand', width: '1%', tdClass: 'text-center pointer' },
-        { label: 'Method', field: 'method', tdClass: 'text-weight-bold' },
-        { label: 'Path', field: 'path', tdClass: 'text-weight-bold' },
-        { label: 'Requests', field: 'requests', type: 'number', tdClass: 'text-weight-bold' },
-        { label: 'Responses', field: 'responses', type: 'number' },
-        { label: 'Apdex Score', field: 'apdex_score', type: 'number', formatFn: this.formatToFixed2, tdClass: this.tdClassApdex },
-        { label: 'Errors', field: 'errors', type: 'number', tdClass: this.tdClassErrors },
-        { label: 'Req rate', field: 'req_rate', type: 'number', formatFn: this.formatToFixed2 },
-        { label: 'Err rate', field: 'err_rate', type: 'number', formatFn: this.formatToFixed2, tdClass: this.tdClassErrRate },
-        { label: 'Success', field: 'success', type: 'number' },
-        { label: 'Redirect', field: 'redirect', type: 'number' },
-        { label: 'Client Error', field: 'client_error', type: 'number', tdClass: this.tdClassCErr },
-        { label: 'Server Error', field: 'server_error', type: 'number', tdClass: this.tdClassSErr },
-        { label: 'Max Time (ms)', field: 'max_time', type: 'number' },
-        { label: 'Avg Time (ms)', field: 'avg_time', type: 'number', formatFn: this.formatToFixed2 },
-        { label: 'Avg Req Size', field: 'avg_req_clength', type: 'number', formatFn: this.formatToFixed0 },
-        { label: 'Avg Res Size', field: 'avg_res_clength', type: 'number', formatFn: this.formatToFixed0 },
-        { label: 'Tags', field: 'tags', type: 'string' }
-      ],
       hitsDisplayFields: {
         'api.query': ['api', 'query'],
         'http.response.code': ['http', 'response', 'code'],
@@ -137,12 +98,6 @@ export default {
     };
   },
   computed: {
-    ...mapState({
-      dark: state => state.layout.dark
-    }),
-    vgtTheme: function() {
-      return this.dark ? 'nocturnal' : 'default';
-    },
     iTableItems: function() {
       return ItemsTableData;
     },
@@ -151,19 +106,7 @@ export default {
     }
   },
   watch: {},
-  mounted() {
-    this.initialize();
-    this.ready = true;
-  },
   methods: {
-    initialize: function() {
-      this.updateStats();
-    },
-    updateStats: function() {
-      // Update tables
-      this.rowsRequests = utils.getMethodStatsArray(requestsData);
-      this.rows = utils.getApiStatsArray(dashboardData);
-    },
     onRowClick: function(row) {
       this.selectedHit = row;
       this.hitDetails = true;
