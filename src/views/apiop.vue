@@ -42,7 +42,7 @@ export default {
         colorScheme: 'default',
         // prettier-ignore
         widgets: [
-          { id: 'w1', height: 120, type: 'DbNumber', cspan: 2, properties: { title: 'Requests', subtitle: 'Total requests received', icon: 'fa fa-signal' } },
+          { id: 'w1', height: 100, type: 'DbNumber', cspan: 2, properties: { title: 'Requests', subtitle: 'Total requests received', icon: 'fa fa-signal' } },
           { id: 'w2', type: 'DbNumber', cspan: 2, properties: {
             title: 'Apdex Score', subtitle: 'Overall Apdex Score', total: 1, trendMax: 1, format: '%.2f',
             percentRanges: [
@@ -56,7 +56,7 @@ export default {
           { id: 'w5', type: 'DbNumber', cspan: 2, properties: { title: 'Avg HT', subtitle: 'Average Handle Time', format: '%.0f %s', icon:'fa fa-hourglass', qualifier: 'ms' } },
           { id: 'w6', type: 'DbNumber', cspan: 2, properties: { title: 'Avg Req Payload', subtitle: 'Avg Req Content Len', format: '%.2f %s', icon: 'fa fa-sd-card' } },
 
-          { id: 'w7', height: 120, type: 'DbNumber', cspan: 2, properties: { title: 'Errors', subtitle: 'Total Error Responses' } },
+          { id: 'w7', height: 100, type: 'DbNumber', cspan: 2, properties: { title: 'Errors', subtitle: 'Total Error Responses' } },
           { id: 'w8', type: 'DbNumber', cspan: 2, properties: {
             title: '2XX', subtitle: 'Success Responses',
             percentRanges: [
