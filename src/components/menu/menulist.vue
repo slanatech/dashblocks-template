@@ -1,22 +1,37 @@
 <template>
   <q-list class="db-menu-list">
-    <menu-list-item
-      v-for="item in menuItems"
-      v-bind:key="item.id"
-      :item="item"
-      :collapsed="collapsed"
-      :active-class="activeClass"
-      @expansionItemClick="onExpansionItemClick(item)"
-      @itemExpanded="onItemExpanded(item)"
-      @itemCollapsed="onItemCollapsed(item)"
-    />
+    <div v-if="mode === 'expand'">
+      <menu-list-item
+        v-for="item in menuItems"
+        v-bind:key="item.id"
+        :item="item"
+        :collapsed="collapsed"
+        :active-class="activeClass"
+        @expansionItemClick="onExpansionItemClick(item)"
+        @itemExpanded="onItemExpanded(item)"
+        @itemCollapsed="onItemCollapsed(item)"
+      />
+    </div>
+    <div v-else>
+      <menu-list-item-ex
+        v-for="item in menuItems"
+        v-bind:key="item.id"
+        :item="item"
+        :collapsed="collapsed"
+        :active-class="activeClass"
+        @expansionItemClick="onExpansionItemClick(item)"
+        @itemExpanded="onItemExpanded(item)"
+        @itemCollapsed="onItemCollapsed(item)"
+      />
+    </div>
   </q-list>
 </template>
 <script>
 import MenuListItem from './menulistitem.vue';
+import MenuListItemEx from './menulistitemex.vue';
 export default {
   name: 'MenuList',
-  components: { MenuListItem },
+  components: { MenuListItem, MenuListItemEx },
   props: {
     menuItems: {
       type: Array,
@@ -29,6 +44,10 @@ export default {
     activeClass: {
       type: String,
       default: ''
+    },
+    mode: {
+      type: String,
+      default: 'expand'
     }
   },
   data: function() {
