@@ -81,7 +81,7 @@ export default {
     },
     rowsPerPage: {
       type: Number,
-      default: 10
+      default: 5
     },
     sortBy: {
       type: String,
@@ -90,6 +90,10 @@ export default {
     descending: {
       type: Boolean,
       default: true
+    },
+    preview: {
+      type: Boolean,
+      default: false
     }
   },
   data: function() {
@@ -122,7 +126,7 @@ export default {
       allColumnsList: [],
       thStops: [25, 50, 100],
       thStopsWidth: [100, 140, 160],
-      showPreview: false,
+      showPreview: this.preview,
       filter: ''
     };
   },

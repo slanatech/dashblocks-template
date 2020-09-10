@@ -18,6 +18,7 @@ import VGT from './views/vuegoodtable.vue';
 import QuasarTable from './views/quasartable.vue';
 import APIOp from './views/apiop.vue';
 import Errors from './views/errors.vue';
+import Timeline from './views/timeline.vue';
 
 import Login from './pages/login.vue';
 
@@ -103,6 +104,11 @@ export default new Router({
           path: '/quasartable',
           name: 'quasartable',
           component: QuasarTable
+        },
+        {
+          path: '/timeline',
+          name: 'timeline',
+          component: Timeline
         }
       ]
     },

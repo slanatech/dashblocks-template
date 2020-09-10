@@ -116,7 +116,8 @@ export default {
             { id: 'summary', title: 'Summary', link: '/summary', caption: 'Microservice Status', icon: 'mdi-chart-line-variant' },
             { id: 'requests', title: 'Requests', link: '/requests', icon: 'sync_alt', badge: '2070', badgeColor: 'accent' },
             { id: 'errors', title: 'Errors', link: '/errors', icon: 'error', caption: 'Errors Trend', badge: '10.62%', badgeColor: 'negative' },
-            { id: 'apiop', title: 'API Operation', link: '/apiop', icon: 'settings_ethernet', caption: 'API Operation Scorecard' }
+            { id: 'apiop', title: 'API Operation', link: '/apiop', icon: 'settings_ethernet', caption: 'API Operation Scorecard' },
+            { id: 'timeline', title: 'Timeline', link: '/timeline', icon: 'mdi-chart-bar', caption: 'Visits over time' }
           ]
         },
         //{ id: '3', title: 'Forms', link: '/forms', icon: 'mdi-playlist-edit' },
